@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a64e5b0e436d4bed9780211ae245f7b, type: 3}
+  m_Name: Ubbie_Data
+  m_EditorClassIdentifier: 
+  dataName: Ubbie
+  dragonBonesJSON: {fileID: 4900000, guid: eafd24b4bd8a06a48bb5c75c133de4a4, type: 3}
+  textureAtlas:
+  - textureAtlasJSON: {fileID: 4900000, guid: 62fbdce39d0d5a64a805d282903592ba, type: 3}
+    texture: {fileID: 2800000, guid: ed21fa874bbc10a429b402d91c07b963, type: 3}
+    material: {fileID: 2100000, guid: 6e34f72bc2031bc46b91436be41de1be, type: 2}
+    uiMaterial: {fileID: 2100000, guid: 095b039792c4643458fe9f5c7b2f728b, type: 2}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a64e5b0e436d4bed9780211ae245f7b, type: 3}
+  m_Name: SwordsMan_Data
+  m_EditorClassIdentifier: 
+  dataName: SwordsMan
+  dragonBonesJSON: {fileID: 4900000, guid: e19cd91122ce14677bde5f01936cd10f, type: 3}
+  textureAtlas:
+  - textureAtlasJSON: {fileID: 4900000, guid: 510f15c598caf46cb8ed458b5c383aac, type: 3}
+    texture: {fileID: 2800000, guid: a56574ea03205424098318bd87b44161, type: 3}
+    material: {fileID: 2100000, guid: eb9f7561cf2daf642b7ed584102a9f0a, type: 2}
+    uiMaterial: {fileID: 2100000, guid: 270f971d07ab9f4439a8c24b2eb2701b, type: 2}
