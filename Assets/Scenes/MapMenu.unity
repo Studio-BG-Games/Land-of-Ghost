@@ -1025,6 +1025,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993639204}
   m_CullTransparentMesh: 1
+--- !u!1 &1120336135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1120336137}
+  - component: {fileID: 1120336136}
+  - component: {fileID: 1120336138}
+  m_Layer: 0
+  m_Name: LevelsSelectSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1120336136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120336135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee21d71cf7c71cc49926811b088cb751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levels:
+  - {fileID: 11400000, guid: b4cbee7bdf6fec641b74bc29a230c16d, type: 2}
+  - {fileID: 11400000, guid: 8605b71603cd4a54dbad4ed6df902057, type: 2}
+  _intervalY: 6.3
+  _levelPrefab: {fileID: 260372953232100302, guid: 6d6fafdacd8fbf34299b0426ec100703, type: 3}
+--- !u!4 &1120336137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120336135}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.35, y: -6.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1120336138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120336135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc4749f375127b4887584fd268a34b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 1
 --- !u!1 &1149671440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,7 +1361,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1833176558}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1120336136}
+        m_TargetAssemblyTypeName: LevelsSelectSpawner, Assembly-CSharp
+        m_MethodName: MoveToPrev
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1833176558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1350,6 +1424,7 @@ GameObject:
   - component: {fileID: 1917881252}
   - component: {fileID: 1917881251}
   - component: {fileID: 1917881250}
+  - component: {fileID: 1917881254}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1441,6 +1516,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1917881254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917881249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42cfb7681a0f6fa4b89ab99adf7fa79a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelsSelectSpawner: {fileID: 1120336136}
+  _levelsDescription: {fileID: 507897445}
+  OnLevelChenge:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1250927631}
+        m_TargetAssemblyTypeName: ScenesController, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2069042735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,7 +1626,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2069042738}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1120336136}
+        m_TargetAssemblyTypeName: LevelsSelectSpawner, Assembly-CSharp
+        m_MethodName: MoveToNext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 6.3
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2069042738
 MonoBehaviour:
   m_ObjectHideFlags: 0
