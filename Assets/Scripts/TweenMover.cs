@@ -19,5 +19,11 @@ public class TweenMover : MonoBehaviour
             return;
         _tween = transform.DOMoveY(transform.position.y + length, _duration).OnComplete(()=>OnTweenComplete?.Invoke());
     }
+    public void MoveX(float length)
+    {
+        if (_tween.IsActive())
+            return;
+        _tween = transform.DOMoveX(transform.position.x + length, _duration).OnComplete(()=>OnTweenComplete?.Invoke());
+    }
     
 }

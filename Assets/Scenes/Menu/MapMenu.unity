@@ -986,7 +986,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 993639207}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1917881254}
+        m_TargetAssemblyTypeName: LevelSelectUI, Assembly-CSharp
+        m_MethodName: StartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &993639207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1426,7 +1438,7 @@ GameObject:
   - component: {fileID: 1917881250}
   - component: {fileID: 1917881254}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: LevelSelectUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1530,7 +1542,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelsSelectSpawner: {fileID: 1120336136}
   _levelsDescription: {fileID: 507897445}
-  OnLevelChenge:
+  _levelDataSettings: {fileID: 11400000, guid: 62ba45835944c48488befeba53722e07, type: 2}
+  OnLevelChange:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1250927631}

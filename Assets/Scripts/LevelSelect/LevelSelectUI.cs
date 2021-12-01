@@ -9,19 +9,19 @@ public class LevelSelectUI : MonoBehaviour
 {
     [SerializeField] private LevelsSelectSpawner _levelsSelectSpawner;
     [SerializeField] private TextMeshProUGUI _levelsDescription;
-    private LevelData _focusedlevelData;
-    public UnityEvent<string> OnLevelChenge;
+    [SerializeField] private LevelData _levelDataSettings;
+    public UnityEvent<string> OnLevelChange;
     private void Awake()
     {
         _levelsSelectSpawner.OnCangeCurrentLvl += RefreshData;
     }
     private void RefreshData(LevelData levelData)
     {
-        _focusedlevelData = levelData;
+        _levelDataSettings.SetLevelOrigin(levelData);
         _levelsDescription.text = $"Уровень {levelData.LvlNumber}\n{levelData.Description}";
     }
     public void StartLevel()
     {
-        OnLevelChenge?.Invoke(_focusedlevelData.SceneName);
+        OnLevelChange?.Invoke("BattleLevel");
     }
 }
