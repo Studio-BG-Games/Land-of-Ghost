@@ -15,10 +15,14 @@ public class LevelSelectUI : MonoBehaviour
     {
         _levelsSelectSpawner.OnCangeCurrentLvl += RefreshData;
     }
-    private void RefreshData(LevelData levelData)
+    private void OnDestroy()
     {
-        _levelDataSettings.SetLevelOrigin(levelData);
-        _levelsDescription.text = $"Уровень {levelData.LvlNumber}\n{levelData.Description}";
+        _levelsSelectSpawner.OnCangeCurrentLvl -= RefreshData;
+    }
+    private void RefreshData(LevelSelect levelSelect)
+    {
+        _levelDataSettings.SetLevelOrigin(levelSelect.Level);
+        _levelsDescription.text = $"Уровень {levelSelect.Level.LvlNumber}\n{levelSelect.Level.Description}";
     }
     public void StartLevel()
     {

@@ -9,16 +9,12 @@ public class LevelSelect : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private TextMeshPro _levelNumberText;
 
-    private LevelData _level;
-
+    public LevelData Level { get; private set; }
     public void Initialize(LevelData level,float intervalY, bool isActive)
     {
-        _level = level;
+        Level = level;
         transform.position -= new Vector3(0, intervalY);
-        _levelNumberText.text = _level.LvlNumber.ToString();
-        if (isActive)
-            _spriteRenderer.sprite = _spriteActive;
-        else
-            _spriteRenderer.sprite = _spriteInActive;
+        _levelNumberText.text = Level.LvlNumber.ToString();
+        _spriteRenderer.sprite = _spriteActive;
     }
 }

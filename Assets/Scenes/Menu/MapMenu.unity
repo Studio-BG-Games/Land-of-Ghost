@@ -1070,6 +1070,8 @@ MonoBehaviour:
   _levels:
   - {fileID: 11400000, guid: b4cbee7bdf6fec641b74bc29a230c16d, type: 2}
   - {fileID: 11400000, guid: 8605b71603cd4a54dbad4ed6df902057, type: 2}
+  - {fileID: 11400000, guid: 87ca1b25f9ab29b43850633ae6920d26, type: 2}
+  - {fileID: 11400000, guid: 015e2c576cc70924ea809fe4632ac4f7, type: 2}
   _intervalY: 6.3
   _levelPrefab: {fileID: 260372953232100302, guid: 6d6fafdacd8fbf34299b0426ec100703, type: 3}
 --- !u!4 &1120336137

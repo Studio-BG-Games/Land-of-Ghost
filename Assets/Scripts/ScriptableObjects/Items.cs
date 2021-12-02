@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Items : ScriptableObject
-{
+{ 
     [SerializeField] private string _name;
     [SerializeField] private Sprite _icon;
 

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Claw
   _icon: {fileID: 21300000, guid: 3b3d7e89abd8f744c91ddb392a9156c2, type: 3}
+  _view: {fileID: 2046396218622490427, guid: 51273a6656cd2074598e23b1eb7df2ce, type: 3}

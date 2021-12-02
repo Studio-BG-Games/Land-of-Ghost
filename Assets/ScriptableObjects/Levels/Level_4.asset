@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2be4314a2053c664c8ccda1edc55ab48, type: 3}
-  m_Name: Level_1
+  m_Name: Level_4
   m_EditorClassIdentifier: 
-  _lvlNumber: 1
-  _description: "\u041F\u0435\u0440\u0432\u044B\u0439"
-  _conversationName: New Conversation 2
+  _lvlNumber: 4
+  _description: "\u0427\u0435\u0442\u0432\u0451\u0440\u0442\u044B\u0439"
+  _conversationName: Conversation 4
   _isComplete: 0
   _enemies:
-  - {fileID: 4406150334364566250, guid: 869b6991e92779c4e933c4e515537073, type: 3}
-  - {fileID: 4406150334364566250, guid: 869b6991e92779c4e933c4e515537073, type: 3}
+  - {fileID: -2885037759124000068, guid: b419ba27c942d924495501253934c27f, type: 3}
+  - {fileID: 557462683849901442, guid: 27fabdc5013c26a429008daeb6a09871, type: 3}
   _levelDataOrigin: {fileID: 0}

@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 2046396218622490427}
   - component: {fileID: -1997480114787694661}
   m_Layer: 7
-  m_Name: AmuletExample
+  m_Name: Amulet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
