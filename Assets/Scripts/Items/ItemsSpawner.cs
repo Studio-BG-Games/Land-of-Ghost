@@ -6,6 +6,18 @@ using UnityEngine;
 public class ItemsSpawner: MonoBehaviour
 {
     [SerializeField] private DropItem dropItem;
+    [SerializeField] private EnemiesSpawnChannelSO _enemiesSpawnChannel;
+    private List<Enemy> _enemies;
+    private void OnEnable()
+    {
+        _enemiesSpawnChannel.OnEnemiesSpawn += OnEnemySpawn;
+    }
+    private void OnDisable()
+    {
+        _enemiesSpawnChannel.OnEnemiesSpawn -= OnEnemySpawn;
+        foreach (var enemy in _enemies) 
+            enemy.OnDeth -= SpawnItems;
+    }
     public void SpawnItem(Items item)
     {
         var amulet = item as Amulet;
@@ -17,10 +29,9 @@ public class ItemsSpawner: MonoBehaviour
     }
     public void OnEnemySpawn(List<Enemy> enemies)
     {
+        _enemies = enemies;
         foreach (var enemy in enemies)
-        {
             enemy.OnDeth += SpawnItems;
-        }
     }
 
     private void SpawnItems(List<Items> items)

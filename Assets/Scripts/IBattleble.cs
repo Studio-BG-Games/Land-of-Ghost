@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 public interface IBattleble
 {
-    int _maxHP { get; }
-    int _currentHP { get; }
+    int MaxHP { get; }
+    int CurrentHP { get; }
     List<Effect> _effects { get; }
     bool _myTurn { get; }
     int DealDamage();

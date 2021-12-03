@@ -18,5 +18,3 @@ MonoBehaviour:
   _isComplete: 0
   _enemies:
   - {fileID: 4406150334364566250, guid: 869b6991e92779c4e933c4e515537073, type: 3}
-  - {fileID: 4406150334364566250, guid: 869b6991e92779c4e933c4e515537073, type: 3}
-  _levelDataOrigin: {fileID: 0}

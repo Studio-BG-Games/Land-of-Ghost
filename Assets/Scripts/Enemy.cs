@@ -19,6 +19,11 @@ public class Enemy : MonoBehaviour, IBattleble
     public List<Effect> _effects => throw new System.NotImplementedException();
 
     public bool _myTurn => throw new System.NotImplementedException();
+
+    public int MaxHP => throw new NotImplementedException();
+
+    public int CurrentHP => throw new NotImplementedException();
+
     private void OnMouseDown()
     {
         Death();

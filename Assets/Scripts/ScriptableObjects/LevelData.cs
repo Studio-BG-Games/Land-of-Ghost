@@ -9,7 +9,7 @@ public class LevelData: ScriptableObject
     [SerializeField] private string _conversationName;
     [SerializeField] private bool _isComplete;
     [SerializeField] private List<Enemy> _enemies;
-    [SerializeField] private LevelData _levelDataOrigin;
+    private LevelData _levelDataOrigin;
 
     public int LvlNumber => _lvlNumber;
     public string Description => _description;
@@ -29,5 +29,6 @@ public class LevelData: ScriptableObject
         _conversationName = levelDataOrigin.ConversationName;
         _isComplete = levelDataOrigin.IsComplete;
         _enemies = levelDataOrigin.Enemies;
+        _levelDataOrigin = levelDataOrigin;
     }
 }
