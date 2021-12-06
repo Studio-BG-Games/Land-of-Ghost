@@ -25,5 +25,9 @@ public class TweenMover : MonoBehaviour
             return;
         _tween = transform.DOMoveX(transform.position.x + length, _duration).OnComplete(()=>OnTweenComplete?.Invoke());
     }
+    public void Scale(float scale)
+    {
+        _tween = transform.DOScale(scale, _duration);
+    }
     
 }

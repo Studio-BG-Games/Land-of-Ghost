@@ -9,6 +9,7 @@ public class LevelSelect : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private TextMeshPro _levelNumberText;
 
+    private TweenMover _mover;
     public LevelData Level { get; private set; }
     public void Initialize(LevelData level,float intervalY, bool isActive)
     {
@@ -16,5 +17,13 @@ public class LevelSelect : MonoBehaviour
         transform.position -= new Vector3(0, intervalY);
         _levelNumberText.text = Level.LvlNumber.ToString();
         _spriteRenderer.sprite = _spriteActive;
+        _mover = GetComponent<TweenMover>();
+    }
+    public void SetCurrent(bool curernt)
+    {
+        if(curernt)
+            _mover.Scale(1.5f);
+        else
+            _mover.Scale(1);
     }
 }

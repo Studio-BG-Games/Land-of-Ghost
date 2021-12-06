@@ -13,3 +13,4 @@ public class EnemiesSpawnChannelSO : ScriptableObject
         OnEnemiesSpawn?.Invoke(enemies);
     }
 }
+ 

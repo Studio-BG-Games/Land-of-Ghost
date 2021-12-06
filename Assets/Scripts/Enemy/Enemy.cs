@@ -42,13 +42,15 @@ public class Enemy : MonoBehaviour, IBattleble
     {
         _effectsConteiner.gameObject.SetActive(false);
         _armature.animation.GotoAndPlayByProgress("Deat", 0, 1);
+        _armature.animation.GotoAndPlayByProgress("deat", 0, 1);
         OnDeth?.Invoke(_items);
+        gameObject.SetActive(false);
     }
 
     public void SetEffect(Effect effect)
     {
         throw new System.NotImplementedException();
-    }
+    } 
 
     public void TakeDamage(int amount)
     {

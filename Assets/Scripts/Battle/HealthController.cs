@@ -18,3 +18,4 @@ public class HealthController : MonoBehaviour
         _healthText.text = $"’œ {currentHP}/{maxHP}";
     }
 }
+  

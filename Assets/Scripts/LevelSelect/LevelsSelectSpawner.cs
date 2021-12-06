@@ -44,6 +44,7 @@ public class LevelsSelectSpawner : MonoBehaviour
     public void MoveToCurrentLvl()
     {
         _mover.MoveY(_intervalY * (_currentLvlNumber + 1) );
+        _levelSelects[_currentLvlNumber].SetCurrent(true);
     }
     public void MoveToNext()
     {
@@ -71,10 +72,12 @@ public class LevelsSelectSpawner : MonoBehaviour
         {
             return;
         }
+        _levelSelects[_currentLvlNumber].SetCurrent(false);
         _currentLvlNumber = number;
         OnCangeCurrentLvl?.Invoke(newCurrentLvl);
         _mover.MoveY(direction * _intervalY );
         _isLvlChanging = true;
-    }
+        newCurrentLvl.SetCurrent(true);
+    } 
 } 
  

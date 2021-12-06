@@ -180,6 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2842494396381520013}
   - component: {fileID: 260372953232100302}
+  - component: {fileID: -3406203596906550141}
   m_Layer: 0
   m_Name: LevelSelect
   m_TagString: Untagged
@@ -219,6 +220,19 @@ MonoBehaviour:
   _spriteInActive: {fileID: 21300000, guid: 33aaac0374934924c8f4d4e08d9c3a42, type: 3}
   _spriteRenderer: {fileID: 8359499884992896635}
   _levelNumberText: {fileID: 7305787976605360065}
+--- !u!114 &-3406203596906550141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5689500494992708707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc4749f375127b4887584fd268a34b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 1
 --- !u!1 &8775568579357433116
 GameObject:
   m_ObjectHideFlags: 0

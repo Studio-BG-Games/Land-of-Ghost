@@ -15,6 +15,6 @@ MonoBehaviour:
   _lvlNumber: 1
   _description: "\u041F\u0435\u0440\u0432\u044B\u0439"
   _conversationName: New Conversation 2
-  _isComplete: 0
+  _isComplete: 1
   _enemies:
   - {fileID: 4406150334364566250, guid: 869b6991e92779c4e933c4e515537073, type: 3}
