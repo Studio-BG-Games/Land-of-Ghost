@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public abstract class ItemsView<T> : MonoBehaviour where T:Items
@@ -22,4 +23,5 @@ public abstract class ItemsView<T> : MonoBehaviour where T:Items
         _item = item;
         _image.sprite = _item.Icon;
     }
+
 }
