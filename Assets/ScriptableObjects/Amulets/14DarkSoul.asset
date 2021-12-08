@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e16f663faf10e12418cddc1426a84a52, type: 3}
+  m_Name: 14DarkSoul
+  m_EditorClassIdentifier: 
+  _name: DarkSoul
+  _icon: {fileID: 21300000, guid: cc6542dd6eed5474cbe8e800d114c8c2, type: 3}
+  _id: 14
+  _descroption: "\u0443\u0440\u043E\u043D 10+(5 \u0443\u0440\u043E\u043D\u0443 \u0441\u0435\u0431\u0435)
+    \u0437\u043Ci\u043D\u044F\u0435\u0442\u0441\u044F \u043D\u0430 \u0437\u0430\u043B\u0438\u0448\u043E\u043A
+    \u0434\u0443\u0448i \u043Fi\u0441\u043B\u044F 2 \u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u0430\u043D\u044F
+    \u0437\u043D\u0438\u043A\u0430\u044D"
+  _view: {fileID: 2046396218622490427, guid: 51273a6656cd2074598e23b1eb7df2ce, type: 3}

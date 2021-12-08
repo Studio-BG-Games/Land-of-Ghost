@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: InventorySO
   m_EditorClassIdentifier: 
   _items:
-  - {fileID: 11400000, guid: 75382b4461ab0e8438b4bda046c39fa2, type: 2}
+  - {fileID: 11400000, guid: 02f302e35bd412d4fa48a022f44d3d26, type: 2}
   - {fileID: 11400000, guid: 767ff0dc4c48b844fb4a0393a8c03879, type: 2}
-  - {fileID: 11400000, guid: 5bd5445f0894b684a9d64233cc1f9369, type: 2}
+  _amuletsInSlot:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: a352a11139ac3414d82c835a8cd2a8d1, type: 2}
+  - {fileID: 11400000, guid: c255addd83831fe4fa33b7ceb4970331, type: 2}
+  _potionsInSlot:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
+  - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}

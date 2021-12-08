@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e16f663faf10e12418cddc1426a84a52, type: 3}
-  m_Name: Shatter
+  m_Name: 12Stone
   m_EditorClassIdentifier: 
-  _name: Shatter
-  _icon: {fileID: 21300000, guid: c6ed63f747a475c46a5c3bf6924c40da, type: 3}
+  _name: Stone
+  _icon: {fileID: 21300000, guid: 62e208232bdf7534cb81fe362d7ccb7d, type: 3}
+  _id: 12
+  _descroption: "\u041A\u0430\u043C\u0435\u043D\u044C"
   _view: {fileID: 2046396218622490427, guid: 51273a6656cd2074598e23b1eb7df2ce, type: 3}

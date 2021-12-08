@@ -18,4 +18,11 @@ public class UISlot : MonoBehaviour, IDropHandler
         otherItemTransform.SetParent(transform);
         otherItemTransform.localPosition = Vector3.zero;
     }
+    public void Clear()
+    {
+        if (transform.childCount > 0)
+        {
+            Destroy(transform.GetChild(0).gameObject);
+        }
+    }
 }

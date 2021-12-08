@@ -10,8 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e16f663faf10e12418cddc1426a84a52, type: 3}
-  m_Name: Stone
+  m_Name: 2Book
   m_EditorClassIdentifier: 
-  _name: Stone
-  _icon: {fileID: 21300000, guid: 62e208232bdf7534cb81fe362d7ccb7d, type: 3}
+  _name: Book
+  _icon: {fileID: 21300000, guid: 5d33e23dec384424dac2f011b82925c4, type: 3}
+  _id: 2
+  _descroption: "\u0423\u0440\u043E\u043D 4+ \u043C\u0430\u0433 \u044D\u0444\u0444\u0435\u043A\u0442
+    \u043C\u043E\u0436\u043B\u0438\u0432\u043E\u0441\u0442\u0438 50% \u0449\u043E
+    \u0443\u0440\u043E\u043D \u0431\u0443\u0434\u0435 1, \u0430 \u043D\u0435 5"
   _view: {fileID: 2046396218622490427, guid: 51273a6656cd2074598e23b1eb7df2ce, type: 3}
