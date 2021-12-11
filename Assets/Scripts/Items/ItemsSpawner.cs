@@ -16,7 +16,7 @@ public class ItemsSpawner: MonoBehaviour
     {
         _enemiesSpawnChannel.OnEnemiesSpawn -= OnEnemySpawn;
         foreach (var enemy in _enemies) 
-            enemy.OnDeth -= SpawnItems;
+            enemy.OnSpawnDrop -= SpawnItems;
     }
     public void SpawnItem(Items item)
     {
@@ -31,7 +31,7 @@ public class ItemsSpawner: MonoBehaviour
     {
         _enemies = enemies;
         foreach (var enemy in enemies)
-            enemy.OnDeth += SpawnItems;
+            enemy.OnSpawnDrop += SpawnItems;
     }
 
     private void SpawnItems(List<Items> items)

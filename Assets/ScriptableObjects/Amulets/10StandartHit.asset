@@ -22,3 +22,4 @@ MonoBehaviour:
   _countUses: -1
   _amuletAfterAllUses: {fileID: 0}
   _effect: {fileID: 0}
+  _animationId: 5

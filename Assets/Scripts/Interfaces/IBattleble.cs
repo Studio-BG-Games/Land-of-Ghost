@@ -5,9 +5,9 @@ public interface IBattleble
 {
     int MaxHP { get; }
     int CurrentHP { get; }
-    List<Effect> _effects { get; }
-    bool _myTurn { get; }
-    int DealDamage();
+    List<Effect> Effects { get; }
+    bool MyTurn { get; }
+    void DealDamage();
     void TakeDamage(int amount);
     void SetEffect(Effect effect);
     void ClearEffect(Effect effect);

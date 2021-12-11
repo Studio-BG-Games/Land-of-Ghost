@@ -2,7 +2,7 @@
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class UICraftSlot : MonoBehaviour, IDropHandler
+public class UICraftSlot : UISlot, IDropHandler
 {
     [SerializeField] private InventorySO _inventorySO;
     private int _itemId;
@@ -26,13 +26,6 @@ public class UICraftSlot : MonoBehaviour, IDropHandler
                 _itemId = amuletView.Id;
                 OnItemDrop?.Invoke(_itemId);
             }
-        }
-    }
-    public void Clear()
-    {
-        if (transform.childCount > 0)
-        {
-            Destroy(transform.GetChild(0).gameObject);
         }
     }
     public void Craft()

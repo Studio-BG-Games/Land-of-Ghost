@@ -19,3 +19,9 @@ MonoBehaviour:
     \u0443\u0434\u0430\u0440 \u0443\u0440\u043E\u043D 3 \u0435\u0444\u0435\u043A\u0442
     \u0431\u043B\u0438\u0441\u043A\u0430\u0432\u043A\u0430"
   _view: {fileID: 2046396218622490427, guid: 51273a6656cd2074598e23b1eb7df2ce, type: 3}
+  _damageAmount: 3
+  _damageToPlayer: 0
+  _countUses: -1
+  _amuletAfterAllUses: {fileID: 0}
+  _effect: {fileID: 0}
+  _animationId: 0

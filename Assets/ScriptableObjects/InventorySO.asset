@@ -24,8 +24,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
   _amuletsInSlot:
   - {fileID: 11400000, guid: f7955928e16ca004bab0d6768a18d821, type: 2}
-  - {fileID: 11400000, guid: e7f27da62ee633f419d8e023bf67d45f, type: 2}
-  - {fileID: 11400000, guid: 261c721f7760f58489423f900a6a973d, type: 2}
+  - {fileID: 11400000, guid: 313e7051e33eb704eaa9f8f571bcf092, type: 2}
+  - {fileID: 11400000, guid: 0346dd530f1cb9b4f902216133693fde, type: 2}
   _potionsInSlot:
   - {fileID: 0}
   - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}

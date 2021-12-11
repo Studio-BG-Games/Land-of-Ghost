@@ -138,6 +138,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 2046396218323291564}
   _item: {fileID: 0}
+  _currentUsed: {fileID: 11400000, guid: 1ece49579bf50434395d8849bc7893f4, type: 2}
+  OnAmuletClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 2afc953147536744b981e8c381631784, type: 2}
+        m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &-1997480114787694661
 BoxCollider2D:
   m_ObjectHideFlags: 0

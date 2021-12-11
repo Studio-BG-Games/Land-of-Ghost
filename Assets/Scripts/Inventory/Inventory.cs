@@ -36,13 +36,13 @@ public class Inventory : MonoBehaviour
         for (i = 0; i < _uiAmuletSlots.Length; i++)
         {
             if(_inventorySO.AmuletsInSlot[i] != null)
-                _uiAmuletSlots[i].SetItem(_amuletView,_inventorySO.AmuletsInSlot[i]);
+                _uiAmuletSlots[i].SetItem(_amuletView,_inventorySO.AmuletsInSlot[i], false);
         }
         var potions = _inventorySO.GetPotions();
         for (i = 0; i < _uiPotionSlots.Length; i++)
         {
             if(_inventorySO.PotionsInSlot[i] != null)
-                _uiPotionSlots[i].SetItem(_potionView, _inventorySO.PotionsInSlot[i], potions[_inventorySO.PotionsInSlot[i]]);
+                _uiPotionSlots[i].SetItem(_potionView, _inventorySO.PotionsInSlot[i], potions[_inventorySO.PotionsInSlot[i]], false);
         }
     }
     private void ClearSlots()
