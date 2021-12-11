@@ -13,13 +13,23 @@ MonoBehaviour:
   m_Name: InventorySO
   m_EditorClassIdentifier: 
   _items:
+  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
+  - {fileID: 11400000, guid: ead8ecafc42553e499524ddc4b580512, type: 2}
+  - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
+  - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
+  - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
   - {fileID: 11400000, guid: 02f302e35bd412d4fa48a022f44d3d26, type: 2}
-  - {fileID: 11400000, guid: 767ff0dc4c48b844fb4a0393a8c03879, type: 2}
+  - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
+  - {fileID: 11400000, guid: 8eb3cf1fb8234db49888a39c8071fdbd, type: 2}
+  - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
   _amuletsInSlot:
-  - {fileID: 0}
-  - {fileID: 11400000, guid: a352a11139ac3414d82c835a8cd2a8d1, type: 2}
-  - {fileID: 11400000, guid: c255addd83831fe4fa33b7ceb4970331, type: 2}
+  - {fileID: 11400000, guid: f7955928e16ca004bab0d6768a18d821, type: 2}
+  - {fileID: 11400000, guid: e7f27da62ee633f419d8e023bf67d45f, type: 2}
+  - {fileID: 11400000, guid: 261c721f7760f58489423f900a6a973d, type: 2}
   _potionsInSlot:
   - {fileID: 0}
-  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
   - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

@@ -20,24 +20,29 @@ public class Inventory : MonoBehaviour
     {
         ClearSlots();
         var amulets = _inventorySO.GetAmulets();
-        var potions = _inventorySO.GetPotions();
+        var potionsNotInSlot = _inventorySO.GetPotionsNotInSlot();
         var i = 0;
-        for (i = 0; i < amulets.Count + potions.Count; i++)
+        for (i = 0; i < amulets.Count + potionsNotInSlot.Count; i++)
         {
             if (i < amulets.Count)
                 InsertAmulet(_uiSlots[i], amulets[i]);
             else
-                InsertPotion(_uiSlots[i], potions[i - amulets.Count]);
+            {
+                var potion = potionsNotInSlot.ElementAt(i - amulets.Count).Key;
+                if (!_inventorySO.PotionsInSlot.Contains(potion))
+                    InsertPotion(_uiSlots[i], potion, potionsNotInSlot[potion]);
+            }
         }
         for (i = 0; i < _uiAmuletSlots.Length; i++)
         {
             if(_inventorySO.AmuletsInSlot[i] != null)
                 _uiAmuletSlots[i].SetItem(_amuletView,_inventorySO.AmuletsInSlot[i]);
         }
+        var potions = _inventorySO.GetPotions();
         for (i = 0; i < _uiPotionSlots.Length; i++)
         {
             if(_inventorySO.PotionsInSlot[i] != null)
-                _uiPotionSlots[i].SetItem(_potionView, _inventorySO.PotionsInSlot[i]);
+                _uiPotionSlots[i].SetItem(_potionView, _inventorySO.PotionsInSlot[i], potions[_inventorySO.PotionsInSlot[i]]);
         }
     }
     private void ClearSlots()
@@ -60,10 +65,10 @@ public class Inventory : MonoBehaviour
         var amulet = Instantiate(_amuletView, uISlot.transform);
         amulet.Init(item);
     }
-    private void InsertPotion(UISlot uISlot, Potion item)
+    private void InsertPotion(UISlot uISlot, Potion item, int amount)
     {
         var potion = Instantiate(_potionView, uISlot.transform);
-        potion.Init(item);
+        potion.Init(item, amount);
     }
 
 }

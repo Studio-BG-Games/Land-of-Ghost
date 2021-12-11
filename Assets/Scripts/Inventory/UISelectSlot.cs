@@ -20,11 +20,11 @@ public class UISelectSlot : MonoBehaviour
         amuletInstance.Init(amulet);
         amuletInstance.EnableCollider(false);
     }
-    public void SetItem(PotionView potionView, Potion potion)
+    public void SetItem(PotionView potionView, Potion potion, int amount)
     {
         _item = potion;
         var amuletInstance = Instantiate(potionView, transform);
-        amuletInstance.Init(potion);
+        amuletInstance.Init(potion, amount);
         amuletInstance.EnableCollider(false);
     }
     public void Clear()

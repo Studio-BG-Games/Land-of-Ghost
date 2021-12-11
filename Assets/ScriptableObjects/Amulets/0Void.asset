@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e16f663faf10e12418cddc1426a84a52, type: 3}
+  m_Name: 0Void
+  m_EditorClassIdentifier: 
+  _name: 
+  _icon: {fileID: 7348533661700182467, guid: a968769c15bfa1249a763d2e501cb706, type: 3}
+  _id: 0
+  _descroption: 
+  _view: {fileID: 0}
+  _damageAmount: 0
+  _damageToPlayer: 0
+  _countUses: 0
+  _amuletAfterAllUses: {fileID: 0}
+  _effect: {fileID: 0}

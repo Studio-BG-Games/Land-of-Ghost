@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16f663faf10e12418cddc1426a84a52, type: 3}
   m_Name: 9Shatter
   m_EditorClassIdentifier: 
-  _name: Shatter
+  _name: "\u041E\u0441\u043A\u043E\u043B\u043E\u043A"
   _icon: {fileID: 21300000, guid: c6ed63f747a475c46a5c3bf6924c40da, type: 3}
   _id: 9
   _descroption: "\u041E\u0441\u043A\u043E\u043B\u043E\u043A"
   _view: {fileID: 2046396218622490427, guid: 51273a6656cd2074598e23b1eb7df2ce, type: 3}
+  _damageAmount: 0
+  _damageToPlayer: 0
+  _countUses: 0
+  _amuletAfterAllUses: {fileID: 0}
+  _effect: {fileID: 0}

@@ -86,9 +86,9 @@ GameObject:
   - component: {fileID: 2046396218622490424}
   - component: {fileID: 2046396218622490426}
   - component: {fileID: 2046396218622490427}
-  - component: {fileID: -4772746965565717940}
   - component: {fileID: -1997480114787694661}
-  - component: {fileID: 1417146174603315503}
+  - component: {fileID: 3816709470102909889}
+  - component: {fileID: -2861779317076745637}
   m_Layer: 5
   m_Name: Amulet
   m_TagString: Untagged
@@ -138,18 +138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 2046396218323291564}
   _item: {fileID: 0}
---- !u!114 &-4772746965565717940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046396218622490425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 367c997e3461d8f4f91ca974a7f0158e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &-1997480114787694661
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -176,7 +164,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 200, y: 200}
   m_EdgeRadius: 0
---- !u!225 &1417146174603315503
+--- !u!114 &3816709470102909889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046396218622490425}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 367c997e3461d8f4f91ca974a7f0158e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnCraftItem:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: fc978926dc5526641b568828973059df, type: 2}
+        m_TargetAssemblyTypeName: InventorySO, Assembly-CSharp
+        m_MethodName: AddItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnCraftClear:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 2afc953147536744b981e8c381631784, type: 2}
+        m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!225 &-2861779317076745637
 CanvasGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

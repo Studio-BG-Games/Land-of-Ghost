@@ -18,19 +18,20 @@ public class UIItemSelect : MonoBehaviour
     [SerializeField] private string _buttonSelectText1;
     [SerializeField] private string _buttonSelectText2;
     [SerializeField] private InventorySO _inventorySO;
+    [SerializeField] private Amulet _voidAmuletSO;
+    [SerializeField] private Potion _voidPotionSO;
     private List<Amulet> _amulets;
-    private List<Potion> _potions;
+    private Dictionary<Potion, int> _potions;
     private int _currentNumber;
     private int _cellId;
     private Amulet _amuletInSlot;
     private Potion _potionInSlot;
     private bool _isAmulet;
-    public UnityEvent OnSetAmulet;
+    public UnityEvent OnSetItem;
     public void OpenSelectPanel(int cellId,bool isAmulet)
     {
         _cellId = cellId;
         _cellIdText.text = $"{cellId}/3";
-        _buttonSelectText.text = $"{_buttonSelectText1} {cellId}";
         _hidePanel.SetActive(false);
         gameObject.SetActive(true);
         _isAmulet = isAmulet;
@@ -40,11 +41,14 @@ public class UIItemSelect : MonoBehaviour
             _amulets = _inventorySO.GetAmulets();
             if (_amuletInSlot != null)
             {
+                _buttonSelectText.text = _buttonSelectText2;
                 _amulets.Add(_amuletInSlot);
                 _currentNumber = _amulets.Count - 1;
             }
             else
             {
+                if (_amulets.Count == 0)
+                    _amulets.Add(_voidAmuletSO);
                 _currentNumber = 0;
             }
             SetInfo(_amulets);
@@ -52,14 +56,26 @@ public class UIItemSelect : MonoBehaviour
         else
         {
             _potionInSlot = _inventorySO.PotionsInSlot[cellId - 1];
-            _potions = _inventorySO.GetPotions();
+            _potions = _inventorySO.GetPotions();            
             if (_potionInSlot != null)
             {
-                _potions.Add(_potionInSlot);
+                _buttonSelectText.text = _buttonSelectText2;
                 _currentNumber = _potions.Count - 1;
             }
             else
             {
+                List<Potion> removePotions = new List<Potion>();
+                foreach (var potion in _potions)
+                {
+                    if (_inventorySO.PotionsInSlot.Contains(potion.Key))
+                        removePotions.Add(potion.Key);
+                }
+                foreach (var potion in removePotions)
+                {
+                    _potions.Remove(potion);
+                }
+                if (_potions.Count == 0)
+                    _potions.Add(_voidPotionSO, 0);
                 _currentNumber = 0;
             }
             SetInfo(_potions);
@@ -113,34 +129,33 @@ public class UIItemSelect : MonoBehaviour
         _image.sprite = amulets[_currentNumber].Icon;
         _name.text = amulets[_currentNumber].Name;
         _description.text = amulets[_currentNumber].Description;
+        if (_amulets[_currentNumber] == _amuletInSlot)
+            _buttonSelectText.text = _buttonSelectText2;
+        else
+            _buttonSelectText.text = $"{_buttonSelectText1} {_cellId}";
     }
-    private void SetInfo(List<Potion> potions)
+    private void SetInfo(Dictionary<Potion, int> potions)
     {
-        _image.sprite = potions[_currentNumber].Icon;
-        _name.text = potions[_currentNumber].Name;
-        _description.text = potions[_currentNumber].Description;
+        var potion = potions.ElementAt(_currentNumber).Key;
+        _image.sprite = potion.Icon;
+        _name.text = potion.Name;
+        _description.text = potion.Description;
+        if (potion == _potionInSlot)
+            _buttonSelectText.text = _buttonSelectText2;
+        else
+            _buttonSelectText.text = $"{_buttonSelectText1} {_cellId}";
     }
     public void PutAmuletInSlot()
     {
         if (_isAmulet)
         {
-            if (_amulets[_currentNumber] != _amuletInSlot)
-            {
-                if (_amuletInSlot != null)
-                    _inventorySO.AddItem(_amuletInSlot);
-                _inventorySO.PutAmuletInSlot(_cellId - 1, _amulets[_currentNumber]);
-                OnSetAmulet?.Invoke();
-            }
+            _inventorySO.PutAmuletInSlot(_cellId - 1, _amulets[_currentNumber], _amuletInSlot);
+            OnSetItem?.Invoke();
         }
         else
         {
-            if (_potions[_currentNumber] != _potionInSlot)
-            {
-                if (_potionInSlot != null)
-                    _inventorySO.AddItem(_potionInSlot);
-                _inventorySO.PutPotionInSlot(_cellId - 1, _potions[_currentNumber]);
-                OnSetAmulet?.Invoke();
-            }
+            _inventorySO.PutPotionInSlot(_cellId - 1, _potions.ElementAt(_currentNumber).Key, _potionInSlot);
+            OnSetItem?.Invoke();
         }
         CloseSelectPanel();
     } 

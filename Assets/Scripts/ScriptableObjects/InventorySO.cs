@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-[CreateAssetMenu(fileName = "InventorySO", menuName = "SO/InventorySO")]
 public class InventorySO : ScriptableObject
 {
     [SerializeField] private List<Items> _items;
@@ -19,9 +18,27 @@ public class InventorySO : ScriptableObject
     {
         return _items.Where(item => item as Amulet).Select(item => item as Amulet).ToList();
     }
-    public List<Potion> GetPotions()
+    public Dictionary<Potion, int> GetPotions()
     {
-        return _items.Where(item => item as Potion).Select(item => item as Potion).ToList();
+        var potions = _items.Where(item => item as Potion).Select(item => item as Potion).ToList();
+        Dictionary<Potion, int> potionsCountMap = new Dictionary<Potion, int>();
+        foreach (var potion in potions)
+        {
+            if (!potionsCountMap.ContainsKey(potion))
+                potionsCountMap.Add(potion, potions.Where(p => p == potion).Count());
+        }
+        return potionsCountMap;
+    }
+    public Dictionary<Potion, int> GetPotionsNotInSlot()
+    {
+        var potions = GetPotions();
+        Dictionary<Potion, int> potionsNotInSlot = new Dictionary<Potion, int>();
+        foreach (var potion in potions)
+        {
+            if (!_potionsInSlot.Contains(potion.Key))
+                potionsNotInSlot.Add(potion.Key, potion.Value);
+        }
+        return potionsNotInSlot;
     }
     public void AddItem(Items item)
     {
@@ -31,15 +48,29 @@ public class InventorySO : ScriptableObject
     {
         _items.Remove(item);
     }
-    public void PutAmuletInSlot(int id, Amulet amulet)
+    public void RemoveItem(int itemId)
     {
-        _amuletsInSlot[id] = amulet;
-        _items.Remove(amulet);
+        var items = _items.Where(i => i.Id == itemId);
+        var item = items.FirstOrDefault();
+        _items.Remove(item);
+        if(item as Potion && items.Count() == 1 )
+            for (int i = 0; i < _potionsInSlot.Length; i++)
+                if (_potionsInSlot[i] != null && _potionsInSlot[i].Id == itemId) _potionsInSlot[i] = null;
     }
-    public void PutPotionInSlot(int id, Potion potion)
+    public void PutAmuletInSlot(int id, Amulet amulet, Amulet amuletInSlot)
     {
+        if (amulet == amuletInSlot || amulet.Id == 0)
+            amulet = null;
+        _amuletsInSlot[id] = amulet;
+        RemoveItem(amulet);
+        if(amuletInSlot != null) AddItem(amuletInSlot);
+    }
+    public void PutPotionInSlot(int id, Potion potion, Potion potionInSlot)
+    {
+        Debug.Log(potion.Id);
+        if (potion == potionInSlot || potion.Id == 0 )
+            potion = null;
         _potionsInSlot[id] = potion;
-        _items.Remove(potion);
     }
 }
  
