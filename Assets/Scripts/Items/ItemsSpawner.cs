@@ -7,7 +7,8 @@ public class ItemsSpawner: MonoBehaviour
 {
     [SerializeField] private DropItem dropItem;
     [SerializeField] private EnemiesSpawnChannelSO _enemiesSpawnChannel;
-    private List<Enemy> _enemies;
+    private List<Enemy> _enemies = new List<Enemy>();
+    private List<DropItem> _drops = new List<DropItem>();
     private void OnEnable()
     {
         _enemiesSpawnChannel.OnEnemiesSpawn += OnEnemySpawn;
@@ -20,25 +21,36 @@ public class ItemsSpawner: MonoBehaviour
     }
     public void SpawnItem(Items item)
     {
-        var amulet = item as Amulet;
-        if (amulet != null)
-            Instantiate(dropItem, transform).Init(amulet);
-        var potion = item as Potion;
-        if (potion != null)
-            Instantiate(dropItem, transform).Init(potion);
+        var drop = Instantiate(dropItem, transform);
+        drop.Init(item);
+        _drops.Add(drop);
     }
-    public void OnEnemySpawn(List<Enemy> enemies)
+    public void SpawnItem(int money)
+    {
+        var drop = Instantiate(dropItem, transform);
+        drop.Init(money);
+        _drops.Add(drop);
+    }
+    public void OnEnemySpawn(List<Enemy> enemies, int money)
     {
         _enemies = enemies;
         foreach (var enemy in enemies)
             enemy.OnSpawnDrop += SpawnItems;
     }
 
-    private void SpawnItems(List<Items> items)
+    private void SpawnItems(List<Items> items,int money)
     {
         foreach (var item in items)
         {
             SpawnItem(item);
+        }
+        SpawnItem(money);
+    }
+    public void PickUpAllDrops()
+    {
+        foreach (var drop in _drops)
+        {
+            drop.PickUp();
         }
     }
 }

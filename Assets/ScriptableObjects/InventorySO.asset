@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: InventorySO
   m_EditorClassIdentifier: 
   _items:
-  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
-  - {fileID: 11400000, guid: ead8ecafc42553e499524ddc4b580512, type: 2}
+  - {fileID: 11400000, guid: 767ff0dc4c48b844fb4a0393a8c03879, type: 2}
   - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
   - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
   - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
   - {fileID: 11400000, guid: 02f302e35bd412d4fa48a022f44d3d26, type: 2}
   - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
-  - {fileID: 11400000, guid: 8eb3cf1fb8234db49888a39c8071fdbd, type: 2}
   - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
+  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
+  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
+  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
+  - {fileID: 11400000, guid: 9d9c86412510d314bafbad42be23d2fd, type: 2}
   _amuletsInSlot:
   - {fileID: 11400000, guid: f7955928e16ca004bab0d6768a18d821, type: 2}
   - {fileID: 11400000, guid: 313e7051e33eb704eaa9f8f571bcf092, type: 2}
@@ -30,6 +32,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _money: 10

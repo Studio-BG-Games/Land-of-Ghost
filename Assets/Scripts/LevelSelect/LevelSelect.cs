@@ -5,7 +5,7 @@ using TMPro;
 public class LevelSelect : MonoBehaviour
 {
     [SerializeField] private Sprite _spriteActive;
-    [SerializeField] private Sprite _spriteInActive;
+    [SerializeField] private SpriteRenderer _imageInBuble;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private TextMeshPro _levelNumberText;
 
@@ -17,6 +17,7 @@ public class LevelSelect : MonoBehaviour
         transform.position -= new Vector3(0, intervalY);
         _levelNumberText.text = Level.LvlNumber.ToString();
         _spriteRenderer.sprite = _spriteActive;
+        _imageInBuble.sprite = Level.ImageInBuble;
         _mover = GetComponent<TweenMover>();
     }
     public void SetCurrent(bool curernt)

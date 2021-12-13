@@ -5,11 +5,11 @@ using UnityEngine.Events;
 
 public class EnemiesSpawnChannelSO : ScriptableObject
 {
-    public UnityAction<List<Enemy>> OnEnemiesSpawn;
+    public UnityAction<List<Enemy>, int> OnEnemiesSpawn;
 
-    public void RaiseEvent(List<Enemy> enemies)
+    public void RaiseEvent(List<Enemy> enemies, int money)
     {
-        OnEnemiesSpawn?.Invoke(enemies);
+        OnEnemiesSpawn?.Invoke(enemies, money);
     }
 }
  

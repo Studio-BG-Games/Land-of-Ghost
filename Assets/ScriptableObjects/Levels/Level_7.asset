@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be4314a2053c664c8ccda1edc55ab48, type: 3}
+  m_Name: Level_7
+  m_EditorClassIdentifier: 
+  _lvlNumber: 7
+  _description: 
+  _conversationName: 
+  _isComplete: 1
+  _enemies:
+  - {fileID: 6008324967137640686, guid: e5158855ef5b5014189a581148a700a2, type: 3}
+  _imageInBuble: {fileID: 21300000, guid: e426567cda53d064bb69742dcf510945, type: 3}

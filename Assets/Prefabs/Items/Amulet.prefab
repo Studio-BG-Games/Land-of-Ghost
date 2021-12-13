@@ -142,7 +142,7 @@ MonoBehaviour:
   OnAmuletClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 2afc953147536744b981e8c381631784, type: 2}
+      - m_Target: {fileID: 11400000, guid: 614f34fe09fdae547b75930985c36f90, type: 2}
         m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
         m_MethodName: RaiseEvent
         m_Mode: 1

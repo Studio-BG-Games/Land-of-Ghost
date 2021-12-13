@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,12 @@ public class InventorySO : ScriptableObject
     [SerializeField] private List<Items> _items;
     [SerializeField] private Amulet[] _amuletsInSlot;
     [SerializeField] private Potion[] _potionsInSlot;
+    [SerializeField] private int _money;
 
     public Amulet[] AmuletsInSlot { get => _amuletsInSlot; private set => _amuletsInSlot = value; }
     public Potion[] PotionsInSlot { get => _potionsInSlot; private set => _potionsInSlot = value; }
-
+    public int Money { get => _money; private set => _money = value; }
+    public Action OnMoneyChange;
     public List<Amulet> GetAmulets()
     {
         return _items.Where(item => item as Amulet).Select(item => item as Amulet).ToList();
@@ -67,10 +70,13 @@ public class InventorySO : ScriptableObject
     }
     public void PutPotionInSlot(int id, Potion potion, Potion potionInSlot)
     {
-        Debug.Log(potion.Id);
         if (potion == potionInSlot || potion.Id == 0 )
             potion = null;
         _potionsInSlot[id] = potion;
     }
-}
- 
+    public void AddMoney(int amount)
+    {
+        _money += amount;
+        OnMoneyChange?.Invoke();
+    }
+} 

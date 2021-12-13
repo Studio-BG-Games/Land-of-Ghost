@@ -12,34 +12,63 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform _enemyPosition2;
     [SerializeField] private EnemiesSpawnChannelSO _enemiesSpawnChannel;
     [SerializeField] private HealthController _HPcontroller;
+    [SerializeField] private ItemsSpawner _itemsSpawner;
     private List<Enemy> _enemies = new List<Enemy>();
-    private Enemy _firstEnemy;
+    private Enemy _firstEnemy; 
+    public Action<int> OnEnemyDealDamage;
+    public Action OnEnemyEndTurn;
+    public UnityEvent<string> OnEndLevel;
     private void Start()
     {
         Spawn(_levelDataSettings.Enemies.ElementAt(0), _enemyPosition1);
         if(_levelDataSettings.Enemies.Count > 1)
             Spawn(_levelDataSettings.Enemies.ElementAt(1), _enemyPosition2);
-        _enemiesSpawnChannel.RaiseEvent(_enemies);
         _firstEnemy = _enemies.ElementAt(0);
+        _enemiesSpawnChannel.RaiseEvent(_enemies, _firstEnemy.MoneyDrop);
         _HPcontroller.Initialize(_firstEnemy.MaxHP, _firstEnemy.CurrentHP);
+
         _firstEnemy.OnTakeHit += _HPcontroller.OnHealthChange;
-        _firstEnemy.OnDeth += _HPcontroller.Hide;
-    }
-    private void OnEnable()
-    {
+        _firstEnemy.OnDeth += EnemyDeth;
+        _firstEnemy.OnDealDamage += OnEnemyDealDamage.Invoke;
+        _firstEnemy.OnEndTurn += OnEnemyEndTurn.Invoke;
     }
     private void OnDisable()
     {
-        _firstEnemy.OnTakeHit -= _HPcontroller.OnHealthChange;
-        _firstEnemy.OnDeth -= _HPcontroller.Hide;
+        StopAllCoroutines();
     }
     private void Spawn(Enemy enemy, Transform pos)
     {
         if(enemy != null)
             _enemies.Add(Instantiate(enemy, pos));
     }
-    public void TakeHit(int amount)
+    public void TakeHitEnemy(int amount)
     {
+        StartCoroutine(WaitEndPlayerAttackAnimation(amount));
+    }
+    public void StartEnemyTurn()
+    {
+        StartCoroutine(WaitEndPlayerTurn());
+    }
+    public void EnemyDeth()
+    {
+        _HPcontroller.Hide();
+        StartCoroutine(WaitLevelExit());
+    }
+    private IEnumerator WaitEndPlayerAttackAnimation(int amount)
+    {
+        yield return new WaitForSeconds(1);
         _firstEnemy.TakeDamage(amount);
+    }
+    private IEnumerator WaitEndPlayerTurn()
+    {
+        yield return new WaitForSeconds(3);
+        _firstEnemy.StartTurn();
+    }
+    private IEnumerator WaitLevelExit()
+    {
+        yield return new WaitForSeconds(2);
+        _itemsSpawner.PickUpAllDrops();
+        _levelDataSettings.Complete();
+        OnEndLevel?.Invoke("MapMenu");
     }
 }

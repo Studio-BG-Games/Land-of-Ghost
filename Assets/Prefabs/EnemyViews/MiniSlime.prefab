@@ -134,7 +134,7 @@ MonoBehaviour:
   bonesRoot: {fileID: 0}
   unityBones: []
   boneHierarchy: 0
-  animationName: stan2
+  animationName: stan1
   _playTimes: 0
   _timeScale: 1
   _sortingMode: 0
@@ -169,7 +169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4000206594957667050}
   m_LocalRotation: {x: -0.032207966, y: -0.9994812, z: 0.0000000014078549, w: 0.00000004368871}
-  m_LocalPosition: {x: -0.119500324, y: 1.015, z: -0.002}
+  m_LocalPosition: {x: -0.111723006, y: 1.015, z: -0.002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 604916073465992275}
@@ -331,7 +331,7 @@ Transform:
   m_GameObject: {fileID: 7044021413829840250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children:
   - {fileID: 604916073465992275}
   - {fileID: 1310906509047450403}
@@ -352,9 +352,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _armature: {fileID: 6692154571123957526}
   _effectsConteiner: {fileID: 7045201270329854115}
-  _items: []
-  _maxHP: 40
-  _currentHP: 40
+  _items:
+  - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
+  _maxHP: 30
+  _currentHP: 30
+  _attackDamage: 1
+  _animationStand: stan1
+  _animationAttack: 
+  _animationTakeHit: stan2
+  _animationDeath: 
+  _moneyDrop: 1
+  _shadow: {fileID: 0}
 --- !u!1001 &636238678747560808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -417,10 +425,10 @@ PrefabInstance:
     - target: {fileID: 2264546735561194341, guid: 6a8715955fc81b545a521b72a9c3b88a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -3099951077275221391, guid: 31816737f72983b46952c75e70fbb6c1, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2264546735561194341, guid: 6a8715955fc81b545a521b72a9c3b88a, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7147477662947342296, guid: 6a8715955fc81b545a521b72a9c3b88a, type: 3}
       propertyPath: m_Name

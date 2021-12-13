@@ -333,8 +333,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 1\n\u041F\u0440\u0438\u0432\u0435\u0442,
-    \u041C\u0438\u0440!"
+  m_text: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 276bc0d5d0589c54badcce10ff77166b, type: 2}
   m_sharedMaterial: {fileID: -6886778610004056943, guid: 276bc0d5d0589c54badcce10ff77166b, type: 2}
@@ -1072,6 +1071,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8605b71603cd4a54dbad4ed6df902057, type: 2}
   - {fileID: 11400000, guid: 87ca1b25f9ab29b43850633ae6920d26, type: 2}
   - {fileID: 11400000, guid: 015e2c576cc70924ea809fe4632ac4f7, type: 2}
+  - {fileID: 11400000, guid: 2b39b90fa3d6b464a829d3e9e9fdc7f8, type: 2}
+  - {fileID: 11400000, guid: 6feaa0b3c176e6b4c86201cb49794f64, type: 2}
+  - {fileID: 11400000, guid: 5ff7536918d6ed54f87d27ece5b694ba, type: 2}
+  - {fileID: 11400000, guid: d34927e0eb9d6b047a207e6e80a021c9, type: 2}
+  - {fileID: 11400000, guid: 0c0400b226e4c3c48937a827a02d54c4, type: 2}
   _intervalY: 6.3
   _levelPrefab: {fileID: 260372953232100302, guid: 6d6fafdacd8fbf34299b0426ec100703, type: 3}
 --- !u!4 &1120336137
@@ -1480,7 +1484,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

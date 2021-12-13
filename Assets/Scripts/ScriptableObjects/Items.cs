@@ -8,13 +8,17 @@ public abstract class Items : ScriptableObject
     [SerializeField] private Sprite _icon;
     [SerializeField] private int _id;
     [SerializeField] private string _descroption;
+    [SerializeField] private int _moneyPrice;
+    [SerializeField] private Items _itemPrice;
 
     public string Name { get => _name; protected set => _name = value; }
     public Sprite Icon { get => _icon; protected set => _icon = value; }
     public int Id { get => _id; protected set => _id = value; }
     public string Description { get => _descroption; protected set => _descroption = value; }
+    public int MoneyPrice { get => _moneyPrice; protected set => _moneyPrice = value; }
+    public Items ItemPrice { get => _itemPrice; protected set => _itemPrice = value; }
     public virtual void Use()
     {
-        Debug.Log($"using Item {Name}");
+        
     }
 }

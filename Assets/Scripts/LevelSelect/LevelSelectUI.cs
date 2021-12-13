@@ -26,6 +26,9 @@ public class LevelSelectUI : MonoBehaviour
     }
     public void StartLevel()
     {
-        OnLevelChange?.Invoke("BattleLevel");
+        if(_levelDataSettings.LvlNumber == 4)
+            OnLevelChange?.Invoke("Trader");
+        else
+            OnLevelChange?.Invoke("BattleLevel");
     }
 }

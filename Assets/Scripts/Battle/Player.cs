@@ -14,12 +14,13 @@ public class Player : MonoBehaviour, IBattleble
     [SerializeField] private int _currentHP;
     [SerializeField] private Amulet _currentUsedInBatleAmulet;
     [SerializeField] private VoidChannelSO _OnUseAmulet;
+    private bool _myTurn;
     public Action OnDeth;
+    public Action OnEndTurn;
     public Action<int> OnDealDamage;
 
     public int CurrentHP => _currentHP;
     public List<Effect> _effects => throw new System.NotImplementedException();
-    public bool _myTurn => throw new System.NotImplementedException();
     public int MaxHP => _maxHP;
 
     public List<Effect> Effects => _effects;
@@ -39,8 +40,12 @@ public class Player : MonoBehaviour, IBattleble
 
         _HPcontroller.Initialize(_maxHP,_currentHP);
         _OnUseAmulet.OnVoid += UseAmulet;
+        StartTurn();
     }
-
+    public void StartTurn()
+    {
+        _myTurn = true;
+    }
     public void DealDamage()
     {
         StartCoroutine(WaitAnimationEnd());
@@ -48,6 +53,8 @@ public class Player : MonoBehaviour, IBattleble
     }
     public void UseAmulet()
     {
+        if ( !_myTurn )
+            return;
         var anim = _animations[4];
         if (_currentUsedInBatleAmulet.AnimationId != 0)
             anim = _animations[_currentUsedInBatleAmulet.AnimationId];
@@ -57,6 +64,8 @@ public class Player : MonoBehaviour, IBattleble
             TakeDamage(_currentUsedInBatleAmulet.DamageToPlayer);
         if (_currentUsedInBatleAmulet.DamageAmount > 0)
             DealDamage();
+        _myTurn = false;
+        OnEndTurn?.Invoke();
     }
     public void TakeDamage(int amount)
     {
@@ -76,6 +85,7 @@ public class Player : MonoBehaviour, IBattleble
         _HPcontroller.Hide();
         OnDeth?.Invoke();
     }
+    
     private IEnumerator WaitAnimationEnd()
     {
         while (_armature.animation.lastAnimationName == _animations[1])
