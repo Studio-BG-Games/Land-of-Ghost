@@ -12,24 +12,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6217fbb96581d77428b5f5116af7c2a9, type: 3}
   m_Name: InventorySO
   m_EditorClassIdentifier: 
-  _items:
-  - {fileID: 11400000, guid: 767ff0dc4c48b844fb4a0393a8c03879, type: 2}
-  - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
-  - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
-  - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
+  _allItems:
+  - {fileID: 11400000, guid: e7f27da62ee633f419d8e023bf67d45f, type: 2}
+  - {fileID: 11400000, guid: 75382b4461ab0e8438b4bda046c39fa2, type: 2}
+  - {fileID: 11400000, guid: 313e7051e33eb704eaa9f8f571bcf092, type: 2}
+  - {fileID: 11400000, guid: ead8ecafc42553e499524ddc4b580512, type: 2}
+  - {fileID: 11400000, guid: a352a11139ac3414d82c835a8cd2a8d1, type: 2}
+  - {fileID: 11400000, guid: 261c721f7760f58489423f900a6a973d, type: 2}
   - {fileID: 11400000, guid: 02f302e35bd412d4fa48a022f44d3d26, type: 2}
+  - {fileID: 11400000, guid: 9d9c86412510d314bafbad42be23d2fd, type: 2}
+  - {fileID: 11400000, guid: 8eb3cf1fb8234db49888a39c8071fdbd, type: 2}
+  - {fileID: 11400000, guid: 767ff0dc4c48b844fb4a0393a8c03879, type: 2}
+  - {fileID: 11400000, guid: f7955928e16ca004bab0d6768a18d821, type: 2}
+  - {fileID: 11400000, guid: 5bd5445f0894b684a9d64233cc1f9369, type: 2}
+  - {fileID: 11400000, guid: 0346dd530f1cb9b4f902216133693fde, type: 2}
+  - {fileID: 11400000, guid: c255addd83831fe4fa33b7ceb4970331, type: 2}
+  - {fileID: 11400000, guid: 04a7db479013ac64b8ba6b9cbb694552, type: 2}
+  - {fileID: 11400000, guid: 5bb12918ca436894e905f923963e10f5, type: 2}
+  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
+  - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
+  - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
+  _items:
+  - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
+  - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
+  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
+  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
+  - {fileID: 11400000, guid: c255addd83831fe4fa33b7ceb4970331, type: 2}
+  - {fileID: 11400000, guid: 0346dd530f1cb9b4f902216133693fde, type: 2}
+  - {fileID: 11400000, guid: 5bb12918ca436894e905f923963e10f5, type: 2}
+  - {fileID: 11400000, guid: 5bb12918ca436894e905f923963e10f5, type: 2}
+  - {fileID: 11400000, guid: 5bb12918ca436894e905f923963e10f5, type: 2}
   - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
   - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
-  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
-  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
-  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
+  - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
   - {fileID: 11400000, guid: 9d9c86412510d314bafbad42be23d2fd, type: 2}
   _amuletsInSlot:
-  - {fileID: 11400000, guid: f7955928e16ca004bab0d6768a18d821, type: 2}
   - {fileID: 11400000, guid: 313e7051e33eb704eaa9f8f571bcf092, type: 2}
-  - {fileID: 11400000, guid: 0346dd530f1cb9b4f902216133693fde, type: 2}
+  - {fileID: 11400000, guid: f7955928e16ca004bab0d6768a18d821, type: 2}
+  - {fileID: 0}
   _potionsInSlot:
   - {fileID: 0}
   - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
   - {fileID: 0}
-  _money: 10
+  _money: 13

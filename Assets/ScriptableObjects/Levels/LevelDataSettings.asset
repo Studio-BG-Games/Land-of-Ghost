@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be4314a2053c664c8ccda1edc55ab48, type: 3}
   m_Name: LevelDataSettings
   m_EditorClassIdentifier: 
-  _lvlNumber: 1
+  _lvlNumber: 9
   _description: 
   _conversationName: 
   _isComplete: 0
   _enemies:
-  - {fileID: 4406150334364566250, guid: 869b6991e92779c4e933c4e515537073, type: 3}
+  - {fileID: 4510725371601204926, guid: 92bc003b83422574d92ae55800b63f7a, type: 3}
+  _imageInBuble: {fileID: 0}

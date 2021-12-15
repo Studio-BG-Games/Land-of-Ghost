@@ -15,7 +15,7 @@ MonoBehaviour:
   _lvlNumber: 5
   _description: 
   _conversationName: Mashroom
-  _isComplete: 1
+  _isComplete: 0
   _enemies:
   - {fileID: 5464526499185763044, guid: 20bceaa026afdd447ad6c4b5c343deed, type: 3}
   _imageInBuble: {fileID: 21300000, guid: 01dfd2281366f9d45a047faa35713730, type: 3}

@@ -139,7 +139,7 @@ MonoBehaviour:
   _animationAttack: 
   _animationTakeHit: 
   _animationDeath: Deat
-  _moneyDrop: 0
+  _moneyDrop: 1
   _shadow: {fileID: 8521121775113034276}
 --- !u!61 &-2919911096892942255
 BoxCollider2D:

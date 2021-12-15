@@ -15,6 +15,6 @@ MonoBehaviour:
   _lvlNumber: 4
   _description: "\u0422\u043E\u0440\u0433\u0430\u0448"
   _conversationName: 
-  _isComplete: 1
+  _isComplete: 0
   _enemies: []
   _imageInBuble: {fileID: 21300000, guid: 117b3dc047b52ce42ae43531fd7f78cd, type: 3}

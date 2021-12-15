@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
     private Enemy _firstEnemy; 
     public Action<int> OnEnemyDealDamage;
     public Action OnEnemyEndTurn;
-    public UnityEvent<string> OnEndLevel;
+    public Action OnEnemyDeath;
     private void Start()
     {
         Spawn(_levelDataSettings.Enemies.ElementAt(0), _enemyPosition1);
@@ -35,6 +35,7 @@ public class EnemySpawner : MonoBehaviour
     private void OnDisable()
     {
         StopAllCoroutines();
+        OnEnemyDeath = null;
     }
     private void Spawn(Enemy enemy, Transform pos)
     {
@@ -69,6 +70,6 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(2);
         _itemsSpawner.PickUpAllDrops();
         _levelDataSettings.Complete();
-        OnEndLevel?.Invoke("MapMenu");
+        OnEnemyDeath?.Invoke();
     }
 }

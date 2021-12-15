@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class InventorySO : ScriptableObject
 {
+    [SerializeField] private List<Items> _allItems;
     [SerializeField] private List<Items> _items;
     [SerializeField] private Amulet[] _amuletsInSlot;
     [SerializeField] private Potion[] _potionsInSlot;
@@ -56,7 +57,7 @@ public class InventorySO : ScriptableObject
         var items = _items.Where(i => i.Id == itemId);
         var item = items.FirstOrDefault();
         _items.Remove(item);
-        if(item as Potion && items.Count() == 1 )
+        if (item as Potion && items.Count() == 1)
             for (int i = 0; i < _potionsInSlot.Length; i++)
                 if (_potionsInSlot[i] != null && _potionsInSlot[i].Id == itemId) _potionsInSlot[i] = null;
     }
@@ -66,11 +67,11 @@ public class InventorySO : ScriptableObject
             amulet = null;
         _amuletsInSlot[id] = amulet;
         RemoveItem(amulet);
-        if(amuletInSlot != null) AddItem(amuletInSlot);
+        if (amuletInSlot != null) AddItem(amuletInSlot);
     }
     public void PutPotionInSlot(int id, Potion potion, Potion potionInSlot)
     {
-        if (potion == potionInSlot || potion.Id == 0 )
+        if (potion == potionInSlot || potion.Id == 0)
             potion = null;
         _potionsInSlot[id] = potion;
     }
@@ -79,4 +80,5 @@ public class InventorySO : ScriptableObject
         _money += amount;
         OnMoneyChange?.Invoke();
     }
-} 
+
+}

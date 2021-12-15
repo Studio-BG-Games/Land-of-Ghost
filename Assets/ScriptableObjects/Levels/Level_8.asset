@@ -15,7 +15,7 @@ MonoBehaviour:
   _lvlNumber: 8
   _description: 
   _conversationName: 
-  _isComplete: 1
+  _isComplete: 0
   _enemies:
   - {fileID: 3887938439122297333, guid: 62dae847c1b456543a111acfc4ec42fb, type: 3}
   _imageInBuble: {fileID: 21300000, guid: ba0faac28a4ab2a4ca77d58b37cc9be4, type: 3}

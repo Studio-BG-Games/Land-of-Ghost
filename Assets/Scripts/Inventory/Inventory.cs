@@ -15,7 +15,6 @@ public class Inventory : MonoBehaviour
     {
         Refresh();
     }
-
     public void Refresh()
     {
         ClearSlots();
