@@ -17,5 +17,6 @@ MonoBehaviour:
   _conversationName: 
   _isComplete: 0
   _enemies:
-  - {fileID: 4510725371601204926, guid: 92bc003b83422574d92ae55800b63f7a, type: 3}
+  - {fileID: 5464526499185763044, guid: 20bceaa026afdd447ad6c4b5c343deed, type: 3}
+  - {fileID: 3887938439122297333, guid: 62dae847c1b456543a111acfc4ec42fb, type: 3}
   _imageInBuble: {fileID: 21300000, guid: 275fd36252ceb294f87f1faf71f65589, type: 3}

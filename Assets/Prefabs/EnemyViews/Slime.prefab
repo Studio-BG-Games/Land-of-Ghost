@@ -25,9 +25,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388881823068064393}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9601864, w: 0.27936012}
-  m_LocalPosition: {x: -0.2649822, y: 0.5118014, z: -0.003}
-  m_LocalScale: {x: 0.9999998, y: 1.0000001, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9582237, w: 0.2860199}
+  m_LocalPosition: {x: -0.2850993, y: 0.50610644, z: -0.003}
+  m_LocalScale: {x: 0.9999998, y: 1.0000002, z: 1}
   m_Children: []
   m_Father: {fileID: 4087084192570954880}
   m_RootOrder: 3
@@ -128,10 +128,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _armature: {fileID: 1032090623167264035}
   _effectsConteiner: {fileID: 3528870965801682640}
-  _items: []
-  _maxHP: 40
+  _itemsDrop:
+  - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
+  - {fileID: 11400000, guid: 04a7db479013ac64b8ba6b9cbb694552, type: 2}
+  - {fileID: 11400000, guid: c255addd83831fe4fa33b7ceb4970331, type: 2}
+  _itemsDropChance: 320000000a0000000a000000
+  _maxHP: 10
   _currentHP: 40
-  _attackDamage: 1
+  _attackDamage: 5
   _animationStand: 
   _animationAttack: 
   _animationTakeHit: 
@@ -163,9 +167,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3311131495633914121}
-  m_LocalRotation: {x: 0, y: 0, z: -0.753061, w: -0.65795076}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7576109, w: -0.65270644}
   m_LocalPosition: {x: 0.13508531, y: -0.939783, z: -0.002}
-  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_Children: []
   m_Father: {fileID: 4087084192570954880}
   m_RootOrder: 2

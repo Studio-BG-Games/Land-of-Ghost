@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ItemsSpawner: MonoBehaviour
 {
@@ -38,11 +39,13 @@ public class ItemsSpawner: MonoBehaviour
             enemy.OnSpawnDrop += SpawnItems;
     }
 
-    private void SpawnItems(List<Items> items,int money)
+    private void SpawnItems(Dictionary<Items,int> items,int money)
     {
         foreach (var item in items)
         {
-            SpawnItem(item);
+            var rnd = Random.Range(0, 100);
+            if ( item.Value > rnd )
+                SpawnItem(item.Key);
         }
         SpawnItem(money);
     }

@@ -2,6 +2,7 @@ using DragonBones;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,7 +10,9 @@ public class Enemy : MonoBehaviour, IBattleble
 {
     [SerializeField] private UnityArmatureComponent _armature;
     [SerializeField] private Effects _effectsConteiner;
-    [SerializeField] private List<Items> _items;
+    [SerializeField] private List<Items> _itemsDrop;
+    [Range(0,100)] 
+    [SerializeField] private List<int> _itemsDropChance;
     [SerializeField] private int _maxHP;
     [SerializeField] private int _currentHP;
     [SerializeField] private int _attackDamage;
@@ -19,9 +22,9 @@ public class Enemy : MonoBehaviour, IBattleble
     [SerializeField] private string _animationDeath;
     [SerializeField] private int _moneyDrop;
     [SerializeField] private SpriteRenderer _shadow;
-    private bool _myTurn;
     private bool _isAlive;
     private List<Effect> _effects;
+    private Dictionary<Items, int> _itemsDropMap = new Dictionary<Items, int>();
     private enum anim
     {
         stand,
@@ -36,15 +39,14 @@ public class Enemy : MonoBehaviour, IBattleble
         { anim.takehit , "demeg" },
         { anim.death , "deat" },
     };
-    public Action<List<Items>,int> OnSpawnDrop;
+    public int MaxHP => _maxHP;
+    public int CurrentHP => _currentHP;
+    public int MoneyDrop => _moneyDrop;
+    public Action<Dictionary<Items, int>, int> OnSpawnDrop;
     public Action<int> OnTakeHit;
     public Action<int> OnDealDamage;
     public Action OnDeth;
     public Action OnEndTurn;
-
-    public int MaxHP => _maxHP;
-    public int CurrentHP => _currentHP;
-    public int MoneyDrop => _moneyDrop;
 
 
     public List<Effect> Effects => throw new NotImplementedException();
@@ -61,6 +63,11 @@ public class Enemy : MonoBehaviour, IBattleble
             _animationMap[anim.takehit] = _animationTakeHit;
         if (_animationDeath != "")
             _animationMap[anim.death] = _animationDeath;
+
+        foreach (var item in _itemsDrop)
+        {
+            _itemsDropMap.Add(item, _itemsDropChance.ElementAt(_itemsDropMap.Count));
+        }
     }
     private void OnDisable()
     {
@@ -81,7 +88,7 @@ public class Enemy : MonoBehaviour, IBattleble
         _armature.animation.GotoAndPlayByProgress(_animationMap[anim.death], 0, 1);
         if(_shadow != null)_shadow.enabled = false;
         _isAlive = false;
-        OnSpawnDrop?.Invoke(_items,_moneyDrop);
+        OnSpawnDrop?.Invoke(_itemsDropMap,_moneyDrop);
         OnDeth?.Invoke();
     }
     public void TakeDamage(int amount)

@@ -16,5 +16,7 @@ MonoBehaviour:
   _description: "\u0422\u043E\u0440\u0433\u0430\u0448"
   _conversationName: 
   _isComplete: 0
-  _enemies: []
-  _imageInBuble: {fileID: 21300000, guid: 117b3dc047b52ce42ae43531fd7f78cd, type: 3}
+  _enemies:
+  - {fileID: 4406150334364566250, guid: 869b6991e92779c4e933c4e515537073, type: 3}
+  - {fileID: -2885037759124000068, guid: b419ba27c942d924495501253934c27f, type: 3}
+  _imageInBuble: {fileID: 21300000, guid: 414bde913cb71c64583de08879221d71, type: 3}

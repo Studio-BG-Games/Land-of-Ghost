@@ -1422,7 +1422,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _armature: {fileID: 925456749516640858}
   _effectsConteiner: {fileID: 8608640581876957085}
-  _items: []
+  _itemsDrop:
+  - {fileID: 11400000, guid: a352a11139ac3414d82c835a8cd2a8d1, type: 2}
+  - {fileID: 11400000, guid: 02f302e35bd412d4fa48a022f44d3d26, type: 2}
+  _itemsDropChance: 6400000050000000
   _maxHP: 50
   _currentHP: 50
   _attackDamage: 3

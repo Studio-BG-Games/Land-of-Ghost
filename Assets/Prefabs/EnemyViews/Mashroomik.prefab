@@ -116,11 +116,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _armature: {fileID: 6380655754313331948}
   _effectsConteiner: {fileID: 6421419109955219652}
-  _items:
+  _itemsDrop:
   - {fileID: 11400000, guid: 9d9c86412510d314bafbad42be23d2fd, type: 2}
-  _maxHP: 10
+  - {fileID: 11400000, guid: 767ff0dc4c48b844fb4a0393a8c03879, type: 2}
+  _itemsDropChance: 6400000032000000
+  _maxHP: 20
   _currentHP: 10
-  _attackDamage: 2
+  _attackDamage: 3
   _animationStand: 
   _animationAttack: 
   _animationTakeHit: 

@@ -7,8 +7,9 @@ public class TradeInventory : MonoBehaviour
 {
     [SerializeField] private InventorySO _inventorySO;
     [SerializeField] private Items[] _itemsShop;
-    [SerializeField] private AmuletView _amuletView;
-    [SerializeField] private PotionView _potionView;
+    [SerializeField] private GameObject _productPrefab;
+    [SerializeField] private Transform _productsConteiner;
+    private Items _itemCurrent;
     void Start()
     {
         Refresh();
@@ -16,12 +17,12 @@ public class TradeInventory : MonoBehaviour
 
     public void Refresh()
     {
-        ClearSlots();
+        CreateProducts();
 
     }
-    private void ClearSlots()
+    private void CreateProducts()
     {
-
+        var product = Instantiate(_productPrefab, _productsConteiner);
     }
 
 

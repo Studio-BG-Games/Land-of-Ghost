@@ -8,7 +8,9 @@ public class ScenesController : MonoBehaviour
     [SerializeField] private GameSaver _gameSaver;
     private void Awake()
     {
-        _gameSaver.Load(); 
+#if (!UNITY_EDITOR)
+        _gameSaver.Load();
+#endif
     } 
     public void Quit()
     {
@@ -17,7 +19,9 @@ public class ScenesController : MonoBehaviour
     }
     public void GoToScene(string sceneName)
     {
+#if (!UNITY_EDITOR)
         _gameSaver.Save();
+#endif
         SceneManager.LoadScene(sceneName);
     }
 }
