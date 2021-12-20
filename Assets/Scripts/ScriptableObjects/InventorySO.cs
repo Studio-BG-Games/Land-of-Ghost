@@ -80,5 +80,15 @@ public class InventorySO : ScriptableObject
         _money += amount;
         OnMoneyChange?.Invoke();
     }
+    public void RemoveMoney(int amount)
+    {
+        _money -= amount;
+        OnMoneyChange?.Invoke();
+    }
+    public bool HaveItem(Items item)
+    {
+        if (_items.Contains(item)) return true;
+        return false;
+    }
 
 }

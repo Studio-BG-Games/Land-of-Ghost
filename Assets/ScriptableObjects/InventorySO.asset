@@ -38,6 +38,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a352a11139ac3414d82c835a8cd2a8d1, type: 2}
   - {fileID: 11400000, guid: 9d9c86412510d314bafbad42be23d2fd, type: 2}
   - {fileID: 11400000, guid: 767ff0dc4c48b844fb4a0393a8c03879, type: 2}
+  - {fileID: 11400000, guid: c255addd83831fe4fa33b7ceb4970331, type: 2}
   _amuletsInSlot:
   - {fileID: 11400000, guid: f7955928e16ca004bab0d6768a18d821, type: 2}
   - {fileID: 0}
@@ -46,4 +47,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  _money: 29
+  _money: 1000

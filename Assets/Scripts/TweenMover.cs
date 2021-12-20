@@ -13,17 +13,19 @@ public class TweenMover : MonoBehaviour
     {
         OnTweenComplete = null;
     }
-    public void MoveY(float length)
+    public void MoveY(float length, bool isRelative = false)
     {
         if (_tween.IsActive())
             return;
         _tween = transform.DOMoveY(transform.position.y + length, _duration).OnComplete(()=>OnTweenComplete?.Invoke());
+        if (isRelative) _tween.SetRelative();
     }
-    public void MoveX(float length)
+    public void MoveX(float length,bool isRelative = false)
     {
         if (_tween.IsActive())
             return;
         _tween = transform.DOMoveX(transform.position.x + length, _duration).OnComplete(()=>OnTweenComplete?.Invoke());
+        if (isRelative) _tween.SetRelative();
     }
     public void Scale(float scale)
     {
