@@ -41,6 +41,7 @@ public class Player : MonoBehaviour, IBattleble
         _HPcontroller.Initialize(_maxHP,_currentHP);
         _OnUseAmulet.OnVoid += UseAmulet;
         StartTurn();
+        StartCoroutine(WaitAnimationEnd());
     }
     public void StartTurn()
     {
@@ -76,7 +77,6 @@ public class Player : MonoBehaviour, IBattleble
         {
             _HPcontroller.OnHealthChange(_currentHP);
             _armature.animation.GotoAndPlayByProgress(_animations[7], 0, 1);
-            StartCoroutine(WaitAnimationEnd());
         }
     }
     public void Death()
@@ -88,10 +88,10 @@ public class Player : MonoBehaviour, IBattleble
     
     private IEnumerator WaitAnimationEnd()
     {
-        while (_armature.animation.lastAnimationName == _animations[1])
+        while (true)
         {
             if (_armature.animation.isCompleted)
-                _armature.animation.GotoAndPlayByProgress(_animations[1]);
+                _armature.animation.GotoAndPlayByProgress(_animations[1],0,-1);
             yield return null;
         }
     }

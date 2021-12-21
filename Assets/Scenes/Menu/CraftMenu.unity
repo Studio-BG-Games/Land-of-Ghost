@@ -130,6 +130,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005079550}
     m_Modifications:
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625979370}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 899684388}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8003647296584539106, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
       propertyPath: m_Name
       value: UIDropSlot (2)
@@ -389,6 +441,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005079550}
     m_Modifications:
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625979370}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 899684388}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8003647296584539106, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
       propertyPath: m_Name
       value: UIDropSlot (8)
@@ -695,6 +799,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005079550}
     m_Modifications:
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625979370}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 899684388}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8003647296584539106, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
       propertyPath: m_Name
       value: UIDropSlot (9)
@@ -992,7 +1148,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1136,7 +1292,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1216,6 +1372,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 147124055}
     m_Modifications:
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625979370}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 899684388}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8003647296584539106, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
       propertyPath: m_Name
       value: UIDropSlot
@@ -1332,7 +1540,7 @@ MonoBehaviour:
   OnItemDrop:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1035264632}
+      - m_Target: {fileID: 1035264630}
         m_TargetAssemblyTypeName: UICraftResultSlot, Assembly-CSharp
         m_MethodName: SetItem2
         m_Mode: 0
@@ -1457,49 +1665,19 @@ MonoBehaviour:
   _uiCraftSlots:
   - {fileID: 1625979370}
   - {fileID: 899684388}
-  _amuletView: {fileID: 2046396218622490427, guid: 51273a6656cd2074598e23b1eb7df2ce, type: 3}
-  _potionView: {fileID: 2482407804659054143, guid: a1303a89ee0edcb4b8d0a103575b672b, type: 3}
-  _uiCraftSlot: {fileID: 1035264632}
+  _uiCraftSlot: {fileID: 1035264630}
   _voidChannelSO: {fileID: 11400000, guid: 2afc953147536744b981e8c381631784, type: 2}
---- !u!1 &1035264629 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8003647296584539106, guid: 0b3e733ed6591ad45be9a39fe8898a97, type: 3}
+--- !u!114 &1035264630 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9098075609227479780, guid: 0b3e733ed6591ad45be9a39fe8898a97, type: 3}
   m_PrefabInstance: {fileID: 1163938567}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1035264632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035264629}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97fbdfa07dfb5414da73da509141d2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _craftReciepts: {fileID: 11400000, guid: a53a35cfc1de32e4a9afb693f378711c, type: 2}
-  _allItems:
-  - {fileID: 11400000, guid: 1948229157b5c5245aef48b93c1b2484, type: 2}
-  - {fileID: 11400000, guid: 75382b4461ab0e8438b4bda046c39fa2, type: 2}
-  - {fileID: 11400000, guid: 313e7051e33eb704eaa9f8f571bcf092, type: 2}
-  - {fileID: 11400000, guid: ead8ecafc42553e499524ddc4b580512, type: 2}
-  - {fileID: 11400000, guid: a352a11139ac3414d82c835a8cd2a8d1, type: 2}
-  - {fileID: 11400000, guid: 261c721f7760f58489423f900a6a973d, type: 2}
-  - {fileID: 11400000, guid: 02f302e35bd412d4fa48a022f44d3d26, type: 2}
-  - {fileID: 11400000, guid: 9d9c86412510d314bafbad42be23d2fd, type: 2}
-  - {fileID: 11400000, guid: 8eb3cf1fb8234db49888a39c8071fdbd, type: 2}
-  - {fileID: 11400000, guid: 767ff0dc4c48b844fb4a0393a8c03879, type: 2}
-  - {fileID: 11400000, guid: f7955928e16ca004bab0d6768a18d821, type: 2}
-  - {fileID: 11400000, guid: 5bd5445f0894b684a9d64233cc1f9369, type: 2}
-  - {fileID: 11400000, guid: 0346dd530f1cb9b4f902216133693fde, type: 2}
-  - {fileID: 11400000, guid: c255addd83831fe4fa33b7ceb4970331, type: 2}
-  - {fileID: 11400000, guid: 04a7db479013ac64b8ba6b9cbb694552, type: 2}
-  - {fileID: 11400000, guid: e7f27da62ee633f419d8e023bf67d45f, type: 2}
-  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
-  - {fileID: 11400000, guid: 25ebd779fed60c041bc7cd916362975f, type: 2}
-  - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
-  - {fileID: 11400000, guid: 5bb12918ca436894e905f923963e10f5, type: 2}
 --- !u!1001 &1135370705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1507,6 +1685,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005079550}
     m_Modifications:
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625979370}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 899684388}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8003647296584539106, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
       propertyPath: m_Name
       value: UIDropSlot (4)
@@ -1786,6 +2016,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005079550}
     m_Modifications:
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625979370}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 899684388}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8003647296584539106, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
       propertyPath: m_Name
       value: UIDropSlot (6)
@@ -1888,6 +2170,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 147124055}
     m_Modifications:
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625979370}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 899684388}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8003647296584539106, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
       propertyPath: m_Name
       value: UIDropSlot (1)
@@ -2001,6 +2335,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005079550}
     m_Modifications:
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625979370}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 899684388}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8003647296584539106, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
       propertyPath: m_Name
       value: UIDropSlot (7)
@@ -2178,6 +2564,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005079550}
     m_Modifications:
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625979370}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 899684388}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8003647296584539106, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
       propertyPath: m_Name
       value: UIDropSlot
@@ -2305,7 +2743,7 @@ MonoBehaviour:
   OnItemDrop:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1035264632}
+      - m_Target: {fileID: 1035264630}
         m_TargetAssemblyTypeName: UICraftResultSlot, Assembly-CSharp
         m_MethodName: SetItem1
         m_Mode: 0
@@ -2335,6 +2773,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005079550}
     m_Modifications:
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625979370}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 899684388}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8003647296584539106, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
       propertyPath: m_Name
       value: UIDropSlot (10)
@@ -2437,6 +2927,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005079550}
     m_Modifications:
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625979370}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 899684388}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8003647296584539106, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
       propertyPath: m_Name
       value: UIDropSlot (11)
@@ -2539,6 +3081,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005079550}
     m_Modifications:
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625979370}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 899684388}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8003647296584539106, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
       propertyPath: m_Name
       value: UIDropSlot (1)
@@ -2641,6 +3235,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005079550}
     m_Modifications:
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625979370}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 899684388}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8003647296584539106, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
       propertyPath: m_Name
       value: UIDropSlot (5)
@@ -2944,6 +3590,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005079550}
     m_Modifications:
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1625979370}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 899684388}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetChildItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UICraftSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411996075265517909, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
+      propertyPath: OnSomeItemDrop.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8003647296584539106, guid: fb24f23790ecda74abfe9767e171bef6, type: 3}
       propertyPath: m_Name
       value: UIDropSlot (3)

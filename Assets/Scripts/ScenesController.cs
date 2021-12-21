@@ -14,7 +14,9 @@ public class ScenesController : MonoBehaviour
     } 
     public void Quit()
     {
+#if (!UNITY_EDITOR)
         _gameSaver.Save();
+#endif
         Application.Quit();
     }
     public void GoToScene(string sceneName)

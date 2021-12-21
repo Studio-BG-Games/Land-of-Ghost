@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _armature: {fileID: 8521121777006482429}
+  _shadow: {fileID: 8521121775113034276}
   _effectsConteiner: {fileID: 2256533849475973183}
   _itemsDrop:
   - {fileID: 11400000, guid: 5bd5445f0894b684a9d64233cc1f9369, type: 2}
@@ -136,14 +137,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
   _itemsDropChance: 320000000a00000014000000
   _maxHP: 20
-  _currentHP: 10
+  _currentHP: 20
   _attackDamage: 5
   _animationStand: 
   _animationAttack: 
   _animationTakeHit: 
   _animationDeath: Deat
   _moneyDrop: 1
-  _shadow: {fileID: 8521121775113034276}
+  _timeDurationAttack: 3
 --- !u!61 &-2919911096892942255
 BoxCollider2D:
   m_ObjectHideFlags: 0

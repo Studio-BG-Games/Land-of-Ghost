@@ -2,26 +2,30 @@
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class UICraftSlot : UISlot, IDropHandler
+public class UICraftSlot : UISlot
 {
     [SerializeField] private InventorySO _inventorySO;
     private int _itemId;
     private UIDragItem _dragItem;
     public UnityEvent<int> OnItemDrop;
 
-    public void OnDrop(PointerEventData eventData)
+    public void GetChildItem()
     {
-        var otherItemTransform = eventData.pointerDrag.transform;
-        _dragItem = otherItemTransform.GetComponent<UIDragItem>();
+        _dragItem = GetComponentInChildren<UIDragItem>();
+        if(_dragItem == null)
+        {
+            OnItemDrop?.Invoke(0);
+            return;
+        }            
         _dragItem.SetIngredient(true);
-        if (otherItemTransform.TryGetComponent<PotionView>(out var potionView))
+        if (_dragItem.TryGetComponent<PotionView>(out var potionView))
         {
             _itemId = potionView.Id;
             OnItemDrop?.Invoke(_itemId);
         }
         else
         {
-            if (otherItemTransform.TryGetComponent<AmuletView>(out var amuletView))
+            if (_dragItem.TryGetComponent<AmuletView>(out var amuletView))
             {
                 _itemId = amuletView.Id;
                 OnItemDrop?.Invoke(_itemId);

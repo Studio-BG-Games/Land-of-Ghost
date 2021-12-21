@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8003647296584539107}
   - component: {fileID: 8003647296584539110}
   - component: {fileID: 8003647296584539105}
+  - component: {fileID: 9098075609227479780}
   m_Layer: 5
   m_Name: UICraftResultSlot
   m_TagString: Untagged
@@ -75,3 +76,17 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9098075609227479780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003647296584539106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97fbdfa07dfb5414da73da509141d2cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _craftReciepts: {fileID: 11400000, guid: a53a35cfc1de32e4a9afb693f378711c, type: 2}
+  _inventorySO: {fileID: 11400000, guid: fc978926dc5526641b568828973059df, type: 2}

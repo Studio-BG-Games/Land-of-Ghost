@@ -22,7 +22,7 @@ public class LevelSelectUI : MonoBehaviour
     private void RefreshData(LevelSelect levelSelect)
     {
         _levelDataSettings.SetLevelOrigin(levelSelect.Level);
-        _levelsDescription.text = $"Уровень {levelSelect.Level.LvlNumber}\n{levelSelect.Level.Description}";
+        _levelsDescription.text = $"Рiвень {levelSelect.Level.LvlNumber}\n{levelSelect.Level.Description}";
     }
     public void StartLevel()
     {

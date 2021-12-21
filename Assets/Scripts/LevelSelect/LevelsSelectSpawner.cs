@@ -24,6 +24,7 @@ public class LevelsSelectSpawner : MonoBehaviour
     private void Start()
     {
         SpawnLevels();
+        _currentLvlNumber = 0;
         OnCangeCurrentLvl?.Invoke(_levelSelects[_currentLvlNumber]);
         MoveToCurrentLvl();
     }
@@ -36,14 +37,13 @@ public class LevelsSelectSpawner : MonoBehaviour
             _levelSelects[i] = Instantiate(_levelPrefab, transform, false);
             var isActive = (i == 0 || _levels[i - 1].IsComplete);
             _levelSelects[i].Initialize(_levels[i], i * _intervalY, isActive);
-            if (isActive)
-                _currentLvlNumber = i;
+             //if (isActive) _currentLvlNumber = i;
         }
     }
 
     public void MoveToCurrentLvl()
     {
-        _mover.MoveY(_intervalY * (_currentLvlNumber + 1) );
+        MoveToLvlAtNumber(_currentLvlNumber); 
         _levelSelects[_currentLvlNumber].SetCurrent(true);
     }
     public void MoveToNext()

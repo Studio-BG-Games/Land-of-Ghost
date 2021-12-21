@@ -16,4 +16,6 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: b43916761498b7f419239d38c2131fb2, type: 3}
   _id: 20
   _descroption: 
+  _moneyPrice: 10
+  _itemPrice: {fileID: 0}
   _view: {fileID: 2482407804659054143, guid: a1303a89ee0edcb4b8d0a103575b672b, type: 3}

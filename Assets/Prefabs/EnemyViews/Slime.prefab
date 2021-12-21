@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _armature: {fileID: 1032090623167264035}
+  _shadow: {fileID: 0}
   _effectsConteiner: {fileID: 3528870965801682640}
   _itemsDrop:
   - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
@@ -134,14 +135,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c255addd83831fe4fa33b7ceb4970331, type: 2}
   _itemsDropChance: 320000000a0000000a000000
   _maxHP: 10
-  _currentHP: 40
+  _currentHP: 10
   _attackDamage: 5
   _animationStand: 
   _animationAttack: 
   _animationTakeHit: 
   _animationDeath: 
   _moneyDrop: 2
-  _shadow: {fileID: 0}
+  _timeDurationAttack: 0.35
 --- !u!1 &3311131495633914121
 GameObject:
   m_ObjectHideFlags: 0

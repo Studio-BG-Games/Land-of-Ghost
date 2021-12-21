@@ -4,24 +4,24 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour, IBattleble
 {
     [SerializeField] private UnityArmatureComponent _armature;
+    [SerializeField] private SpriteRenderer _shadow;
     [SerializeField] private Effects _effectsConteiner;
     [SerializeField] private List<Items> _itemsDrop;
-    [Range(0,100)] 
+    [Range(0, 100)]
     [SerializeField] private List<int> _itemsDropChance;
     [SerializeField] private int _maxHP;
-    [SerializeField] private int _currentHP;
     [SerializeField] private int _attackDamage;
     [SerializeField] private string _animationStand;
     [SerializeField] private string _animationAttack;
     [SerializeField] private string _animationTakeHit;
     [SerializeField] private string _animationDeath;
     [SerializeField] private int _moneyDrop;
-    [SerializeField] private SpriteRenderer _shadow;
+    [SerializeField] private float _timeDurationAttack = 3f; 
+    private int _currentHP;
     private bool _isAlive;
     private List<Effect> _effects;
     private Dictionary<Items, int> _itemsDropMap = new Dictionary<Items, int>();
@@ -52,6 +52,13 @@ public class Enemy : MonoBehaviour, IBattleble
     public List<Effect> Effects => throw new NotImplementedException();
 
     public bool MyTurn => throw new NotImplementedException();
+
+    public float TimeDurationAttack { get => _timeDurationAttack; set => _timeDurationAttack = value; }
+    
+    private void Awake()
+    {
+        _currentHP = _maxHP;
+    }
     private void Start()
     {
         _isAlive = true;
@@ -68,6 +75,7 @@ public class Enemy : MonoBehaviour, IBattleble
         {
             _itemsDropMap.Add(item, _itemsDropChance.ElementAt(_itemsDropMap.Count));
         }
+        StartCoroutine(WaitAnimationEnd());
     }
     private void OnDisable()
     {
@@ -86,9 +94,9 @@ public class Enemy : MonoBehaviour, IBattleble
     {
         _effectsConteiner.gameObject.SetActive(false);
         _armature.animation.GotoAndPlayByProgress(_animationMap[anim.death], 0, 1);
-        if(_shadow != null)_shadow.enabled = false;
+        if (_shadow != null) _shadow.enabled = false;
         _isAlive = false;
-        OnSpawnDrop?.Invoke(_itemsDropMap,_moneyDrop);
+        OnSpawnDrop?.Invoke(_itemsDropMap, _moneyDrop);
         OnDeth?.Invoke();
     }
     public void TakeDamage(int amount)
@@ -106,7 +114,7 @@ public class Enemy : MonoBehaviour, IBattleble
     }
     public void StartTurn()
     {
-        if ( !_isAlive )
+        if (!_isAlive)
             return;
         DealDamage();
         OnEndTurn?.Invoke();
@@ -118,5 +126,14 @@ public class Enemy : MonoBehaviour, IBattleble
     public void ClearEffect(Effect effect)
     {
         throw new System.NotImplementedException();
+    }
+    private IEnumerator WaitAnimationEnd()
+    {
+        while (true)
+        {
+            if (_armature.animation.isCompleted && _armature.animation.lastAnimationName != _animationMap[anim.death])
+                _armature.animation.GotoAndPlayByProgress(_animationMap[anim.stand], 0, -1);
+            yield return null;
+        }
     }
 }

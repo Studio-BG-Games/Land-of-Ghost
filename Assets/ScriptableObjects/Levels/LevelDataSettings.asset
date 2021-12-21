@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be4314a2053c664c8ccda1edc55ab48, type: 3}
   m_Name: LevelDataSettings
   m_EditorClassIdentifier: 
-  _lvlNumber: 2
+  _lvlNumber: 5
   _description: 
-  _conversationName: 
+  _conversationName: Mashroom
   _isComplete: 0
   _enemies:
-  - {fileID: -2885037759124000068, guid: b419ba27c942d924495501253934c27f, type: 3}
+  - {fileID: 5464526499185763044, guid: 20bceaa026afdd447ad6c4b5c343deed, type: 3}
   _imageInBuble: {fileID: 0}

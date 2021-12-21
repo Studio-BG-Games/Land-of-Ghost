@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
-public abstract class ItemsView<T> : MonoBehaviour where T:Items
+using TMPro;
+public abstract class ItemsView: MonoBehaviour
 {
     [SerializeField] protected Image _image;
-    [SerializeField] protected T _item;
+    [SerializeField] protected Items _item;
+    [SerializeField] private TextMeshProUGUI _amountText;
     protected BoxCollider2D _collider;
     protected UIDragItem _dragItem;
     public int Id => _item.Id;
@@ -21,13 +22,25 @@ public abstract class ItemsView<T> : MonoBehaviour where T:Items
     {
         _item.Use();
     }
-    public virtual void Init(T item, int amount = 1 )
+    public  void Init(Items item)
+    {
+        BaseInint(item);
+    }
+    public  void Init(Items item, int amount)
+    {
+        BaseInint(item);
+        if(amount > 0 && _amountText != null)
+            _amountText.text = amount.ToString();
+    }
+
+    private void BaseInint(Items item)
     {
         _collider = GetComponent<BoxCollider2D>();
         _dragItem = GetComponent<UIDragItem>();
         _item = item;
         _image.sprite = _item.Icon;
     }
+
     public void EnableCollider(bool enable)
     {
         _collider.enabled = enable;

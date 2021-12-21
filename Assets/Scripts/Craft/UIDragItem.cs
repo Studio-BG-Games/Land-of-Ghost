@@ -19,7 +19,6 @@ public class UIDragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
         _canvasGroup = GetComponent<CanvasGroup>();
         _canvas = GetComponentInParent<Canvas>();
     }
-
     public void OnBeginDrag(PointerEventData eventData)
     {
         var slotTransform = _rectTransform.parent;
@@ -28,16 +27,15 @@ public class UIDragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
         CheckCrafted();
         CheckisIngredient();
     }
-
     private void CheckisIngredient()
     {
         if (!_isIngredient)
             return;
         var craftSlot = transform.parent.GetComponent<UICraftSlot>();
-        craftSlot.Zeroing();
+        if(craftSlot != null)
+            craftSlot.Zeroing();
         SetIngredient(false);
     }
-
     private void CheckCrafted()
     {
         if (!_isCrafted)
@@ -51,7 +49,6 @@ public class UIDragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
         OnCraftItem?.Invoke(newItem);
         SetCrafted(false);        
     }
-
     public void OnDrag(PointerEventData eventData)
     {
         _rectTransform.anchoredPosition += eventData.delta / _canvas.scaleFactor;

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +9,9 @@ public class InventoryCraft : MonoBehaviour
     [SerializeField] private InventorySO _inventorySO;
     [SerializeField] private UIDropSlot[] _uiSlots;
     [SerializeField] private UICraftSlot[] _uiCraftSlots;
-    [SerializeField] private AmuletView _amuletView;
-    [SerializeField] private PotionView _potionView;
     [SerializeField] private UICraftResultSlot _uiCraftSlot;
     [SerializeField] private VoidChannelSO _voidChannelSO;
-    void Start()
+    private void Start()
     {
         ClearSlots();
         Refresh();
@@ -24,14 +23,23 @@ public class InventoryCraft : MonoBehaviour
     {
         var amulets = _inventorySO.GetAmulets();
         var potions = _inventorySO.GetPotions();
+        var commons = _inventorySO.GetCommons();
         var i = 0;
-        for (i = 0; i < amulets.Count + potions.Count; i++)
+        for (i = 0; i < amulets.Count + potions.Count + commons.Count; i++)
         {
             if (i < amulets.Count)
-                InsertAmulet(_uiSlots[i], amulets[i]);
+                InsertItem(_uiSlots[i], amulets[i]);
+            else if (i < amulets.Count + potions.Count)
+            {
+                var index = i - amulets.Count;
+                var element = potions.ElementAt(index).Key;
+                InsertItem(_uiSlots[i], element,potions.ElementAt(index).Value);
+            }
             else
             {
-                InsertPotion(_uiSlots[i], potions.ElementAt(i - amulets.Count).Key, potions.ElementAt(i-amulets.Count).Value);
+                var index = i - amulets.Count - potions.Count;
+                var element = commons.ElementAt(index).Key;
+                InsertItem(_uiSlots[i], element,commons.ElementAt(index).Value);
             }
         }
     }
@@ -42,7 +50,6 @@ public class InventoryCraft : MonoBehaviour
         _uiCraftSlot.Clear();
         _uiCraftSlot.Zero(); 
     }
-
     private void ClearCraftSlots()
     {
         foreach (var item in _uiCraftSlots)
@@ -50,7 +57,6 @@ public class InventoryCraft : MonoBehaviour
             item.Clear();
         }
     }
-
     private void ClearInventory()
     {
         foreach (var item in _uiSlots)
@@ -59,17 +65,11 @@ public class InventoryCraft : MonoBehaviour
         }
     }
 
-    private void InsertAmulet(UIDropSlot uISlot, Amulet item)
+    private void InsertItem(UIDropSlot uISlot, Items item, int amount = 1)
     {
-        var amulet = Instantiate(_amuletView, uISlot.transform);
-        amulet.Init(item);
-        amulet.EnableDragItem(true);
-    }
-    private void InsertPotion(UIDropSlot uISlot, Potion item, int amount)
-    {
-        var potion = Instantiate(_potionView, uISlot.transform);
-        potion.Init(item, amount);
-        potion.EnableDragItem(true);
+        var newItem = Instantiate(item.View, uISlot.transform);
+        newItem.Init(item, amount);
+        newItem.EnableDragItem(true);
     }
 
 }

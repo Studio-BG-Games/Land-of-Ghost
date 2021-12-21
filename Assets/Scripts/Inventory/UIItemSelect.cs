@@ -56,24 +56,24 @@ public class UIItemSelect : MonoBehaviour
         else
         {
             _potionInSlot = _inventorySO.PotionsInSlot[cellId - 1];
-            _potions = _inventorySO.GetPotions();            
+            _potions = _inventorySO.GetPotions();
+            List<Potion> removePotions = new List<Potion>();
+            foreach (var potion in _potions)
+            {
+                if (_inventorySO.PotionsInSlot.Contains(potion.Key) && _potionInSlot != potion.Key)
+                    removePotions.Add(potion.Key);
+            }
+            foreach (var potion in removePotions)
+            {
+                _potions.Remove(potion);
+            }
             if (_potionInSlot != null)
             {
                 _buttonSelectText.text = _buttonSelectText2;
                 _currentNumber = _potions.Count - 1;
             }
             else
-            {
-                List<Potion> removePotions = new List<Potion>();
-                foreach (var potion in _potions)
-                {
-                    if (_inventorySO.PotionsInSlot.Contains(potion.Key))
-                        removePotions.Add(potion.Key);
-                }
-                foreach (var potion in removePotions)
-                {
-                    _potions.Remove(potion);
-                }
+            {                
                 if (_potions.Count == 0)
                     _potions.Add(_voidPotionSO, 0);
                 _currentNumber = 0;

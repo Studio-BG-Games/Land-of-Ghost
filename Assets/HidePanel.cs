@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HidePanel : MonoBehaviour
 {
-    [SerializeField] private GameObject _hidePanel;
+    public UnityEvent OnEnter;
     private void OnMouseDown()
     {
-        _hidePanel.SetActive(false);
+        OnEnter?.Invoke();
     }
 }

@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class InventorySO : ScriptableObject
 {
@@ -16,6 +13,7 @@ public class InventorySO : ScriptableObject
 
     public Amulet[] AmuletsInSlot { get => _amuletsInSlot; private set => _amuletsInSlot = value; }
     public Potion[] PotionsInSlot { get => _potionsInSlot; private set => _potionsInSlot = value; }
+    public List<Items> AllItems { get => _allItems; private set => _allItems = value; }
     public int Money { get => _money; private set => _money = value; }
     public Action OnMoneyChange;
     public List<Amulet> GetAmulets()
@@ -32,6 +30,17 @@ public class InventorySO : ScriptableObject
                 potionsCountMap.Add(potion, potions.Where(p => p == potion).Count());
         }
         return potionsCountMap;
+    }
+    public Dictionary<Common, int> GetCommons()
+    {
+        var commons = _items.Where(item => item as Common).Select(item => item as Common).ToList();
+        Dictionary<Common, int> commonsCountMap = new Dictionary<Common, int>();
+        foreach (var common in commons)
+        {
+            if (!commonsCountMap.ContainsKey(common))
+                commonsCountMap.Add(common, commons.Where(p => p == common).Count());
+        }
+        return commonsCountMap;
     }
     public Dictionary<Potion, int> GetPotionsNotInSlot()
     {

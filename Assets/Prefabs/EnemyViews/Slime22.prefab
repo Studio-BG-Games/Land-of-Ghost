@@ -1749,6 +1749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _armature: {fileID: 3737440557807522236}
+  _shadow: {fileID: 0}
   _effectsConteiner: {fileID: 271446693785796039}
   _itemsDrop:
   - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
@@ -1762,7 +1763,7 @@ MonoBehaviour:
   _animationTakeHit: 
   _animationDeath: 
   _moneyDrop: 3
-  _shadow: {fileID: 0}
+  _timeDurationAttack: 0.38
 --- !u!1 &8212631068949829231
 GameObject:
   m_ObjectHideFlags: 0

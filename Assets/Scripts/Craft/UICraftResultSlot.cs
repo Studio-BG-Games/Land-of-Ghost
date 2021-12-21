@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UICraftResultSlot : MonoBehaviour
+public class UICraftResultSlot : UISlot
 {
     [SerializeField] private CraftReciepts _craftReciepts;
-    [SerializeField] private Items[] _allItems;
+    [SerializeField] private InventorySO _inventorySO;
     private int _item1;
     private int _item2;
     public Items NewItem { get; private set; }
@@ -29,20 +29,14 @@ public class UICraftResultSlot : MonoBehaviour
         {
             if (pair.IsSupersetOf(reciept.Key))
             {
-                foreach (var item in _allItems)
+                var allItems = _inventorySO.AllItems;
+                foreach (var item in allItems)
                     if(reciept.Value == item.Id)
                     {
                         Instantiating(item);
                         return;
                     }
             }
-        }
-    }
-    public void Clear()
-    {
-        if (transform.childCount > 0)
-        {
-            Destroy(transform.GetChild(0).gameObject);
         }
     }
     public void Zero()

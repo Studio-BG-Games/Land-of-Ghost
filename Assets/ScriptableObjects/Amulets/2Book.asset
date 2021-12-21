@@ -19,7 +19,7 @@ MonoBehaviour:
     \u043C\u043E\u0436\u043B\u0438\u0432\u043E\u0441\u0442\u0438 50% \u0449\u043E
     \u0443\u0440\u043E\u043D \u0431\u0443\u0434\u0435 1, \u0430 \u043D\u0435 5"
   _moneyPrice: 100
-  _itemPrice: {fileID: 11400000, guid: c255addd83831fe4fa33b7ceb4970331, type: 2}
+  _itemPrice: {fileID: 0}
   _view: {fileID: 2046396218622490427, guid: 51273a6656cd2074598e23b1eb7df2ce, type: 3}
   _damageAmount: 4
   _damageToPlayer: 0

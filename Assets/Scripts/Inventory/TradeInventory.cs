@@ -40,7 +40,6 @@ public class TradeInventory : MonoBehaviour
         {
             var product = Instantiate(_productPrefab, _productsConteiner.transform);
             product.Init(_itemsShop[i]);
-
         }
     }
     public void BuyProduct()
@@ -53,7 +52,6 @@ public class TradeInventory : MonoBehaviour
     }
     public void NextProduct()
     {
-        Debug.Log($"{_itemsShop.Length} - {_itemCurrentId}");
         if (_itemsShop.Length <= _itemCurrentId + 1)
             return;
         _productsConteiner.MoveX(-_intervalX);
@@ -65,6 +63,5 @@ public class TradeInventory : MonoBehaviour
             return;
         _productsConteiner.MoveX(_intervalX);
         ChangeCurrent(_itemCurrentId - 1);
-        Debug.Log($"{_itemCurrentId}");
     }
 }

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class UIDropSlot : MonoBehaviour, IDropHandler
+public class UIDropSlot : UISlot, IDropHandler
 {
+    public UnityEvent OnSomeItemDrop;
     public void OnDrop(PointerEventData eventData)
     {
         var otherItemTransform = eventData.pointerDrag.transform;
@@ -17,12 +19,6 @@ public class UIDropSlot : MonoBehaviour, IDropHandler
         }            
         otherItemTransform.SetParent(transform);
         otherItemTransform.localPosition = Vector3.zero;
-    }
-    public void Clear()
-    {
-        if (transform.childCount > 0)
-        {
-            Destroy(transform.GetChild(0).gameObject);
-        }
+        OnSomeItemDrop?.Invoke();
     }
 }

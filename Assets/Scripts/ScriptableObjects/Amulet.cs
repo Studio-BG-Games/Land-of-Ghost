@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Amulet", menuName = "Items/new Amulet", order = 51)]
 public class Amulet : Items
 {
-    [SerializeField] private AmuletView _view;
     [SerializeField] private int _damageAmount;
     [SerializeField] private int _damageToPlayer;
     [SerializeField] private int _countUses = -1;
@@ -13,7 +12,6 @@ public class Amulet : Items
     [SerializeField] private Effect _effect;
     [SerializeField] private int _animationId;
 
-    public AmuletView View { get => _view; private set => _view = value; }
     public int DamageAmount { get => _damageAmount; set => _damageAmount = value; }
     public int DamageToPlayer { get => _damageToPlayer; set => _damageToPlayer = value; }
     public int CountUses { get => _countUses; set => _countUses = value; }

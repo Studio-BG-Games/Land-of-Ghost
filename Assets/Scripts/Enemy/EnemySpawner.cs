@@ -13,6 +13,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private EnemiesSpawnChannelSO _enemiesSpawnChannel;
     [SerializeField] private HealthController _HPcontroller;
     [SerializeField] private ItemsSpawner _itemsSpawner;
+    [SerializeField] private Dialog _dialog;
     private List<Enemy> _enemies = new List<Enemy>();
     private Enemy _firstEnemy; 
     public Action<int> OnEnemyDealDamage;
@@ -27,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
         _enemiesSpawnChannel.RaiseEvent(_enemies, _firstEnemy.MoneyDrop);
         _HPcontroller.Initialize(_firstEnemy.MaxHP, _firstEnemy.CurrentHP);
 
-        _firstEnemy.OnTakeHit += _HPcontroller.OnHealthChange;
+        _firstEnemy.OnTakeHit += OnEnemyTakeHit;
         _firstEnemy.OnDeth += EnemyDeth;
         _firstEnemy.OnDealDamage += OnEnemyDealDamage.Invoke;
         _firstEnemy.OnEndTurn += OnEnemyEndTurn.Invoke;
@@ -42,6 +43,11 @@ public class EnemySpawner : MonoBehaviour
         if(enemy != null)
             _enemies.Add(Instantiate(enemy, pos));
     }
+    private void OnEnemyTakeHit(int amount)
+    {
+        _HPcontroller.OnHealthChange(amount);
+        _dialog.TakeDmgDialog();
+    }
     public void TakeHitEnemy(int amount)
     {
         StartCoroutine(WaitEndPlayerAttackAnimation(amount));
@@ -53,6 +59,7 @@ public class EnemySpawner : MonoBehaviour
     public void EnemyDeth()
     {
         _HPcontroller.Hide();
+        _dialog.DeathDialog();
         StartCoroutine(WaitLevelExit());
     }
     private IEnumerator WaitEndPlayerAttackAnimation(int amount)
@@ -62,7 +69,7 @@ public class EnemySpawner : MonoBehaviour
     }
     private IEnumerator WaitEndPlayerTurn()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(_firstEnemy.TimeDurationAttack);
         _firstEnemy.StartTurn();
     }
     private IEnumerator WaitLevelExit()
