@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be4314a2053c664c8ccda1edc55ab48, type: 3}
   m_Name: LevelDataSettings
   m_EditorClassIdentifier: 
-  _lvlNumber: 5
+  _lvlNumber: 1
   _description: 
-  _conversationName: Mashroom
-  _isComplete: 0
+  _conversationName: EntSlime
+  _isComplete: 1
   _enemies:
-  - {fileID: 5464526499185763044, guid: 20bceaa026afdd447ad6c4b5c343deed, type: 3}
+  - {fileID: 4406150334364566250, guid: 869b6991e92779c4e933c4e515537073, type: 3}
   _imageInBuble: {fileID: 0}

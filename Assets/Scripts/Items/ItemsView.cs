@@ -4,13 +4,16 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
-public abstract class ItemsView: MonoBehaviour
+using UnityEngine.Events;
+
+public class ItemsView: MonoBehaviour
 {
     [SerializeField] protected Image _image;
     [SerializeField] protected Items _item;
     [SerializeField] private TextMeshProUGUI _amountText;
     protected BoxCollider2D _collider;
     protected UIDragItem _dragItem;
+    public UnityEvent<string> OnItemClick;
     public int Id => _item.Id;
     private void Start()
     {
@@ -20,7 +23,7 @@ public abstract class ItemsView: MonoBehaviour
     }
     private void OnMouseDown()
     {
-        _item.Use();
+        MouseDown();
     }
     public  void Init(Items item)
     {
@@ -32,7 +35,11 @@ public abstract class ItemsView: MonoBehaviour
         if(amount > 0 && _amountText != null)
             _amountText.text = amount.ToString();
     }
-
+    protected void MouseDown()
+    {
+        Debug.Log(_item.Name);
+        OnItemClick?.Invoke(_item.Name);
+    }
     private void BaseInint(Items item)
     {
         _collider = GetComponent<BoxCollider2D>();

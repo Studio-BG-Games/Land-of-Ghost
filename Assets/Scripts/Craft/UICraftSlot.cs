@@ -18,18 +18,10 @@ public class UICraftSlot : UISlot
             return;
         }            
         _dragItem.SetIngredient(true);
-        if (_dragItem.TryGetComponent<PotionView>(out var potionView))
+        if (_dragItem.TryGetComponent<ItemsView>(out var view))
         {
-            _itemId = potionView.Id;
+            _itemId = view.Id;
             OnItemDrop?.Invoke(_itemId);
-        }
-        else
-        {
-            if (_dragItem.TryGetComponent<AmuletView>(out var amuletView))
-            {
-                _itemId = amuletView.Id;
-                OnItemDrop?.Invoke(_itemId);
-            }
         }
     }
     public void Craft()

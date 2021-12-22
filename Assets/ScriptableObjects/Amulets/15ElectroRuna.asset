@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16f663faf10e12418cddc1426a84a52, type: 3}
   m_Name: 15ElectroRuna
   m_EditorClassIdentifier: 
-  _name: ElectroRuna
+  _name: 15ElectroRuna
   _icon: {fileID: 21300000, guid: d091c16972ce94e4e9067f509a289deb, type: 3}
   _id: 15
   _descroption: "\u0443\u043B\u0443\u043A\u0442\u0440\u0438\u0447\u043D\u0438\u0439

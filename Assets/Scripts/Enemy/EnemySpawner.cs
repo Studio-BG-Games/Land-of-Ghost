@@ -16,6 +16,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Dialog _dialog;
     private List<Enemy> _enemies = new List<Enemy>();
     private Enemy _firstEnemy; 
+    private Enemy _secondEnemy;
+    private int _maxHP;
+    private int _currentHP;
     public Action<int> OnEnemyDealDamage;
     public Action OnEnemyEndTurn;
     public Action OnEnemyDeath;
@@ -25,8 +28,19 @@ public class EnemySpawner : MonoBehaviour
         if(_levelDataSettings.Enemies.Count > 1)
             Spawn(_levelDataSettings.Enemies.ElementAt(1), _enemyPosition2);
         _firstEnemy = _enemies.ElementAt(0);
-        _enemiesSpawnChannel.RaiseEvent(_enemies, _firstEnemy.MoneyDrop);
-        _HPcontroller.Initialize(_firstEnemy.MaxHP, _firstEnemy.CurrentHP);
+        if(_enemies.Count == 2)_secondEnemy = _enemies.ElementAt(1);
+        _enemiesSpawnChannel.RaiseEvent(_enemies);
+        _maxHP = _firstEnemy.MaxHP;
+        _currentHP = _firstEnemy.CurrentHP;
+        if (_secondEnemy != null)
+        {
+            _secondEnemy.OnTakeHit += OnEnemyTakeHit;
+            _secondEnemy.OnDeth += EnemyDeth;
+            _secondEnemy.OnDealDamage += OnEnemyDealDamage.Invoke;
+            _maxHP += _secondEnemy.MaxHP;
+            _currentHP += _secondEnemy.CurrentHP;
+        }
+        _HPcontroller.Initialize(_maxHP, _currentHP);
 
         _firstEnemy.OnTakeHit += OnEnemyTakeHit;
         _firstEnemy.OnDeth += EnemyDeth;
@@ -43,9 +57,13 @@ public class EnemySpawner : MonoBehaviour
         if(enemy != null)
             _enemies.Add(Instantiate(enemy, pos));
     }
-    private void OnEnemyTakeHit(int amount)
+    private void OnEnemyTakeHit()
     {
-        _HPcontroller.OnHealthChange(amount);
+        if (_secondEnemy != null)
+            _currentHP = _secondEnemy.CurrentHP + _firstEnemy.CurrentHP;
+        else
+            _currentHP = _firstEnemy.CurrentHP;
+        _HPcontroller.OnHealthChange(_currentHP);
         _dialog.TakeDmgDialog();
     }
     public void TakeHitEnemy(int amount)
@@ -54,23 +72,36 @@ public class EnemySpawner : MonoBehaviour
     }
     public void StartEnemyTurn()
     {
-        StartCoroutine(WaitEndPlayerTurn());
+        StartCoroutine(WaitEndPlayerTurn1());
+        if(_secondEnemy != null)
+            StartCoroutine(WaitEndPlayerTurn2());
     }
     public void EnemyDeth()
     {
-        _HPcontroller.Hide();
+        if (_firstEnemy.CurrentHP > 0)
+            return;
+
         _dialog.DeathDialog();
+        _HPcontroller.Hide();
         StartCoroutine(WaitLevelExit());
     }
     private IEnumerator WaitEndPlayerAttackAnimation(int amount)
     {
         yield return new WaitForSeconds(1);
-        _firstEnemy.TakeDamage(amount);
+        if (_secondEnemy != null && _secondEnemy.CurrentHP > 0)
+            _secondEnemy.TakeDamage(amount);
+        else
+            _firstEnemy.TakeDamage(amount);
     }
-    private IEnumerator WaitEndPlayerTurn()
+    private IEnumerator WaitEndPlayerTurn1()
     {
-        yield return new WaitForSeconds(_firstEnemy.TimeDurationAttack);
+        yield return new WaitForSeconds(_firstEnemy.TimeDurationAttack + 0.5f);
         _firstEnemy.StartTurn();
+    }
+    private IEnumerator WaitEndPlayerTurn2()
+    {
+        yield return new WaitForSeconds(_secondEnemy.TimeDurationAttack);
+        _secondEnemy.StartTurn();
     }
     private IEnumerator WaitLevelExit()
     {

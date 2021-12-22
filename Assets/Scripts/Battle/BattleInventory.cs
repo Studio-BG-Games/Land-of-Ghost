@@ -40,12 +40,15 @@ public class BattleInventory : MonoBehaviour
         }
         RefreshMoneyInfo();
     }
-
+    public void RemoveItem(int id)
+    {
+        _inventorySO.RemoveItem(id); 
+        Refresh();
+    }
     private void RefreshMoneyInfo()
     {
         _moneyText.text = _inventorySO.Money.ToString();
     }
-
     private void ClearSlots()
     {
         foreach (var item in _itemSlotPotions)

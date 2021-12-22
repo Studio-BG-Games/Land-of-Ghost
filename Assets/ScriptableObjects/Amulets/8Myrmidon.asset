@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16f663faf10e12418cddc1426a84a52, type: 3}
   m_Name: 8Myrmidon
   m_EditorClassIdentifier: 
-  _name: Myrmidon
+  _name: 8Myrmidon
   _icon: {fileID: 21300000, guid: 11a7487fafe427b4fb9e653a3573eea0, type: 3}
   _id: 8
   _descroption: "\u043F\u043E\u0441i\u043F\u0430\u043A\u0430"

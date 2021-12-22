@@ -22,11 +22,12 @@ public class LevelSelectUI : MonoBehaviour
     private void RefreshData(LevelSelect levelSelect)
     {
         _levelDataSettings.SetLevelOrigin(levelSelect.Level);
-        _levelsDescription.text = $"Рiвень {levelSelect.Level.LvlNumber}\n{levelSelect.Level.Description}";
+        if (_levelDataSettings.LvlNumber != 0)
+            _levelsDescription.text = $"Рiвень {levelSelect.Level.LvlNumber}\n{levelSelect.Level.Description}";
     }
     public void StartLevel()
     {
-        if(_levelDataSettings.LvlNumber == 4)
+        if(_levelDataSettings.LvlNumber == 0)
             OnLevelChange?.Invoke("Trader");
         else
             OnLevelChange?.Invoke("BattleLevel");

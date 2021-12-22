@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f5e812c687784489ad0742242c0fd2, type: 3}
+  m_Name: 24BottleWithPurple
+  m_EditorClassIdentifier: 
+  _name: 24BottleWithPurple
+  _icon: {fileID: 21300000, guid: b60f621de1936144aac1effbd1eab48d, type: 3}
+  _id: 24
+  _descroption: 
+  _moneyPrice: 10
+  _itemPrice: {fileID: 0}
+  _view: {fileID: 2482407804659054143, guid: a1303a89ee0edcb4b8d0a103575b672b, type: 3}
+  _damageBoostPercent: 0
+  _damageBoostTurnsCount: 0
+  _defenceBoostPercent: 50
+  _defenceBoostTurnsCount: 0
+  _healAmount: 0

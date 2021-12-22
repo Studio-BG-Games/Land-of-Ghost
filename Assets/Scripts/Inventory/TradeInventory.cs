@@ -14,6 +14,7 @@ public class TradeInventory : MonoBehaviour
     [SerializeField] private float _intervalX;
     private Items _itemCurrent;
     private int _itemCurrentId;
+    private int _itemsCount;
     void Start()
     {
         _inventorySO.OnMoneyChange += DisplayMoney;
@@ -21,6 +22,7 @@ public class TradeInventory : MonoBehaviour
     }
     public void Refresh()
     {
+        Clear();
         CreateProducts();
         ChangeCurrent(0);
         DisplayMoney();
@@ -38,21 +40,38 @@ public class TradeInventory : MonoBehaviour
     {
         for (int i = 0; i < _itemsShop.Length; i++)
         {
-            var product = Instantiate(_productPrefab, _productsConteiner.transform);
-            product.Init(_itemsShop[i]);
+            if (!_inventorySO.AmuletsInSlot.Contains(_itemsShop[i]) && !_inventorySO.GetAmulets().Contains(_itemsShop[i]))
+            {
+                var product = Instantiate(_productPrefab, _productsConteiner.transform);
+                product.Init(_itemsShop[i]);
+                _itemsCount++;
+            }
         }
     }
+
+    private void Clear()
+    {
+        _productsConteiner.transform.localPosition = new Vector3(0, 0);
+        for (var i = _productsConteiner.transform.childCount; i > 0; i--)
+        {
+            Destroy(_productsConteiner.transform.GetChild(i - 1).gameObject);
+        }
+    }
+
     public void BuyProduct()
     {
-        if (_inventorySO.Money < _itemCurrent.MoneyPrice || !_inventorySO.HaveItem(_itemCurrent.ItemPrice))
+        if (_inventorySO.Money < _itemCurrent.MoneyPrice)
+            return;
+        if (_itemCurrent.ItemPrice != null && !_inventorySO.HaveItem(_itemCurrent.ItemPrice))
             return;
         _inventorySO.RemoveMoney(_itemCurrent.MoneyPrice);
-        _inventorySO.RemoveItem(_itemCurrent.ItemPrice);
+        if(_itemCurrent.ItemPrice != null) _inventorySO.RemoveItem(_itemCurrent.ItemPrice);
         _inventorySO.AddItem(_itemCurrent);
+        Refresh();
     }
     public void NextProduct()
     {
-        if (_itemsShop.Length <= _itemCurrentId + 1)
+        if (_itemsCount <= _itemCurrentId + 1)
             return;
         _productsConteiner.MoveX(-_intervalX);
         ChangeCurrent(_itemCurrentId + 1);

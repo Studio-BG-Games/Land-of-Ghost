@@ -25,20 +25,25 @@ public class ItemsSpawner: MonoBehaviour
         var drop = Instantiate(dropItem, transform);
         drop.Init(item);
         _drops.Add(drop);
+        RandomLocation(drop.transform);
+    }
+    private void RandomLocation(Transform transform)
+    {
+        transform.localPosition += new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
     }
     public void SpawnItem(int money)
     {
         var drop = Instantiate(dropItem, transform);
         drop.Init(money);
         _drops.Add(drop);
+        RandomLocation(drop.transform);
     }
-    public void OnEnemySpawn(List<Enemy> enemies, int money)
+    public void OnEnemySpawn(List<Enemy> enemies)
     {
         _enemies = enemies;
         foreach (var enemy in enemies)
             enemy.OnSpawnDrop += SpawnItems;
     }
-
     private void SpawnItems(Dictionary<Items,int> items,int money)
     {
         foreach (var item in items)

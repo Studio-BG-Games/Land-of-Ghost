@@ -31,5 +31,9 @@ public class TweenMover : MonoBehaviour
     {
         _tween = transform.DOScale(scale, _duration);
     }
+    public void ScaleX(float scale)
+    {
+        _tween = transform.DOScaleX(scale, _duration);
+    }
     
 }

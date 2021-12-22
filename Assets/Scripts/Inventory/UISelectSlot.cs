@@ -16,15 +16,15 @@ public class UISelectSlot : UISlot
     public void SetItem(AmuletView amuletView, Amulet amulet, bool enableCollider)
     {
         _item = amulet;
-        var amuletInstance = Instantiate(amuletView, transform);
-        amuletInstance.Init(amulet);
-        amuletInstance.EnableCollider(enableCollider);
+        var instance = Instantiate(amuletView, transform);
+        instance.Init(amulet);
+        instance.EnableCollider(enableCollider);
     }
     public void SetItem(PotionView potionView, Potion potion, int amount, bool enableCollider)
     {
         _item = potion;
-        var amuletInstance = Instantiate(potionView, transform);
-        amuletInstance.Init(potion, amount);
-        amuletInstance.EnableCollider(enableCollider);
+        var instance = Instantiate(potionView, transform);
+        instance.Init(potion, amount);
+        instance.EnableCollider(enableCollider);
     }
 }

@@ -132,12 +132,11 @@ MonoBehaviour:
   _shadow: {fileID: 8521121775113034276}
   _effectsConteiner: {fileID: 2256533849475973183}
   _itemsDrop:
-  - {fileID: 11400000, guid: 5bd5445f0894b684a9d64233cc1f9369, type: 2}
-  - {fileID: 11400000, guid: a352a11139ac3414d82c835a8cd2a8d1, type: 2}
+  - {fileID: 11400000, guid: 943abb72a05e5fd45b33dd9aa7ff212d, type: 2}
+  - {fileID: 11400000, guid: b82c8792760c2604e81ebeaa012e2c3d, type: 2}
   - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
   _itemsDropChance: 320000000a00000014000000
   _maxHP: 20
-  _currentHP: 20
   _attackDamage: 5
   _animationStand: 
   _animationAttack: 

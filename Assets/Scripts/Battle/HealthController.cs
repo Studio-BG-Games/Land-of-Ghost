@@ -8,6 +8,7 @@ public class HealthController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _healthText;
     [SerializeField] private Image _healthBar;
+    [SerializeField] private TweenMover _tweenMover;
     private int _maxHP;
     public void Initialize(int maxHP, int currentHP)
     {
@@ -17,7 +18,7 @@ public class HealthController : MonoBehaviour
     }
     public void OnHealthChange(int currentHP)
     {
-        _healthBar.rectTransform.localScale = new Vector3((float)currentHP / (float)_maxHP, 1);
+        _tweenMover.ScaleX((float)currentHP / (float)_maxHP);
         _healthText.text = $"’œ {currentHP}/{_maxHP}";
     }
     public void Hide()

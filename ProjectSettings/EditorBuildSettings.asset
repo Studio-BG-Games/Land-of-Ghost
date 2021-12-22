@@ -15,11 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/CraftMenu.unity
     guid: b62be6f6dc3d6114eb2fbf0a2bdc087d
   - enabled: 1
-    path: Assets/Scenes/Menu/InventoryMenu.unity
-    guid: 0971446e4632daa48b2a3a82af24dd30
-  - enabled: 1
     path: Assets/Scenes/Menu/MapMenu.unity
     guid: 41b42cd5b8622ff4e9a3670dbd497375
+  - enabled: 1
+    path: Assets/Scenes/Menu/InventoryMenu.unity
+    guid: 0971446e4632daa48b2a3a82af24dd30
   - enabled: 1
     path: Assets/Scenes/Levels/BattleLevel.unity
     guid: f0eb1851229c7524594257e7ba0cd984
@@ -34,8 +34,5 @@ EditorBuildSettings:
     guid: 42d68f57c1770e84abdb3199afbab602
   - enabled: 1
     path: Assets/Scenes/Levels/TraderZapitat.unity
-    guid: 58af72e965fbf80479a34037657c3b68
-  - enabled: 1
-    path: Assets/Scenes/Levels/TraderQuest.unity
-    guid: dc2aff6c6f1875a49a900289a940e8ec
+    guid: 85d64bca60d639b4aaf76d934b58dcea
   m_configObjects: {}

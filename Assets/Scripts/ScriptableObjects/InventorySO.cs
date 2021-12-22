@@ -29,6 +29,7 @@ public class InventorySO : ScriptableObject
             if (!potionsCountMap.ContainsKey(potion))
                 potionsCountMap.Add(potion, potions.Where(p => p == potion).Count());
         }
+        Debug.Log(potionsCountMap.Count);
         return potionsCountMap;
     }
     public Dictionary<Common, int> GetCommons()
@@ -59,14 +60,18 @@ public class InventorySO : ScriptableObject
     }
     public void RemoveItem(Items item)
     {
+        var items = _items.Where(i => i == item);
         _items.Remove(item);
+        if (item as Potion && items.Count() == 0)
+            for (int i = 0; i < _potionsInSlot.Length; i++)
+                if (_potionsInSlot[i] != null && _potionsInSlot[i] == item) _potionsInSlot[i] = null;
     }
     public void RemoveItem(int itemId)
     {
         var items = _items.Where(i => i.Id == itemId);
         var item = items.FirstOrDefault();
         _items.Remove(item);
-        if (item as Potion && items.Count() == 1)
+        if (item as Potion && items.Count() == 0)
             for (int i = 0; i < _potionsInSlot.Length; i++)
                 if (_potionsInSlot[i] != null && _potionsInSlot[i].Id == itemId) _potionsInSlot[i] = null;
     }

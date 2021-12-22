@@ -8,7 +8,7 @@ public class GameSaver : ScriptableObject
 {
     [SerializeField] private InventorySO _inventorySO;
     [SerializeField] private List<LevelData> _levels;
-    [SerializeField] private string _mainFolder = "/game_save";
+    [SerializeField] private string _mainFolder = "/game_save_1";
     private bool IsDirectoryExist(string path)
     {
         return Directory.Exists(Application.persistentDataPath + path);

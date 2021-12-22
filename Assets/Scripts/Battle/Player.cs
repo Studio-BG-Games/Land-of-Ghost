@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class Player : MonoBehaviour, IBattleble
 {
@@ -13,8 +12,15 @@ public class Player : MonoBehaviour, IBattleble
     [SerializeField] private int _maxHP;
     [SerializeField] private int _currentHP;
     [SerializeField] private Amulet _currentUsedInBatleAmulet;
+    [SerializeField] private Potion _currentUsedInBatlePotion;
     [SerializeField] private VoidChannelSO _OnUseAmulet;
+    [SerializeField] private VoidChannelSO _OnUsePotion;
+    private int _damageBoostPercent;
+    private int _damageBoostTurnsCount;
+    private int _defenceBoostPercent;
+    private int _defenceBoostTurnsCount;
     private bool _myTurn;
+    public Action<int> OnUsePotion;
     public Action OnDeth;
     public Action OnEndTurn;
     public Action<int> OnDealDamage;
@@ -27,21 +33,35 @@ public class Player : MonoBehaviour, IBattleble
 
     public bool MyTurn => _myTurn;
 
-    private Dictionary<int, string> _animations = new Dictionary<int, string>(7);
+    private Dictionary<int, string> _animations;
     private void Start()
     {
+        _animations = new Dictionary<int, string>();
         _animations.Add(1, "stan"); // idle
-        _animations.Add(2, "stan0");
-        _animations.Add(3, "atack"); //книга
+        _animations.Add(2, "stan1");
+        _animations.Add(3, "atackknigka"); //книга
         _animations.Add(4, "atack0");//руками
         _animations.Add(5, "atack1");//стандартная
         _animations.Add(6, "atack4");//камень
         _animations.Add(7, "demeg"); // take dmg
+        _animations.Add(8, "deat"); // death
+        _animations.Add(9, "deat2"); 
+        _animations.Add(10, "deat3"); 
+        _animations.Add(11, "upstan"); 
+        _animations.Add(12, "deatStan"); 
+        _animations.Add(13, "use");//potions
+        _animations.Add(14, "atackknigka2"); //книга
 
         _HPcontroller.Initialize(_maxHP,_currentHP);
         _OnUseAmulet.OnVoid += UseAmulet;
+        _OnUsePotion.OnVoid += UsePotion;
         StartTurn();
         StartCoroutine(WaitAnimationEnd());
+
+    }
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
     }
     public void StartTurn()
     {
@@ -49,11 +69,40 @@ public class Player : MonoBehaviour, IBattleble
     }
     public void DealDamage()
     {
-        StartCoroutine(WaitAnimationEnd());
-        OnDealDamage?.Invoke(_currentUsedInBatleAmulet.DamageAmount);
+        var damage = _currentUsedInBatleAmulet.DamageAmount;
+        if (_damageBoostTurnsCount > 0)
+        {
+            damage += damage * _damageBoostPercent / 100;
+            _damageBoostTurnsCount--;
+        }
+        OnDealDamage?.Invoke(damage);
     }
+    public void UsePotion()
+    {
+        if (!_myTurn)
+            return;
+        var anim = _animations[13];
+        _armature.animation.GotoAndPlayByProgress(anim, 0, 1);
+        _damageBoostPercent = _currentUsedInBatlePotion.DamageBoostPercent;
+        _damageBoostTurnsCount = _currentUsedInBatlePotion.DamageBoostTurnsCount;
+        _defenceBoostPercent = _currentUsedInBatlePotion.DefenceBoostPercent;
+        _defenceBoostTurnsCount = _currentUsedInBatlePotion.DefenceBoostTurnsCount;
+        Heal();
+        OnUsePotion?.Invoke(_currentUsedInBatlePotion.Id);
+    }
+
+    private void Heal()
+    {
+        if (_currentHP + _currentUsedInBatlePotion.HealAmount > _maxHP)
+            _currentHP = _maxHP;
+        else
+            _currentHP += _currentUsedInBatlePotion.HealAmount;
+        _HPcontroller.OnHealthChange(_currentHP);
+    }
+
     public void UseAmulet()
     {
+        Debug.Log(_armature.animation);
         if ( !_myTurn )
             return;
         var anim = _animations[4];
@@ -70,7 +119,13 @@ public class Player : MonoBehaviour, IBattleble
     }
     public void TakeDamage(int amount)
     {
-        _currentHP -= amount;
+        var damage = amount;
+        if (_defenceBoostTurnsCount > 0)
+        {
+            damage -= damage * _defenceBoostPercent / 100;
+            _defenceBoostTurnsCount--;
+        }
+        _currentHP -= damage;
         if (_currentHP <= 0)
             Death();
         else
@@ -81,11 +136,12 @@ public class Player : MonoBehaviour, IBattleble
     }
     public void Death()
     {
+        var anim = _animations[8];
+        _armature.animation.GotoAndPlayByProgress(anim, 0, 1);
         _effectsConteiner.gameObject.SetActive(false);
         _HPcontroller.Hide();
         OnDeth?.Invoke();
-    }
-    
+    }    
     private IEnumerator WaitAnimationEnd()
     {
         while (true)

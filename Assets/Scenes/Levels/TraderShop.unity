@@ -3195,8 +3195,7 @@ MonoBehaviour:
   _inventorySO: {fileID: 11400000, guid: fc978926dc5526641b568828973059df, type: 2}
   _itemsShop:
   - {fileID: 11400000, guid: 313e7051e33eb704eaa9f8f571bcf092, type: 2}
-  - {fileID: 11400000, guid: 313e7051e33eb704eaa9f8f571bcf092, type: 2}
-  - {fileID: 11400000, guid: 313e7051e33eb704eaa9f8f571bcf092, type: 2}
+  - {fileID: 11400000, guid: 0346dd530f1cb9b4f902216133693fde, type: 2}
   _productPrefab: {fileID: 605352169594056188, guid: de5402090902c7c48be2427cfa47da68, type: 3}
   _productsConteiner: {fileID: 1188954517}
   _playerMoneyText: {fileID: 1618255247}

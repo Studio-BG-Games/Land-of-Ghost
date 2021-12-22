@@ -18,6 +18,10 @@ public class ProductView : MonoBehaviour
             _imagePriceItem.sprite = item.ItemPrice.Icon;
             plus = "+";
         }
+        else
+        {
+            _imagePriceItem.enabled = false;
+        }
         _priceText.text = $"{item.MoneyPrice} {plus}";
     }
 }

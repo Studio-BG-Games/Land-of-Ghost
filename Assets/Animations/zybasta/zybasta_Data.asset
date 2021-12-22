@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a64e5b0e436d4bed9780211ae245f7b, type: 3}
+  m_Name: zybasta_Data
+  m_EditorClassIdentifier: 
+  dataName: zybasta
+  dragonBonesJSON: {fileID: 4900000, guid: 4439327bffea7c04c81a6b1517b8233b, type: 3}
+  textureAtlas:
+  - textureAtlasJSON: {fileID: 4900000, guid: 6f81e4011f752034c8ecc9ed5c897ca2, type: 3}
+    texture: {fileID: 2800000, guid: 37c7a281974dd2743bc761b7e146d00f, type: 3}
+    material: {fileID: 2100000, guid: a72c772c36a3c2c488baace1e23bb207, type: 2}
+    uiMaterial: {fileID: 0}

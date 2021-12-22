@@ -19,9 +19,5 @@ public class Amulet : Items
     public Effect Effect { get => _effect; set => _effect = value; }
     public int AnimationId { get => _animationId; set => _animationId = value; }
 
-    public override void Use()
-    {
-        Debug.Log($"using Amulet {Name}");
-    }
 
 }

@@ -8,11 +8,13 @@ public class BattleController : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private EnemySpawner _enemySpawner;
+    [SerializeField] private BattleInventory _inventory;
     public UnityEvent<string> OnEndLevel;
     void Start()
     {
         _player.OnDealDamage += DealDamageToEnemy;
         _player.OnEndTurn += StartEnemyTurn;
+        _player.OnUsePotion += UsePotion;
         _enemySpawner.OnEnemyDealDamage += DealDamageToPlayer;
         _enemySpawner.OnEnemyEndTurn += StartPlayerTurn;
         _enemySpawner.OnEnemyDeath += LevelExit;
@@ -21,9 +23,14 @@ public class BattleController : MonoBehaviour
     {
         _player.OnDealDamage -= DealDamageToEnemy;
         _player.OnEndTurn -= StartEnemyTurn;
+        _player.OnUsePotion -= UsePotion;
         _enemySpawner.OnEnemyDealDamage -= DealDamageToPlayer;
         _enemySpawner.OnEnemyEndTurn -= StartPlayerTurn;
         StopAllCoroutines();
+    }
+    private void UsePotion(int id)
+    {
+        _inventory.RemoveItem(id);
     }
     private void DealDamageToEnemy(int amount)
     {

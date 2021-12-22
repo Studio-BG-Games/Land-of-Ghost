@@ -265,6 +265,37 @@ MonoBehaviour:
   _image: {fileID: 2482407803213772304}
   _item: {fileID: 0}
   _amountText: {fileID: 2014320575925268401}
+  OnItemClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 79ee9eba24651e047a4144b085c5daf9, type: 2}
+        m_TargetAssemblyTypeName: StringChannelSO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _currentUsed: {fileID: 11400000, guid: 8a1e3c5ef5d4ab44ca1f76ded0701f1b, type: 2}
+  OnPotionClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 0805d96850cd75f4495e6d22dc4d4eb2, type: 2}
+        m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &587390117178896866
 BoxCollider2D:
   m_ObjectHideFlags: 0

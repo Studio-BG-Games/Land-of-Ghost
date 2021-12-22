@@ -5,14 +5,17 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Bottle", menuName = "Items/new Potion", order = 51)]
 public class Potion : Items
 {
-    private void Drink()
-    {
-        Debug.Log($"using Potion {Name}");
-    }
+    [Range(0, 100)]
+    [SerializeField] private int _damageBoostPercent;
+    [SerializeField] private int _damageBoostTurnsCount;
+    [Range(0, 100)]
+    [SerializeField] private int _defenceBoostPercent;
+    [SerializeField] private int _defenceBoostTurnsCount;
+    [SerializeField] private int _healAmount;
 
-    public override void Use()
-    {
-        base.Use();
-        Drink();
-    }
+    public int DamageBoostPercent { get => _damageBoostPercent; set => _damageBoostPercent = value; }
+    public int DamageBoostTurnsCount { get => _damageBoostTurnsCount; set => _damageBoostTurnsCount = value; }
+    public int DefenceBoostPercent { get => _defenceBoostPercent; set => _defenceBoostPercent = value; }
+    public int DefenceBoostTurnsCount { get => _defenceBoostTurnsCount; set => _defenceBoostTurnsCount = value; }
+    public int HealAmount { get => _healAmount; set => _healAmount = value; }
 }

@@ -21,6 +21,7 @@ public class InventorySell : MonoBehaviour
     }
     public void Refresh()
     {
+        _itemSellId = 0;
         var potions = _inventorySO.GetPotions();
         var commons = _inventorySO.GetCommons();
         var i = 0;
@@ -68,6 +69,7 @@ public class InventorySell : MonoBehaviour
             _itemSellPrice = 0;
         else
             _itemSellPrice = _inventorySO.AllItems.Where(item => item.Id == id).Select(item => item.MoneyPrice).First();
+        Debug.Log(_itemSellPrice);
         _uiMoneySlot.ItemSellChange(_itemSellPrice);
     }
     public void Sell()

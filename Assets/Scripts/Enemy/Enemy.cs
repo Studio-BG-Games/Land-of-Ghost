@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour, IBattleble
     public int CurrentHP => _currentHP;
     public int MoneyDrop => _moneyDrop;
     public Action<Dictionary<Items, int>, int> OnSpawnDrop;
-    public Action<int> OnTakeHit;
+    public Action OnTakeHit;
     public Action<int> OnDealDamage;
     public Action OnDeth;
     public Action OnEndTurn;
@@ -109,7 +109,7 @@ public class Enemy : MonoBehaviour, IBattleble
         else
         {
             _armature.animation.GotoAndPlayByProgress(_animationMap[anim.takehit], 0, 1);
-            OnTakeHit?.Invoke(_currentHP);
+            OnTakeHit?.Invoke();
         }
     }
     public void StartTurn()

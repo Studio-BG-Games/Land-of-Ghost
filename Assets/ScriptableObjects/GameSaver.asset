@@ -23,4 +23,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5ff7536918d6ed54f87d27ece5b694ba, type: 2}
   - {fileID: 11400000, guid: d34927e0eb9d6b047a207e6e80a021c9, type: 2}
   - {fileID: 11400000, guid: 0c0400b226e4c3c48937a827a02d54c4, type: 2}
-  _mainFolder: /game_save
+  _mainFolder: /game_save_1
