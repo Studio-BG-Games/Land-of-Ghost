@@ -631,7 +631,7 @@ RectTransform:
   - {fileID: 759129860}
   - {fileID: 147124055}
   m_Father: {fileID: 1917881253}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -978,7 +978,7 @@ RectTransform:
   - {fileID: 1895949486}
   - {fileID: 779589048}
   m_Father: {fileID: 1917881253}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1666,7 +1666,8 @@ MonoBehaviour:
   - {fileID: 1625979370}
   - {fileID: 899684388}
   _uiCraftSlot: {fileID: 1035264630}
-  _voidChannelSO: {fileID: 11400000, guid: 2afc953147536744b981e8c381631784, type: 2}
+  _craftClearChannelSO: {fileID: 11400000, guid: 89f3b7650d4687841b74286e8ae494f4, type: 2}
+  _beginDragChannelSO: {fileID: 11400000, guid: f5056304e56b6c34284601dd0a888f54, type: 2}
 --- !u!114 &1035264630 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9098075609227479780, guid: 0b3e733ed6591ad45be9a39fe8898a97, type: 3}
@@ -3551,8 +3552,8 @@ RectTransform:
   m_Children:
   - {fileID: 1149671441}
   - {fileID: 1449824214}
-  - {fileID: 684258081}
   - {fileID: 320535457}
+  - {fileID: 684258081}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -11,6 +11,8 @@ public class BattleInventory : MonoBehaviour
     [SerializeField] private AmuletView _amuletView;
     [SerializeField] private PotionView _potionView;
     [SerializeField] private TextMeshProUGUI _moneyText;
+    [SerializeField] private ItemsChannelSO _itemDestroy;
+
     void Start()
     {
         Refresh();
@@ -18,10 +20,12 @@ public class BattleInventory : MonoBehaviour
     private void OnEnable()
     {
         _inventorySO.OnMoneyChange += RefreshMoneyInfo;
+        _itemDestroy.OnItemsChannel += RemoveAmuletFromSlot;
     }
     private void OnDisable()
     {
         _inventorySO.OnMoneyChange -= RefreshMoneyInfo;
+        _itemDestroy.OnItemsChannel -= RemoveAmuletFromSlot;
     }
     public void Refresh()
     {
@@ -43,6 +47,11 @@ public class BattleInventory : MonoBehaviour
     public void RemoveItem(int id)
     {
         _inventorySO.RemoveItem(id); 
+        Refresh();
+    }
+    public void RemoveAmuletFromSlot(Items item)
+    {
+        _inventorySO.RemoveAmuletFromSlot(item); 
         Refresh();
     }
     private void RefreshMoneyInfo()

@@ -34,23 +34,31 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5bb12918ca436894e905f923963e10f5, type: 2}
   - {fileID: 11400000, guid: 35f16196eb9ffae4ea2bc1ac6c548922, type: 2}
   _items:
-  - {fileID: 11400000, guid: 04a7db479013ac64b8ba6b9cbb694552, type: 2}
   - {fileID: 11400000, guid: 35f16196eb9ffae4ea2bc1ac6c548922, type: 2}
-  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
-  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
-  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
   - {fileID: 11400000, guid: 5bb12918ca436894e905f923963e10f5, type: 2}
-  - {fileID: 11400000, guid: 5bb12918ca436894e905f923963e10f5, type: 2}
+  - {fileID: 11400000, guid: 4c080a70fddfe2a4abd47c12daf110e2, type: 2}
+  - {fileID: 11400000, guid: 4c080a70fddfe2a4abd47c12daf110e2, type: 2}
+  - {fileID: 11400000, guid: 4c080a70fddfe2a4abd47c12daf110e2, type: 2}
+  - {fileID: 11400000, guid: 4c080a70fddfe2a4abd47c12daf110e2, type: 2}
+  - {fileID: 11400000, guid: 943abb72a05e5fd45b33dd9aa7ff212d, type: 2}
+  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
+  - {fileID: 11400000, guid: 28083338c14aa574b9483aff93bbcc44, type: 2}
+  - {fileID: 11400000, guid: 28083338c14aa574b9483aff93bbcc44, type: 2}
+  - {fileID: 11400000, guid: 28083338c14aa574b9483aff93bbcc44, type: 2}
+  - {fileID: 11400000, guid: 28083338c14aa574b9483aff93bbcc44, type: 2}
+  - {fileID: 11400000, guid: 04a7db479013ac64b8ba6b9cbb694552, type: 2}
+  - {fileID: 11400000, guid: 28083338c14aa574b9483aff93bbcc44, type: 2}
+  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
+  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
+  - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
   - {fileID: 11400000, guid: 115caf845913ae5489e020f091bee5e3, type: 2}
-  - {fileID: 11400000, guid: 28083338c14aa574b9483aff93bbcc44, type: 2}
-  - {fileID: 11400000, guid: 28083338c14aa574b9483aff93bbcc44, type: 2}
-  - {fileID: 11400000, guid: 28083338c14aa574b9483aff93bbcc44, type: 2}
+  - {fileID: 11400000, guid: 115caf845913ae5489e020f091bee5e3, type: 2}
   _amuletsInSlot:
   - {fileID: 11400000, guid: f7955928e16ca004bab0d6768a18d821, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   _potionsInSlot:
   - {fileID: 11400000, guid: 763e46a7a2dbbeb4f867498b53874541, type: 2}
-  - {fileID: 11400000, guid: 5bb12918ca436894e905f923963e10f5, type: 2}
   - {fileID: 0}
-  _money: 3047
+  - {fileID: 11400000, guid: 35f16196eb9ffae4ea2bc1ac6c548922, type: 2}
+  _money: 2768

@@ -15,7 +15,10 @@ MonoBehaviour:
   _lvlNumber: 1
   _description: 
   _conversationName: EntSlime
+  _textOnLevelSelect: 
   _isComplete: 1
+  _isActive: 1
   _enemies:
+  - {fileID: 4406150334364566250, guid: 869b6991e92779c4e933c4e515537073, type: 3}
   - {fileID: 4406150334364566250, guid: 869b6991e92779c4e933c4e515537073, type: 3}
   _imageInBuble: {fileID: 0}

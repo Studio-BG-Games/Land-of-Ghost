@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class UIDropSlot : UISlot, IDropHandler
 {
     public UnityEvent OnSomeItemDrop;
+    public UnityEvent OnEqualItemDrop;
     public void OnDrop(PointerEventData eventData)
     {
         var otherItemTransform = eventData.pointerDrag.transform;
@@ -14,11 +15,36 @@ public class UIDropSlot : UISlot, IDropHandler
         if (transform.childCount > 0)
         {
             currentChildItemTransform = transform.GetChild(0);
-            currentChildItemTransform.SetParent(otherItemTransform.parent);
-            currentChildItemTransform.localPosition = Vector3.zero;
-        }            
-        otherItemTransform.SetParent(transform);
-        otherItemTransform.localPosition = Vector3.zero;
+            var currentChildView = currentChildItemTransform.GetComponent<ItemsView>();
+            var otherItemView = otherItemTransform.GetComponent<ItemsView>();
+            if (otherItemView.Id == currentChildView.Id)
+            {
+                OnEqualItemDrop?.Invoke();
+                currentChildView.ChangeAmount(currentChildView.Amount + otherItemView.Amount);
+                Destroy(otherItemView.gameObject);
+            }
+            else
+            {
+                if (otherItemTransform.parent.childCount > 1)
+                {
+                    var itemViewFromOtherSlot = otherItemTransform.parent.GetChild(0).GetComponent<ItemsView>();
+                    itemViewFromOtherSlot.ChangeAmount(itemViewFromOtherSlot.Amount + otherItemView.Amount);
+                    Destroy(otherItemView.gameObject);
+                }
+                else
+                {
+                    currentChildItemTransform.SetParent(otherItemTransform.parent);
+                    currentChildItemTransform.localPosition = Vector3.zero;
+                    otherItemTransform.SetParent(transform);
+                    otherItemTransform.localPosition = Vector3.zero;
+                } 
+            }
+        }
+        else
+        {
+            otherItemTransform.SetParent(transform);
+            otherItemTransform.localPosition = Vector3.zero;
+        }
         OnSomeItemDrop?.Invoke();
     }
 }

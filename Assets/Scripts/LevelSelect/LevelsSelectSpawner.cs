@@ -1,5 +1,5 @@
 using System;
-using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -27,19 +27,22 @@ public class LevelsSelectSpawner : MonoBehaviour
         OnCangeCurrentLvl?.Invoke(_levelSelects[_currentLvlNumber]);
         MoveToCurrentLvl();
     }
-
+    private void OnDisable()
+    {
+        _mover.OnTweenComplete -= OnEndTween;
+    }
     private void SpawnLevels()
     {
-        _levelSelects = new LevelSelect[_levels.Length];
-        for (int i = 0; i < _levels.Length; i++)
+        var activeLevels = _levels.Where(l => l.IsActive).ToArray();
+        _levelSelects = new LevelSelect[activeLevels.Count()];
+        for (int i = 0; i < activeLevels.Count(); i++)
         {
             _levelSelects[i] = Instantiate(_levelPrefab, transform, false);
-            var isActive = (i == 0 || _levels[i - 1].IsComplete);
-            _levelSelects[i].Initialize(_levels[i], i * _intervalY, isActive);
-             if (isActive) _currentLvlNumber = i;
+            var isActive = (i == 0 || activeLevels[i - 1].IsComplete);
+            _levelSelects[i].Initialize(activeLevels[i], i * _intervalY, isActive);
+            if (isActive) _currentLvlNumber = i;
         }
     }
-
     public void MoveToCurrentLvl()
     {
         _mover.MoveY(_intervalY * (_currentLvlNumber + 1));

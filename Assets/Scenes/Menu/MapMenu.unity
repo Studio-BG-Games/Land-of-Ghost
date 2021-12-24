@@ -1070,12 +1070,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b4cbee7bdf6fec641b74bc29a230c16d, type: 2}
   - {fileID: 11400000, guid: 8605b71603cd4a54dbad4ed6df902057, type: 2}
   - {fileID: 11400000, guid: 87ca1b25f9ab29b43850633ae6920d26, type: 2}
+  - {fileID: 11400000, guid: 90c85353ba31e904bbc093a6ed22bf04, type: 2}
+  - {fileID: 11400000, guid: fa1c90b27c4d8ae408c522bfc7d14f7b, type: 2}
   - {fileID: 11400000, guid: 015e2c576cc70924ea809fe4632ac4f7, type: 2}
   - {fileID: 11400000, guid: 2b39b90fa3d6b464a829d3e9e9fdc7f8, type: 2}
   - {fileID: 11400000, guid: 6feaa0b3c176e6b4c86201cb49794f64, type: 2}
   - {fileID: 11400000, guid: 5ff7536918d6ed54f87d27ece5b694ba, type: 2}
   - {fileID: 11400000, guid: d34927e0eb9d6b047a207e6e80a021c9, type: 2}
   - {fileID: 11400000, guid: 0c0400b226e4c3c48937a827a02d54c4, type: 2}
+  - {fileID: 11400000, guid: 094b7e49127db9247889d4ab5c040749, type: 2}
   _intervalY: 6.3
   _levelPrefab: {fileID: 260372953232100302, guid: 6d6fafdacd8fbf34299b0426ec100703, type: 3}
 --- !u!4 &1120336137

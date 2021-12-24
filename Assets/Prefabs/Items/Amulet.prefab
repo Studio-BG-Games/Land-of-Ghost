@@ -170,6 +170,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnItemDestroy:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 2142637d5f7abf840b3427acab88e319, type: 2}
+        m_TargetAssemblyTypeName: ItemsChannelSO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &-1997480114787694661
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -208,25 +223,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367c997e3461d8f4f91ca974a7f0158e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnCraftItem:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: fc978926dc5526641b568828973059df, type: 2}
-        m_TargetAssemblyTypeName: InventorySO, Assembly-CSharp
-        m_MethodName: AddItem
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   OnCraftClear:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 2afc953147536744b981e8c381631784, type: 2}
+      - m_Target: {fileID: 11400000, guid: 89f3b7650d4687841b74286e8ae494f4, type: 2}
         m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
         m_MethodName: RaiseEvent
         m_Mode: 1
@@ -238,6 +238,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnBeginDragEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!225 &-2861779317076745637
 CanvasGroup:
   m_ObjectHideFlags: 0

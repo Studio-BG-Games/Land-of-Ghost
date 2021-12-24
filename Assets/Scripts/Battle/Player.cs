@@ -36,6 +36,7 @@ public class Player : MonoBehaviour, IBattleble
     private Dictionary<int, string> _animations;
     private void Start()
     {
+        Debug.Log(_myTurn);
         _animations = new Dictionary<int, string>();
         _animations.Add(1, "stan"); // idle
         _animations.Add(2, "stan1");
@@ -62,6 +63,12 @@ public class Player : MonoBehaviour, IBattleble
     private void OnDestroy()
     {
         StopAllCoroutines();
+        _OnUseAmulet.OnVoid -= UseAmulet;
+        _OnUsePotion.OnVoid -= UsePotion;
+        OnUsePotion = null;
+        OnDeth = null;
+        OnEndTurn = null;
+        OnDealDamage = null;
     }
     public void StartTurn()
     {
@@ -102,7 +109,6 @@ public class Player : MonoBehaviour, IBattleble
 
     public void UseAmulet()
     {
-        Debug.Log(_armature.animation);
         if ( !_myTurn )
             return;
         var anim = _animations[4];
@@ -111,13 +117,14 @@ public class Player : MonoBehaviour, IBattleble
         _armature.animation.GotoAndPlayByProgress(anim, 0, 1);
 
         if (_currentUsedInBatleAmulet.DamageToPlayer > 0 )
-            TakeDamage(_currentUsedInBatleAmulet.DamageToPlayer);
+            TakeDamage(_currentUsedInBatleAmulet.DamageToPlayer, false);
         if (_currentUsedInBatleAmulet.DamageAmount > 0)
             DealDamage();
         _myTurn = false;
+        _currentUsedInBatleAmulet.CountUses--;
         OnEndTurn?.Invoke();
     }
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount, bool animate = true)
     {
         var damage = amount;
         if (_defenceBoostTurnsCount > 0)
@@ -131,7 +138,7 @@ public class Player : MonoBehaviour, IBattleble
         else
         {
             _HPcontroller.OnHealthChange(_currentHP);
-            _armature.animation.GotoAndPlayByProgress(_animations[7], 0, 1);
+            if (animate) _armature.animation.GotoAndPlayByProgress(_animations[7], 0, 1);
         }
     }
     public void Death()

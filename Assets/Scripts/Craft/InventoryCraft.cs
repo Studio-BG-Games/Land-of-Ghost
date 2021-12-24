@@ -10,14 +10,19 @@ public class InventoryCraft : MonoBehaviour
     [SerializeField] private UIDropSlot[] _uiSlots;
     [SerializeField] private UICraftSlot[] _uiCraftSlots;
     [SerializeField] private UICraftResultSlot _uiCraftSlot;
-    [SerializeField] private VoidChannelSO _voidChannelSO;
+    [SerializeField] private VoidChannelSO _craftClearChannelSO;
+    [SerializeField] private GameObjectChannelSO _beginDragChannelSO;
     private void Start()
     {
         ClearSlots();
         Refresh();
-        _voidChannelSO.OnVoid += ClearInventory;
-        _voidChannelSO.OnVoid += ClearCraftSlots;
-        _voidChannelSO.OnVoid += Refresh;
+        _craftClearChannelSO.OnVoid += CraftItem;
+        _beginDragChannelSO.OnGameObjectChannel += DivideItem;
+    }
+    private void OnDisable()
+    {
+        _craftClearChannelSO.OnVoid -= CraftItem;
+        _beginDragChannelSO.OnGameObjectChannel -= DivideItem;
     }
     public void Refresh()
     {
@@ -64,7 +69,27 @@ public class InventoryCraft : MonoBehaviour
             item.Clear();
         }
     }
-
+    private void CraftItem()
+    {
+        foreach (var slot in _uiCraftSlots)
+        {
+            slot.Craft();
+        }
+        ClearInventory();
+        ClearCraftSlots();
+        Refresh();
+        _inventorySO.AddItem(_uiCraftSlot.NewItem);
+    }
+    private void DivideItem(GameObject gameObject)
+    {
+        var view = gameObject.GetComponent<ItemsView>();
+        var item = _inventorySO.GetItemById(view.Id);
+        var amount = view.Amount;
+        if (amount < 2) return;
+        var uiSlot = gameObject.transform.parent.GetComponent<UIDropSlot>();
+        view.ChangeAmount(1);
+        InsertItem(uiSlot, item, amount - 1);
+    }
     private void InsertItem(UIDropSlot uISlot, Items item, int amount = 1)
     {
         var newItem = Instantiate(item.View, uISlot.transform);

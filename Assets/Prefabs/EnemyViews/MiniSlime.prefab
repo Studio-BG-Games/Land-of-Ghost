@@ -351,18 +351,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _armature: {fileID: 6692154571123957526}
+  _shadow: {fileID: 0}
   _effectsConteiner: {fileID: 7045201270329854115}
-  _items:
-  - {fileID: 11400000, guid: 69d57c8b86bbb2f44a79724eb91659ec, type: 2}
+  _itemsDrop: []
+  _itemsDropChance: 
   _maxHP: 30
-  _currentHP: 30
   _attackDamage: 1
   _animationStand: stan1
   _animationAttack: 
   _animationTakeHit: stan2
   _animationDeath: 
   _moneyDrop: 1
-  _shadow: {fileID: 0}
+  _timeDurationAttack: 0.32
 --- !u!1001 &636238678747560808
 PrefabInstance:
   m_ObjectHideFlags: 0

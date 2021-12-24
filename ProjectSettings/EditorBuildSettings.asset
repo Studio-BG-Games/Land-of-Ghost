@@ -24,15 +24,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/BattleLevel.unity
     guid: f0eb1851229c7524594257e7ba0cd984
   - enabled: 1
-    path: Assets/Scenes/Levels/Trader.unity
+    path: Assets/Scenes/Trader/Trader.unity
     guid: 1db0af7fff01326459b60d5a5a7e3124
   - enabled: 1
-    path: Assets/Scenes/Levels/TraderShop.unity
+    path: Assets/Scenes/Trader/TraderShop.unity
     guid: 341c26349ba45494d802d043efa68daf
   - enabled: 1
-    path: Assets/Scenes/Levels/TraderSell.unity
+    path: Assets/Scenes/Trader/TraderSell.unity
     guid: 42d68f57c1770e84abdb3199afbab602
   - enabled: 1
-    path: Assets/Scenes/Levels/TraderZapitat.unity
+    path: Assets/Scenes/Trader/TraderZapitat.unity
     guid: 85d64bca60d639b4aaf76d934b58dcea
+  - enabled: 1
+    path: Assets/Scenes/Trader/TraderHouse.unity
+    guid: f6982b7800e7b4247b13557287df9028
   m_configObjects: {}

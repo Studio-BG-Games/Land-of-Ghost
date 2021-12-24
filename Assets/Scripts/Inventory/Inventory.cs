@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private UISelectSlot[] _uiPotionSlots;
     [SerializeField] private AmuletView _amuletView;
     [SerializeField] private PotionView _potionView;
-    void Start()
+    private void Start()
     {
         Refresh();
     }

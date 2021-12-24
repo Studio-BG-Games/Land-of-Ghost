@@ -11,10 +11,12 @@ public class ItemsView: MonoBehaviour
     [SerializeField] protected Image _image;
     [SerializeField] protected Items _item;
     [SerializeField] private TextMeshProUGUI _amountText;
+    protected int _amount;
     protected BoxCollider2D _collider;
     protected UIDragItem _dragItem;
     public UnityEvent<string> OnItemClick;
     public int Id => _item.Id;
+    public int Amount => _amount;
     private void Start()
     {
         if (_item == null)
@@ -25,19 +27,23 @@ public class ItemsView: MonoBehaviour
     {
         MouseDown();
     }
-    public  void Init(Items item)
+    public void Init(Items item)
     {
         BaseInint(item);
     }
-    public  void Init(Items item, int amount)
+    public void Init(Items item, int amount)
     {
         BaseInint(item);
-        if(amount > 0 && _amountText != null)
+        ChangeAmount(amount);
+    }
+    public void ChangeAmount(int amount)
+    {
+        _amount = amount;
+        if (amount > 0 && _amountText != null)
             _amountText.text = amount.ToString();
     }
     protected void MouseDown()
     {
-        Debug.Log(_item.Name);
         OnItemClick?.Invoke(_item.Name);
     }
     private void BaseInint(Items item)

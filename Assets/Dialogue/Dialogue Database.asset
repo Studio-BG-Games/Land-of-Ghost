@@ -92,7 +92,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 2800000, guid: 6314ab3955da35146ad8c5b05f8aacf1, type: 3}
+    portrait: {fileID: 2800000, guid: df439584877f76f49a3143dbbcfa560d, type: 3}
     alternatePortraits: []
   - id: 4
     fields:
@@ -112,7 +112,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 2800000, guid: 4cdc9a01670e8a842b296b8637fe78af, type: 3}
+    portrait: {fileID: 2800000, guid: 812faffbced19e745bb8c0cf8b27685b, type: 3}
     alternatePortraits: []
   - id: 5
     fields:
@@ -132,7 +132,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: 930e500bdbe9bd64ea45fc6861cd72e7, type: 3}
     alternatePortraits: []
   - id: 6
     fields:
@@ -152,7 +152,47 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: e5af4b3e584306f43bd815cec3ed5643, type: 3}
+    alternatePortraits: []
+  - id: 7
+    fields:
+    - title: Name
+      value: Slime
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 2800000, guid: 5bb99ea8a1ddfb54784a6c1666c78553, type: 3}
+    alternatePortraits: []
+  - id: 8
+    fields:
+    - title: Name
+      value: Melon
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 2800000, guid: 930e500bdbe9bd64ea45fc6861cd72e7, type: 3}
     alternatePortraits: []
   items:
   - id: 1
@@ -247,7 +287,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: 8Myrmidon
+      value: 
       type: 0
       typeString: 
     - title: Is Item
@@ -265,8 +305,8 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: "\u0421\u0442\u0430\u043D\u0434\u0430\u0440\u0442\u043D\u044B\u0439
-        \u0443\u0434\u0430\u0440"
+      value: "\u0421\u0442\u0430\u043D\u0434\u0430\u0440\u0442\u043D\u0438\u0439
+        \u0443\u0434\u0430\u0440 "
       type: 0
       typeString: 
     - title: Is Item
@@ -284,8 +324,8 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: "\u0432\u0430\u043C\u043F\u0438\u0440\u0438\u0437\u043C \u043D\u0430
-        6 \u0441\u0435\u043A\u0443\u043D\u0434"
+      value: "\u0432\u0430\u043C\u043F\u0456\u0440\u0438\u0437\u043C \u043D\u0430
+        6 \u0441\u0435\u043A\u0443\u043D\u0434 "
       type: 0
       typeString: 
     - title: Is Item
@@ -304,9 +344,9 @@ MonoBehaviour:
       typeString: CustomFieldType_Files
     - title: Description
       value: "\u0443\u0440\u043E\u043D 10+(5 \u0443\u0440\u043E\u043D\u0443 \u0441\u0435\u0431\u0435)
-        \u0437\u043Ci\u043D\u044F\u0435\u0442\u0441\u044F \u043D\u0430 \u0437\u0430\u043B\u0438\u0448\u043E\u043A
-        \u0434\u0443\u0448i \u043Fi\u0441\u043B\u044F 2 \u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u0430\u043D\u044F
-        \u0437\u043D\u0438\u043A\u0430\u044D"
+        \u0437\u043C\u0438\u043D\u044E\u0435\u0442\u044C\u0441\u044F \u043D\u0430
+        \u0437\u0430\u043B\u0438\u0448\u043E\u043A \u0434\u0443\u0448i \u043Fi\u0441\u043B\u044F
+        2 \u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u0430\u043D\u044F \u0437\u043D\u0438\u043A\u0430\u044D"
       type: 0
       typeString: 
     - title: Is Item
@@ -344,8 +384,8 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: "\u0434\u043E\u0431\u0430\u0432\u043B\u044F\u0435\u0442 20% \u0443\u0440\u043E\u043D\u0430
-        \u043D\u0430 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E \u0430\u0442\u0430\u043A\u0443"
+      value: "\u0434\u043E\u0434\u0430\u0454 20% \u0448\u043A\u043E\u0434\u0438 \u043D\u0430
+        \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0443 \u0430\u0442\u0430\u043A\u0443 "
       type: 0
       typeString: 
     - title: Is Item
@@ -399,8 +439,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: "\u043F\u043E\u043F\u043E\u043B\u043D\u044F\u0435\u0442 \u043D\u0430
-        20 \u0445\u043F"
+      value: "\u043F\u043E\u043F\u043E\u0432\u043D\u044E\u0454 \u043D\u0430 20 \u0445\u043F "
       type: 0
       typeString: 
     - title: Is Item
@@ -418,9 +457,9 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: "\u0443\u043C\u0435\u043D\u044C\u0448\u0430\u0435\u0442 \u0434\u0430\u043C\u0430\u0433
-        \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430 \u0432 2 \u0440\u0430\u0437\u0430
-        \u043D\u0430 \u043E\u0434\u0438\u043D \u0445\u043E\u0434"
+      value: "\u0437\u043C\u0435\u043D\u0448\u0443\u0454 \u0443\u0440\u043E\u043D
+        \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430 \u0443 2 \u0440\u0430\u0437\u0438
+        \u043D\u0430 \u043E\u0434\u0438\u043D \u0445\u0456\u0434 "
       type: 0
       typeString: 
     - title: Is Item
@@ -2296,7 +2335,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u0434\u043E\u0431\u0440\u043E\u0433\u043E"
+        value: "\u0414\u043E\u0431\u0440\u043E\u0433\u043E"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -2327,7 +2366,19 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: a445db819267fee498f576a78e724ff8, type: 2}
+            m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+            m_MethodName: RaiseEvent
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 150
@@ -2361,7 +2412,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u0441\u043B\u0443\u0445\u0430\u044E"
+        value: "\u0421\u043B\u0443\u0445\u0430\u044E"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -2392,11 +2443,23 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: a445db819267fee498f576a78e724ff8, type: 2}
+            m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+            m_MethodName: RaiseEvent
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
-        x: 338
-        y: 272
+        x: 341
+        y: 270
         width: 160
         height: 30
     - id: 4
@@ -2426,7 +2489,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u0447\u0438\u043C \u043C\u043E\u0436\u0443 \u0431\u0443\u0442\u0438
+        value: "\u0427\u0438\u043C \u043C\u043E\u0436\u0443 \u0431\u0443\u0442\u0438
           \u043A\u043E\u0440\u0438\u0441\u043D\u0438\u0439?"
         type: 0
         typeString: CustomFieldType_Text
@@ -2458,7 +2521,19 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: a445db819267fee498f576a78e724ff8, type: 2}
+            m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+            m_MethodName: RaiseEvent
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 495
@@ -2492,7 +2567,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u0432\u0456\u0442\u0430\u044E"
+        value: "\u0412\u0456\u0442\u0430\u044E"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -2523,7 +2598,19 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: a445db819267fee498f576a78e724ff8, type: 2}
+            m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+            m_MethodName: RaiseEvent
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 47
@@ -2598,7 +2685,19 @@ MonoBehaviour:
       userScript: SetQuestState("TraderFirst", "success")
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: a445db819267fee498f576a78e724ff8, type: 2}
+            m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+            m_MethodName: RaiseEvent
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 263
@@ -2869,7 +2968,19 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: a445db819267fee498f576a78e724ff8, type: 2}
+            m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+            m_MethodName: RaiseEvent
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 137
@@ -2940,7 +3051,19 @@ MonoBehaviour:
       userScript: SetQuestState("TraderFirstQuest", "active")
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: fa1c90b27c4d8ae408c522bfc7d14f7b, type: 2}
+            m_TargetAssemblyTypeName: LevelData, Assembly-CSharp
+            m_MethodName: Activate
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 122
@@ -3090,7 +3213,19 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: a445db819267fee498f576a78e724ff8, type: 2}
+            m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+            m_MethodName: RaiseEvent
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 383
@@ -3158,7 +3293,19 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: a445db819267fee498f576a78e724ff8, type: 2}
+            m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+            m_MethodName: RaiseEvent
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 122
@@ -3223,14 +3370,26 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: b1285512ba909a54ea5cdb0ed8749e9e, type: 2}
+            m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+            m_MethodName: RaiseEvent
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 390
         y: 334
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 47}
+    canvasScrollPosition: {x: 0.78640556, y: 46.82524}
     canvasZoom: 1
   - id: 9
     fields:
@@ -4262,10 +4421,22 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: a445db819267fee498f576a78e724ff8, type: 2}
+            m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+            m_MethodName: RaiseEvent
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
-        x: 123
+        x: 120
         y: 128
         width: 160
         height: 30

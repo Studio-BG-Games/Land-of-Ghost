@@ -51,6 +51,8 @@ public class EnemySpawner : MonoBehaviour
     {
         StopAllCoroutines();
         OnEnemyDeath = null;
+        _firstEnemy.OnTakeHit -= OnEnemyTakeHit;
+        _firstEnemy.OnDeth -= EnemyDeth;
     }
     private void Spawn(Enemy enemy, Transform pos)
     {

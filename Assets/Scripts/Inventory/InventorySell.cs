@@ -11,11 +11,13 @@ public class InventorySell : MonoBehaviour
     [SerializeField] private UICraftSlot _uiSellSlot;
     [SerializeField] private UIMoneySlot _uiMoneySlot;
     [SerializeField] private TextMeshProUGUI _playerMoneyText;
+    [SerializeField] private GameObjectChannelSO _beginDragChannelSO;
     private int _itemSellId;
     private int _itemSellPrice;
     private void Start()
     {
         _inventorySO.OnMoneyChange += DisplayMoney;
+        _beginDragChannelSO.OnGameObjectChannel += DivideItem;
         ClearSlots();
         Refresh();
     }
@@ -56,6 +58,16 @@ public class InventorySell : MonoBehaviour
         {
             item.Clear();
         }
+    }
+    private void DivideItem(GameObject gameObject)
+    {
+        var view = gameObject.GetComponent<ItemsView>();
+        var item = _inventorySO.GetItemById(view.Id);
+        var amount = view.Amount;
+        if (amount < 2) return;
+        var uiSlot = gameObject.transform.parent.GetComponent<UIDropSlot>();
+        view.ChangeAmount(1);
+        InsertItem(uiSlot, item, amount - 1);
     }
     private void InsertItem(UIDropSlot uISlot, Items item, int amount = 1)
     {

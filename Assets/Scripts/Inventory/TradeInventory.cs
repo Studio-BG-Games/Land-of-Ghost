@@ -15,6 +15,7 @@ public class TradeInventory : MonoBehaviour
     private Items _itemCurrent;
     private int _itemCurrentId;
     private int _itemsCount;
+    private List<Items> _itemsShopActive = new List<Items>();
     void Start()
     {
         _inventorySO.OnMoneyChange += DisplayMoney;
@@ -29,8 +30,10 @@ public class TradeInventory : MonoBehaviour
     }
     private void ChangeCurrent(int id)
     {
+        if (_itemsShopActive.Count == 0)
+            return;
         _itemCurrentId = id;
-        _itemCurrent = _itemsShop[_itemCurrentId];
+        _itemCurrent = _itemsShopActive[_itemCurrentId];
     }
     private void DisplayMoney()
     {
@@ -38,12 +41,14 @@ public class TradeInventory : MonoBehaviour
     }
     private void CreateProducts()
     {
+        _itemsShopActive = new List<Items>();
         for (int i = 0; i < _itemsShop.Length; i++)
         {
             if (!_inventorySO.AmuletsInSlot.Contains(_itemsShop[i]) && !_inventorySO.GetAmulets().Contains(_itemsShop[i]))
             {
                 var product = Instantiate(_productPrefab, _productsConteiner.transform);
                 product.Init(_itemsShop[i]);
+                _itemsShopActive.Add(_itemsShop[i]);
                 _itemsCount++;
             }
         }
@@ -60,6 +65,8 @@ public class TradeInventory : MonoBehaviour
 
     public void BuyProduct()
     {
+        if (_itemCurrent == null)
+            return;
         if (_inventorySO.Money < _itemCurrent.MoneyPrice)
             return;
         if (_itemCurrent.ItemPrice != null && !_inventorySO.HaveItem(_itemCurrent.ItemPrice))

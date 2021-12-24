@@ -18,6 +18,10 @@ public class PanelMoveControl : MonoBehaviour
         _mover = GetComponent<TweenMover>();
         _mover.OnTweenComplete += OnEndTween;
     }
+    private void OnDisable()
+    {
+        _mover.OnTweenComplete -= OnEndTween;
+    }
     public void MoveForward()
     {
         if (_isTweening)

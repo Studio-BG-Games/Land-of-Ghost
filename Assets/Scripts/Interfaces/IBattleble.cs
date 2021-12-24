@@ -8,7 +8,7 @@ public interface IBattleble
     List<Effect> Effects { get; }
     bool MyTurn { get; }
     void DealDamage();
-    void TakeDamage(int amount);
+    void TakeDamage(int amount, bool animate = true);
     void SetEffect(Effect effect);
     void ClearEffect(Effect effect);
     void Death();

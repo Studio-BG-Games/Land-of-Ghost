@@ -7,7 +7,9 @@ public class LevelData: ScriptableObject
     [SerializeField] private int _lvlNumber;
     [SerializeField] private string _description;
     [SerializeField] private string _conversationName;
+    [SerializeField] private string _textOnLevelSelect;
     [SerializeField] private bool _isComplete;
+    [SerializeField] private bool _isActive = true;
     [SerializeField] private List<Enemy> _enemies;
     [SerializeField] private Sprite _imageInBuble;
     private LevelData _levelDataOrigin;
@@ -15,7 +17,9 @@ public class LevelData: ScriptableObject
     public int LvlNumber => _lvlNumber;
     public string Description => _description;
     public string ConversationName => _conversationName;
+    public string TextOnLevelSelect => _textOnLevelSelect;
     public bool IsComplete => _isComplete;
+    public bool IsActive => _isActive;
     public List<Enemy> Enemies => _enemies;
     public Sprite ImageInBuble => _imageInBuble;
 
@@ -24,6 +28,10 @@ public class LevelData: ScriptableObject
         if (_levelDataOrigin != null)
             _levelDataOrigin.Complete();
         _isComplete = true;
+    }
+    public void Activate()
+    {
+        _isActive = true;
     }
     public void SetLevelOrigin(LevelData levelDataOrigin)
     {

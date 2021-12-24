@@ -23,12 +23,12 @@ public class GameSaver : ScriptableObject
     }
     public void Save()
     {
-        SaveData(_inventorySO, "inventory_data", "inventory_save.txt");
+        SaveData(_inventorySO, "inventory_data", "inventory_save.save");
         var i = 0;
         foreach (var level in _levels)
         {
             i++;
-            SaveData(level, "level_data", "level" + i.ToString() + ".txt");
+            SaveData(level, "level_data", "level" + level.LvlNumber.ToString() + ".save");
         }
     }
     public void Load()
@@ -38,7 +38,7 @@ public class GameSaver : ScriptableObject
         foreach (var level in _levels)
         {
             i++;
-            LoadData(level, "level_data", "level" + i.ToString() + ".txt");
+            LoadData(level, "level_data", "level" + level.LvlNumber.ToString() + ".save");
         }
     }
     private void SaveData(object obj,string folder,string fileName)

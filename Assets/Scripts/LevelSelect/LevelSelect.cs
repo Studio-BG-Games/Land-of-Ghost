@@ -7,6 +7,7 @@ public class LevelSelect : MonoBehaviour
     [SerializeField] private Sprite _spriteActive;
     [SerializeField] private SpriteRenderer _imageInBuble;
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private TextMeshPro _text;
 
     private TweenMover _mover;
     public LevelData Level { get; private set; }
@@ -17,6 +18,7 @@ public class LevelSelect : MonoBehaviour
         _spriteRenderer.sprite = _spriteActive;
         _imageInBuble.sprite = Level.ImageInBuble;
         _mover = GetComponent<TweenMover>();
+        _text.text = level.TextOnLevelSelect;
     }
     public void SetCurrent(bool curernt)
     {

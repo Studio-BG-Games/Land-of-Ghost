@@ -47,14 +47,9 @@ public class Enemy : MonoBehaviour, IBattleble
     public Action<int> OnDealDamage;
     public Action OnDeth;
     public Action OnEndTurn;
-
-
     public List<Effect> Effects => throw new NotImplementedException();
-
     public bool MyTurn => throw new NotImplementedException();
-
-    public float TimeDurationAttack { get => _timeDurationAttack; set => _timeDurationAttack = value; }
-    
+    public float TimeDurationAttack { get => _timeDurationAttack; set => _timeDurationAttack = value; }    
     private void Awake()
     {
         _currentHP = _maxHP;
@@ -99,18 +94,15 @@ public class Enemy : MonoBehaviour, IBattleble
         OnSpawnDrop?.Invoke(_itemsDropMap, _moneyDrop);
         OnDeth?.Invoke();
     }
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount, bool animate = true)
     {
         if (!_isAlive)
             return;
         _currentHP -= amount;
+        if(animate)_armature.animation.GotoAndPlayByProgress(_animationMap[anim.takehit], 0, 1);
+        OnTakeHit?.Invoke();
         if (_currentHP <= 0)
-            Death();
-        else
-        {
-            _armature.animation.GotoAndPlayByProgress(_animationMap[anim.takehit], 0, 1);
-            OnTakeHit?.Invoke();
-        }
+            StartCoroutine(WaitDeth());
     }
     public void StartTurn()
     {
@@ -135,5 +127,10 @@ public class Enemy : MonoBehaviour, IBattleble
                 _armature.animation.GotoAndPlayByProgress(_animationMap[anim.stand], 0, -1);
             yield return null;
         }
+    }
+    private IEnumerator WaitDeth()
+    {        
+        yield return new WaitForSeconds(0.5f); 
+        Death();
     }
 }

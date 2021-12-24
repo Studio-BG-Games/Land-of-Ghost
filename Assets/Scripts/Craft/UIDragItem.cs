@@ -11,8 +11,8 @@ public class UIDragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     private CanvasGroup _canvasGroup;
     private bool _isCrafted;
     private bool _isIngredient;
-    public UnityEvent<Items> OnCraftItem;
     public UnityEvent OnCraftClear;
+    public UnityEvent<GameObject> OnBeginDragEvent;
     private void Start()
     {
         _rectTransform = GetComponent<RectTransform>();
@@ -21,6 +21,8 @@ public class UIDragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
+        OnBeginDragEvent?.Invoke(gameObject);
+        gameObject.transform.SetAsLastSibling();
         var slotTransform = _rectTransform.parent;
         slotTransform.SetAsLastSibling();
         _canvasGroup.blocksRaycasts = false;
@@ -40,13 +42,7 @@ public class UIDragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     {
         if (!_isCrafted)
             return;
-        foreach (var slot in FindObjectsOfType<UICraftSlot>())
-        {
-            slot.Craft();
-        }
-        var newItem = transform.parent.GetComponent<UICraftResultSlot>().NewItem;
         OnCraftClear?.Invoke();
-        OnCraftItem?.Invoke(newItem);
         SetCrafted(false);        
     }
     public void OnDrag(PointerEventData eventData)

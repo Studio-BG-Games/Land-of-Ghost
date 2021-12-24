@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inventorySO: {fileID: 11400000, guid: fc978926dc5526641b568828973059df, type: 2}
   _levels:
+  - {fileID: 11400000, guid: 90c85353ba31e904bbc093a6ed22bf04, type: 2}
+  - {fileID: 11400000, guid: fa1c90b27c4d8ae408c522bfc7d14f7b, type: 2}
   - {fileID: 11400000, guid: b4cbee7bdf6fec641b74bc29a230c16d, type: 2}
   - {fileID: 11400000, guid: 8605b71603cd4a54dbad4ed6df902057, type: 2}
   - {fileID: 11400000, guid: 87ca1b25f9ab29b43850633ae6920d26, type: 2}
@@ -23,4 +25,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5ff7536918d6ed54f87d27ece5b694ba, type: 2}
   - {fileID: 11400000, guid: d34927e0eb9d6b047a207e6e80a021c9, type: 2}
   - {fileID: 11400000, guid: 0c0400b226e4c3c48937a827a02d54c4, type: 2}
-  _mainFolder: /game_save_1
+  - {fileID: 11400000, guid: 094b7e49127db9247889d4ab5c040749, type: 2}
+  _mainFolder: /game_save
