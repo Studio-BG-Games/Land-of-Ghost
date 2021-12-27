@@ -107,7 +107,7 @@ public class EnemySpawner : MonoBehaviour
     }
     private IEnumerator WaitLevelExit()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         _itemsSpawner.PickUpAllDrops();
         _levelDataSettings.Complete();
         OnEnemyDeath?.Invoke();

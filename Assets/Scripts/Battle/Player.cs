@@ -19,6 +19,7 @@ public class Player : MonoBehaviour, IBattleble
     private int _damageBoostTurnsCount;
     private int _defenceBoostPercent;
     private int _defenceBoostTurnsCount;
+    private Coroutine _turnTimer;
     private bool _myTurn;
     public Action<int> OnUsePotion;
     public Action OnDeth;
@@ -73,6 +74,7 @@ public class Player : MonoBehaviour, IBattleble
     public void StartTurn()
     {
         _myTurn = true;
+        _turnTimer = StartCoroutine(TurnTimer());
     }
     public void DealDamage()
     {
@@ -109,19 +111,24 @@ public class Player : MonoBehaviour, IBattleble
 
     public void UseAmulet()
     {
-        if ( !_myTurn )
+        if (!_myTurn)
             return;
         var anim = _animations[4];
         if (_currentUsedInBatleAmulet.AnimationId != 0)
             anim = _animations[_currentUsedInBatleAmulet.AnimationId];
         _armature.animation.GotoAndPlayByProgress(anim, 0, 1);
 
-        if (_currentUsedInBatleAmulet.DamageToPlayer > 0 )
+        if (_currentUsedInBatleAmulet.DamageToPlayer > 0)
             TakeDamage(_currentUsedInBatleAmulet.DamageToPlayer, false);
         if (_currentUsedInBatleAmulet.DamageAmount > 0)
             DealDamage();
-        _myTurn = false;
         _currentUsedInBatleAmulet.CountUses--;
+        EndTurn();
+    }
+    private void EndTurn()
+    {
+        _myTurn = false;
+        StopCoroutine(_turnTimer);
         OnEndTurn?.Invoke();
     }
     public void TakeDamage(int amount, bool animate = true)
@@ -157,6 +164,18 @@ public class Player : MonoBehaviour, IBattleble
                 _armature.animation.GotoAndPlayByProgress(_animations[1],0,-1);
             yield return null;
         }
+    }
+    private IEnumerator TurnTimer()
+    {
+        float f = 0.0f; 
+        while (f < 6.0f)
+        {
+            yield return new WaitForSeconds(1.0f);
+            f = f + 1.0f;
+        }
+        _myTurn = false;
+        OnEndTurn?.Invoke();
+        yield return null;
     }
     public void ClearEffect(Effect effect)
     {

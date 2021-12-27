@@ -99,10 +99,10 @@ public class Enemy : MonoBehaviour, IBattleble
         if (!_isAlive)
             return;
         _currentHP -= amount;
-        if(animate)_armature.animation.GotoAndPlayByProgress(_animationMap[anim.takehit], 0, 1);
-        OnTakeHit?.Invoke();
         if (_currentHP <= 0)
             StartCoroutine(WaitDeth());
+        if (animate)_armature.animation.GotoAndPlayByProgress(_animationMap[anim.takehit], 0, 1);
+        OnTakeHit?.Invoke();
     }
     public void StartTurn()
     {
@@ -129,7 +129,8 @@ public class Enemy : MonoBehaviour, IBattleble
         }
     }
     private IEnumerator WaitDeth()
-    {        
+    {
+        _currentHP = 0;
         yield return new WaitForSeconds(0.5f); 
         Death();
     }

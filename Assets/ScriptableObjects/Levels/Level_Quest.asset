@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Level_Quest
   m_EditorClassIdentifier: 
   _lvlNumber: -1
-  _description: "\u041A\u0432\u0435\u0441\u0442"
-  _conversationName: 
+  _description: "\u0422\u0443\u0442 \u043C\u043E\u0436\u043D\u0430 \u0437i\u0431\u0440\u0430\u0442\u0438
+    \u0442\u0435\u043C\u043Di \u0434\u0443\u0448i"
+  _conversationName: Slime22
   _textOnLevelSelect: "\u041A\u0432\u0435\u0441\u0442"
   _isComplete: 0
   _isActive: 0
+  _isQuest: 1
   _enemies:
   - {fileID: 4510725371601204926, guid: 92bc003b83422574d92ae55800b63f7a, type: 3}
   - {fileID: 3887938439122297333, guid: 62dae847c1b456543a111acfc4ec42fb, type: 3}

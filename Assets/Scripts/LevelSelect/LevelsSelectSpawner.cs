@@ -35,12 +35,13 @@ public class LevelsSelectSpawner : MonoBehaviour
     {
         var activeLevels = _levels.Where(l => l.IsActive).ToArray();
         _levelSelects = new LevelSelect[activeLevels.Count()];
+        _currentLvlNumber = 0;
         for (int i = 0; i < activeLevels.Count(); i++)
         {
             _levelSelects[i] = Instantiate(_levelPrefab, transform, false);
-            var isActive = (i == 0 || activeLevels[i - 1].IsComplete);
-            _levelSelects[i].Initialize(activeLevels[i], i * _intervalY, isActive);
-            if (isActive) _currentLvlNumber = i;
+            var isCurrent = (i == 0 || activeLevels[i - 1].IsComplete);
+            _levelSelects[i].Initialize(activeLevels[i], i * _intervalY, isCurrent);
+            if(i>0 && !activeLevels[i-1].IsQuest && isCurrent) _currentLvlNumber = i;
         }
     }
     public void MoveToCurrentLvl()

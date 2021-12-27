@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InventorySO : ScriptableObject
 {
@@ -16,6 +17,7 @@ public class InventorySO : ScriptableObject
     public List<Items> AllItems { get => _allItems; private set => _allItems = value; }
     public int Money { get => _money; private set => _money = value; }
     public Action OnMoneyChange;
+    public UnityEvent OnQuestSuccess;
     public List<Amulet> GetAmulets()
     {
         return _items.Where(item => item as Amulet).Select(item => item as Amulet).ToList();
@@ -56,6 +58,12 @@ public class InventorySO : ScriptableObject
     public void AddItem(Items item)
     {
         _items.Add(item);
+        if( PlayerPrefs.GetString("TraderFirstQuest") == "active")
+            if( _items.Where(i=>i.Id == 14).Count() + AmuletsInSlot.Where(i => i != null && i.Id == 14).Count() == 5)
+            {
+                PlayerPrefs.SetString("TraderFirstQuest", "success");
+                OnQuestSuccess?.Invoke();
+            }
     }
     public void RemoveAmuletFromSlot(Items amulet)
     {
@@ -65,6 +73,7 @@ public class InventorySO : ScriptableObject
             if(item == (Amulet)amulet)
             {
                 AmuletsInSlot[i] = null;
+                return;
             }
             i++;
         }

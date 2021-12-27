@@ -30,6 +30,8 @@ public class TradeInventory : MonoBehaviour
     }
     private void ChangeCurrent(int id)
     {
+        _itemCurrent = null;
+        _itemCurrentId = -1;
         if (_itemsShopActive.Count == 0)
             return;
         _itemCurrentId = id;

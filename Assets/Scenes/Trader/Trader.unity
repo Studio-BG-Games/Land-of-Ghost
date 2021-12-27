@@ -1058,6 +1058,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beca41e14c2b39b44a0d54d7b1e2caa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onDialog: {fileID: 11400000, guid: 4bf966bf7cd78ce42a4d9bf3fe106599, type: 2}
+  _onGetFirstQuest: {fileID: 11400000, guid: 8d4c249179c82824bb9bbe42ff5fb11e, type: 2}
+  _onDeclineQuest: {fileID: 11400000, guid: dff25cdb3fd9bd14cb74258d6fab0240, type: 2}
 --- !u!114 &607687875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,7 +1073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 16
+  trigger: 32
   condition:
     luaConditions: []
     questConditions: []
@@ -3048,7 +3051,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 05a55413dfbb5fa419b49173d309a1fd, type: 3}
 --- !u!114 &1953299982 stripped
 MonoBehaviour:

@@ -12,14 +12,22 @@ public class InventorySell : MonoBehaviour
     [SerializeField] private UIMoneySlot _uiMoneySlot;
     [SerializeField] private TextMeshProUGUI _playerMoneyText;
     [SerializeField] private GameObjectChannelSO _beginDragChannelSO;
+    [SerializeField] private GameObjectChannelSO _endDragNowereChannelSO;
     private int _itemSellId;
     private int _itemSellPrice;
     private void Start()
     {
         _inventorySO.OnMoneyChange += DisplayMoney;
         _beginDragChannelSO.OnGameObjectChannel += DivideItem;
+        _endDragNowereChannelSO.OnGameObjectChannel += RetutnItemBack;
         ClearSlots();
         Refresh();
+    }
+    private void OnDisable()
+    {
+        _inventorySO.OnMoneyChange -= DisplayMoney;
+        _beginDragChannelSO.OnGameObjectChannel -= DivideItem;
+        _endDragNowereChannelSO.OnGameObjectChannel -= RetutnItemBack;
     }
     public void Refresh()
     {
@@ -41,6 +49,7 @@ public class InventorySell : MonoBehaviour
                 InsertItem(_uiSlots[i], element, commons.ElementAt(index).Value);
             }
         }
+        DisplayMoney();
     }
     public void ClearSlots()
     {
@@ -69,6 +78,16 @@ public class InventorySell : MonoBehaviour
         view.ChangeAmount(1);
         InsertItem(uiSlot, item, amount - 1);
     }
+    private void RetutnItemBack(GameObject gameObject)
+    {
+        var view = gameObject.GetComponent<ItemsView>();
+        var amount = view.Amount;
+        var uiSlot = gameObject.transform.parent;
+        Destroy(gameObject);
+        var overView = uiSlot.GetChild(0).GetComponent<ItemsView>();
+        overView.ChangeAmount(overView.Amount + amount);
+
+    }
     private void InsertItem(UIDropSlot uISlot, Items item, int amount = 1)
     {
         var newItem = Instantiate(item.View, uISlot.transform);
@@ -81,7 +100,7 @@ public class InventorySell : MonoBehaviour
             _itemSellPrice = 0;
         else
             _itemSellPrice = _inventorySO.AllItems.Where(item => item.Id == id).Select(item => item.MoneyPrice).First();
-        Debug.Log(_itemSellPrice);
+
         _uiMoneySlot.ItemSellChange(_itemSellPrice);
     }
     public void Sell()

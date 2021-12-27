@@ -200,7 +200,7 @@ MonoBehaviour:
     - title: Name
       value: TraderFirst
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -208,19 +208,19 @@ MonoBehaviour:
     - title: Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Success Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Failure Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: State
       value: active
       type: 0
-      typeString: 
+      typeString: CustomFieldType_QuestState
     - title: Is Item
       value: False
       type: 2
@@ -230,7 +230,7 @@ MonoBehaviour:
     - title: Name
       value: TraderFirstQuest
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -238,19 +238,19 @@ MonoBehaviour:
     - title: Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Success Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Failure Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: State
       value: unassigned
       type: 0
-      typeString: 
+      typeString: CustomFieldType_QuestState
     - title: Is Item
       value: False
       type: 2
@@ -324,7 +324,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: "\u0432\u0430\u043C\u043F\u0456\u0440\u0438\u0437\u043C \u043D\u0430
+      value: "\u0412\u0430\u043C\u043F\u0456\u0440\u0438\u0437\u043C \u043D\u0430
         6 \u0441\u0435\u043A\u0443\u043D\u0434 "
       type: 0
       typeString: 
@@ -343,7 +343,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: "\u0443\u0440\u043E\u043D 10+(5 \u0443\u0440\u043E\u043D\u0443 \u0441\u0435\u0431\u0435)
+      value: "\u0423\u0440\u043E\u043D 10+(5 \u0443\u0440\u043E\u043D\u0443 \u0441\u0435\u0431\u0435)
         \u0437\u043C\u0438\u043D\u044E\u0435\u0442\u044C\u0441\u044F \u043D\u0430
         \u0437\u0430\u043B\u0438\u0448\u043E\u043A \u0434\u0443\u0448i \u043Fi\u0441\u043B\u044F
         2 \u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u0430\u043D\u044F \u0437\u043D\u0438\u043A\u0430\u044D"
@@ -364,7 +364,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: "\u0443\u043B\u0443\u043A\u0442\u0440\u0438\u0447\u043D\u0438\u0439
+      value: "\u0423\u043B\u0443\u043A\u0442\u0440\u0438\u0447\u043D\u0438\u0439
         \u0443\u0434\u0430\u0440 \u0443\u0440\u043E\u043D 3 \u0435\u0444\u0435\u043A\u0442
         \u0431\u043B\u0438\u0441\u043A\u0430\u0432\u043A\u0430"
       type: 0
@@ -384,7 +384,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: "\u0434\u043E\u0434\u0430\u0454 20% \u0448\u043A\u043E\u0434\u0438 \u043D\u0430
+      value: "\u0414\u043E\u0434\u0430\u0454 20% \u0448\u043A\u043E\u0434\u0438 \u043D\u0430
         \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0443 \u0430\u0442\u0430\u043A\u0443 "
       type: 0
       typeString: 
@@ -403,7 +403,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: 21BottleWithSoul
+      value: 
       type: 0
       typeString: 
     - title: Is Item
@@ -421,7 +421,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: 22BottleWithSliz
+      value: 
       type: 0
       typeString: 
     - title: Is Item
@@ -439,7 +439,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: "\u043F\u043E\u043F\u043E\u0432\u043D\u044E\u0454 \u043D\u0430 20 \u0445\u043F "
+      value: "\u041F\u043E\u043F\u043E\u0432\u043D\u044E\u0454 \u043D\u0430 20 \u0445\u043F "
       type: 0
       typeString: 
     - title: Is Item
@@ -457,9 +457,27 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: "\u0437\u043C\u0435\u043D\u0448\u0443\u0454 \u0443\u0440\u043E\u043D
+      value: "\u0417\u043C\u0435\u043D\u0448\u0443\u0454 \u0443\u0440\u043E\u043D
         \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430 \u0443 2 \u0440\u0430\u0437\u0438
         \u043D\u0430 \u043E\u0434\u0438\u043D \u0445\u0456\u0434 "
+      type: 0
+      typeString: 
+    - title: Is Item
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+  - id: 14
+    fields:
+    - title: Name
+      value: New Item 14
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
       type: 0
       typeString: 
     - title: Is Item
@@ -2297,7 +2315,7 @@ MonoBehaviour:
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["TraderFirst"] == true
       userScript: RandomizeNextEntry()
       onExecute:
         m_PersistentCalls:
@@ -2681,12 +2699,24 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("TraderFirst") == "active"
-      userScript: SetQuestState("TraderFirst", "success")
+      conditionsString: Variable["TraderFirst"] == false
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls:
           - m_Target: {fileID: 11400000, guid: a445db819267fee498f576a78e724ff8, type: 2}
+            m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+            m_MethodName: RaiseEvent
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 11400000, guid: 4bf966bf7cd78ce42a4d9bf3fe106599, type: 2}
             m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
             m_MethodName: RaiseEvent
             m_Mode: 1
@@ -2846,7 +2876,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u043C\u043E\u0436\u0443 \u0447\u0438\u043C\u043E\u0441\u044C \u0434\u043E\u043F\u043E\u043C\u043E\u0433\u0442\u0438?"
+        value: "\u043C\u043E\u0436\u0443 \u0447\u0438\u043C\u043E\u0441\u044C \u0434\u043E\u043F\u043E\u043C\u043E\u0433\u0442\u0438? "
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -2885,14 +2915,15 @@ MonoBehaviour:
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: ' (CurrentQuestState("TraderFirstQuest") ~= "active") and
+        (CurrentQuestState("TraderFirstQuest") ~= "abandoned")'
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 259
+        x: 255.90723
         y: 85
         width: 160
         height: 30
@@ -2964,7 +2995,8 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: Variable["TraderFirstQuest"] == false
+      conditionsString: (CurrentQuestState("TraderFirstQuest") == "success") or (CurrentQuestState("TraderFirstQuest")
+        == "unassigned")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -3055,14 +3087,26 @@ MonoBehaviour:
           - m_Target: {fileID: 11400000, guid: fa1c90b27c4d8ae408c522bfc7d14f7b, type: 2}
             m_TargetAssemblyTypeName: LevelData, Assembly-CSharp
             m_MethodName: Activate
-            m_Mode: 1
+            m_Mode: 6
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
               m_FloatArgument: 0
               m_StringArgument: 
-              m_BoolArgument: 0
+              m_BoolArgument: 1
+            m_CallState: 2
+          - m_Target: {fileID: 11400000, guid: fa1c90b27c4d8ae408c522bfc7d14f7b, type: 2}
+            m_TargetAssemblyTypeName: LevelData, Assembly-CSharp
+            m_MethodName: Complete
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 1
             m_CallState: 2
       canvasRect:
         serializedVersion: 2
@@ -3131,10 +3175,22 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["TraderFirstQuest"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: dff25cdb3fd9bd14cb74258d6fab0240, type: 2}
+            m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+            m_MethodName: RaiseEvent
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 390
@@ -3209,7 +3265,7 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: Variable["TraderFirstQuest"] == true
+      conditionsString: CurrentQuestState("TraderFirstQuest") == "failure"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -3306,10 +3362,22 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+          - m_Target: {fileID: 11400000, guid: 8d4c249179c82824bb9bbe42ff5fb11e, type: 2}
+            m_TargetAssemblyTypeName: VoidChannelSO, Assembly-CSharp
+            m_MethodName: RaiseEvent
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 122
-        y: 334
+        y: 337.09277
         width: 160
         height: 30
     - id: 7
@@ -3389,8 +3457,8 @@ MonoBehaviour:
         y: 334
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0.78640556, y: 46.82524}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.97
   - id: 9
     fields:
     - title: Title

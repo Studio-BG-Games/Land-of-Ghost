@@ -15,6 +15,7 @@ public class BattleController : MonoBehaviour
         _player.OnDealDamage += DealDamageToEnemy;
         _player.OnEndTurn += StartEnemyTurn;
         _player.OnUsePotion += UsePotion;
+        _player.OnDeth += LevelExit;
         _enemySpawner.OnEnemyDealDamage += DealDamageToPlayer;
         _enemySpawner.OnEnemyEndTurn += StartPlayerTurn;
         _enemySpawner.OnEnemyDeath += LevelExit;
@@ -24,6 +25,7 @@ public class BattleController : MonoBehaviour
         _player.OnDealDamage -= DealDamageToEnemy;
         _player.OnEndTurn -= StartEnemyTurn;
         _player.OnUsePotion -= UsePotion;
+        _player.OnDeth -= LevelExit;
         _enemySpawner.OnEnemyDealDamage -= DealDamageToPlayer;
         _enemySpawner.OnEnemyEndTurn -= StartPlayerTurn;
         StopAllCoroutines();
@@ -33,7 +35,7 @@ public class BattleController : MonoBehaviour
         _inventory.RemoveItem(id);
     }
     private void DealDamageToEnemy(int amount)
-    {
+    { 
         _enemySpawner.TakeHitEnemy(amount);
     }
     private void DealDamageToPlayer(int amount)
@@ -50,7 +52,7 @@ public class BattleController : MonoBehaviour
     }
     private void LevelExit()
     {
-        OnEndLevel?.Invoke("MapMenu");
+        StartCoroutine(WaitLevelExit());
     }
     private IEnumerator WaitEndEnemyAttackAnimation(int amount)
     {
@@ -61,6 +63,11 @@ public class BattleController : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         _player.StartTurn();
+    }
+    private IEnumerator WaitLevelExit()
+    {
+        yield return new WaitForSeconds(2);
+        OnEndLevel?.Invoke("MapMenu");
     }
 
 }

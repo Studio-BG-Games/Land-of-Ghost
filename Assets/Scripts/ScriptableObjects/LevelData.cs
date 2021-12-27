@@ -10,6 +10,7 @@ public class LevelData: ScriptableObject
     [SerializeField] private string _textOnLevelSelect;
     [SerializeField] private bool _isComplete;
     [SerializeField] private bool _isActive = true;
+    [SerializeField] private bool _isQuest;
     [SerializeField] private List<Enemy> _enemies;
     [SerializeField] private Sprite _imageInBuble;
     private LevelData _levelDataOrigin;
@@ -20,18 +21,19 @@ public class LevelData: ScriptableObject
     public string TextOnLevelSelect => _textOnLevelSelect;
     public bool IsComplete => _isComplete;
     public bool IsActive => _isActive;
+    public bool IsQuest => _isQuest;
     public List<Enemy> Enemies => _enemies;
     public Sprite ImageInBuble => _imageInBuble;
 
-    public void Complete()
+    public void Complete(bool isComplete = true)
     {
         if (_levelDataOrigin != null)
             _levelDataOrigin.Complete();
-        _isComplete = true;
+        _isComplete = isComplete;
     }
-    public void Activate()
+    public void Activate(bool isActivate = true)
     {
-        _isActive = true;
+        _isActive = isActivate;
     }
     public void SetLevelOrigin(LevelData levelDataOrigin)
     {

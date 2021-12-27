@@ -13,6 +13,7 @@ public class UIDragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     private bool _isIngredient;
     public UnityEvent OnCraftClear;
     public UnityEvent<GameObject> OnBeginDragEvent;
+    public UnityEvent<GameObject> OnEndDragNowereEvent;
     private void Start()
     {
         _rectTransform = GetComponent<RectTransform>();
@@ -51,7 +52,14 @@ public class UIDragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.localPosition = Vector3.zero;
+        if(transform.parent.childCount == 1 || transform.GetComponent<AmuletView>() != null)
+        {
+            transform.localPosition = Vector3.zero;
+        }
+        else
+        {
+            OnEndDragNowereEvent?.Invoke(gameObject);
+        }
         _canvasGroup.blocksRaycasts = true;
     }
     public void SetCrafted(bool crafted)

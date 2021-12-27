@@ -24,6 +24,8 @@ public class LevelSelectUI : MonoBehaviour
         _levelDataSettings.SetLevelOrigin(levelSelect.Level);
         if (_levelDataSettings.LvlNumber > 0)
             _levelsDescription.text = $"Рiвень {levelSelect.Level.LvlNumber}\n{levelSelect.Level.Description}";
+        else
+            _levelsDescription.text = $"{levelSelect.Level.Description}";
     }
     public void StartLevel()
     {

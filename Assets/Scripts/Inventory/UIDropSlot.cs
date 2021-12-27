@@ -12,11 +12,13 @@ public class UIDropSlot : UISlot, IDropHandler
     {
         var otherItemTransform = eventData.pointerDrag.transform;
         Transform currentChildItemTransform;
+        var otherItemView = otherItemTransform.GetComponent<ItemsView>();
+        if (otherItemView == null) return;
         if (transform.childCount > 0)
         {
             currentChildItemTransform = transform.GetChild(0);
             var currentChildView = currentChildItemTransform.GetComponent<ItemsView>();
-            var otherItemView = otherItemTransform.GetComponent<ItemsView>();
+            otherItemTransform.GetComponent<ItemsView>();
             if (otherItemView.Id == currentChildView.Id)
             {
                 OnEqualItemDrop?.Invoke();

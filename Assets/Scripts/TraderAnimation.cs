@@ -44,7 +44,7 @@ public class TraderAnimation : MonoBehaviour
     private IEnumerator WaitAnimationEnd()
     {
         int animId = (int)amim.idle;
-        while (true)
+        while (_armature.animation != null)
         {
             if (_armature.animation.isCompleted)
                 _armature.animation.GotoAndPlayByProgress(animId.ToString(), 0, -1);

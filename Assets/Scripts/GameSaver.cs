@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using PixelCrushers;
 
 public class GameSaver : ScriptableObject
 {
@@ -33,7 +34,7 @@ public class GameSaver : ScriptableObject
     }
     public void Load()
     {
-        LoadData(_inventorySO, "inventory_data", "inventory_save.txt");
+        LoadData(_inventorySO, "inventory_data", "inventory_save.save");
         var i = 0;
         foreach (var level in _levels)
         {

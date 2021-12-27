@@ -12,17 +12,20 @@ public class InventoryCraft : MonoBehaviour
     [SerializeField] private UICraftResultSlot _uiCraftSlot;
     [SerializeField] private VoidChannelSO _craftClearChannelSO;
     [SerializeField] private GameObjectChannelSO _beginDragChannelSO;
+    [SerializeField] private GameObjectChannelSO _endDragNowereChannelSO;
     private void Start()
     {
         ClearSlots();
         Refresh();
         _craftClearChannelSO.OnVoid += CraftItem;
         _beginDragChannelSO.OnGameObjectChannel += DivideItem;
+        _endDragNowereChannelSO.OnGameObjectChannel += RetutnItemBack;
     }
     private void OnDisable()
     {
         _craftClearChannelSO.OnVoid -= CraftItem;
         _beginDragChannelSO.OnGameObjectChannel -= DivideItem;
+        _endDragNowereChannelSO.OnGameObjectChannel -= RetutnItemBack;
     }
     public void Refresh()
     {
@@ -89,6 +92,16 @@ public class InventoryCraft : MonoBehaviour
         var uiSlot = gameObject.transform.parent.GetComponent<UIDropSlot>();
         view.ChangeAmount(1);
         InsertItem(uiSlot, item, amount - 1);
+    }
+    private void RetutnItemBack(GameObject gameObject)
+    {
+        var view = gameObject.GetComponent<ItemsView>();
+        var amount = view.Amount;
+        var uiSlot = gameObject.transform.parent;
+        Destroy(gameObject);
+        var overView = uiSlot.GetChild(0).GetComponent<ItemsView>();
+        overView.ChangeAmount(overView.Amount + amount);
+
     }
     private void InsertItem(UIDropSlot uISlot, Items item, int amount = 1)
     {

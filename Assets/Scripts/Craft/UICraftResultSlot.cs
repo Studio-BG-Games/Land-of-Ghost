@@ -59,9 +59,8 @@ public class UICraftResultSlot : UISlot
         }
         else
         {
-            Potion potion = newItem as Potion;
-            var newPotion = Instantiate(potion.View, transform);
-            newPotion.Init(potion);
+            var newPotion = Instantiate(newItem.View, transform);
+            newPotion.Init(newItem,1);
             newPotion.EnableDragItem(true);
             var drag = newPotion.GetComponent<UIDragItem>();
             drag.SetCrafted(true);
