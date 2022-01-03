@@ -19,7 +19,8 @@ public class UIDropSlot : UISlot, IDropHandler
             currentChildItemTransform = transform.GetChild(0);
             var currentChildView = currentChildItemTransform.GetComponent<ItemsView>();
             otherItemTransform.GetComponent<ItemsView>();
-            if (otherItemView.Id == currentChildView.Id)
+            var amulet = otherItemTransform.GetComponent<AmuletView>() != null;
+            if (otherItemView.Id == currentChildView.Id && !amulet)
             {
                 OnEqualItemDrop?.Invoke();
                 currentChildView.ChangeAmount(currentChildView.Amount + otherItemView.Amount);
